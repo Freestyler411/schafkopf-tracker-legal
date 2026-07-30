@@ -1,0 +1,7 @@
+# robots.txt – https://schafkopf-tracker.de/
+# Alle Inhalte dürfen indexiert werden.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://schafkopf-tracker.de/sitemap.xml

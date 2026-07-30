@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PLATZHALTER-SCREENSHOT 1 – „Stammtisch-Übersicht“
+  TODO: Durch echten App-Screenshot ersetzen (z. B. platzhalter-stammtisch.svg
+  gegen stammtisch.png tauschen und in index.html den Dateinamen anpassen).
+  Empfohlen: 1170 × 2532 px (iPhone), als WebP oder PNG, ohne Statusleiste.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Stammtisch-Übersicht der Schafkopf-App">
+  <defs>
+    <linearGradient id="kopf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#104f31"/>
+      <stop offset="1" stop-color="#0a3620"/>
+    </linearGradient>
+  </defs>
+  <rect width="390" height="844" fill="#f7f9f7"/>
+
+  <!-- Kopfbereich -->
+  <rect width="390" height="196" fill="url(#kopf)"/>
+  <text x="28" y="74" fill="#ceab33" font-family="-apple-system, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">STAMMTISCH</text>
+  <text x="28" y="110" fill="#ffffff" font-family="-apple-system, system-ui, sans-serif" font-size="27" font-weight="700">Wirtshaus-Runde</text>
+  <text x="28" y="140" fill="#b9cfc2" font-family="-apple-system, system-ui, sans-serif" font-size="14">4 Spieler · 12 Treffen · 5 ct Tarif</text>
+
+  <!-- Bilanz-Karten -->
+  <g font-family="-apple-system, system-ui, sans-serif">
+    <rect x="20" y="166" width="164" height="86" rx="18" fill="#ffffff"/>
+    <text x="38" y="196" fill="#5b6b62" font-size="12">Aktueller Stand</text>
+    <text x="38" y="228" fill="#104f31" font-size="26" font-weight="700">+ 4,80 €</text>
+
+    <rect x="206" y="166" width="164" height="86" rx="18" fill="#ffffff"/>
+    <text x="224" y="196" fill="#5b6b62" font-size="12">Letztes Treffen</text>
+    <text x="224" y="228" fill="#16211b" font-size="26" font-weight="700">18 Spiele</text>
+  </g>
+
+  <!-- Spielerliste -->
+  <text x="28" y="298" fill="#16211b" font-family="-apple-system, system-ui, sans-serif" font-size="17" font-weight="700">Tabelle</text>
+  <g font-family="-apple-system, system-ui, sans-serif">
+    <rect x="20" y="316" width="350" height="66" rx="16" fill="#ffffff"/>
+    <circle cx="54" cy="349" r="18" fill="#e6efe9"/>
+    <text x="54" y="355" fill="#104f31" font-size="15" font-weight="700" text-anchor="middle">SE</text>
+    <text x="86" y="344" fill="#16211b" font-size="16" font-weight="600">Sepp</text>
+    <text x="86" y="364" fill="#5b6b62" font-size="12">7 Solo · 2 Ramsch</text>
+    <text x="352" y="356" fill="#104f31" font-size="17" font-weight="700" text-anchor="end">+ 6,20 €</text>
+
+    <rect x="20" y="392" width="350" height="66" rx="16" fill="#ffffff"/>
+    <circle cx="54" cy="425" r="18" fill="#e6efe9"/>
+    <text x="54" y="431" fill="#104f31" font-size="15" font-weight="700" text-anchor="middle">RE</text>
+    <text x="86" y="420" fill="#16211b" font-size="16" font-weight="600">Resi</text>
+    <text x="86" y="440" fill="#5b6b62" font-size="12">5 Sauspiel · 1 Ramsch</text>
+    <text x="352" y="432" fill="#104f31" font-size="17" font-weight="700" text-anchor="end">+ 1,40 €</text>
+
+    <rect x="20" y="468" width="350" height="66" rx="16" fill="#ffffff"/>
+    <circle cx="54" cy="501" r="18" fill="#f7f0d8"/>
+    <text x="54" y="507" fill="#8a7220" font-size="15" font-weight="700" text-anchor="middle">TO</text>
+    <text x="86" y="496" fill="#16211b" font-size="16" font-weight="600">Toni</text>
+    <text x="86" y="516" fill="#5b6b62" font-size="12">3 Sauspiel · 4 Ramsch</text>
+    <text x="352" y="508" fill="#a2453a" font-size="17" font-weight="700" text-anchor="end">− 2,60 €</text>
+
+    <rect x="20" y="544" width="350" height="66" rx="16" fill="#ffffff"/>
+    <circle cx="54" cy="577" r="18" fill="#f7f0d8"/>
+    <text x="54" y="583" fill="#8a7220" font-size="15" font-weight="700" text-anchor="middle">MI</text>
+    <text x="86" y="572" fill="#16211b" font-size="16" font-weight="600">Michl</text>
+    <text x="86" y="592" fill="#5b6b62" font-size="12">4 Sauspiel · 3 Ramsch</text>
+    <text x="352" y="584" fill="#a2453a" font-size="17" font-weight="700" text-anchor="end">− 5,00 €</text>
+  </g>
+
+  <!-- Treffen-Hinweis -->
+  <rect x="20" y="636" width="350" height="72" rx="18" fill="#e6efe9"/>
+  <text x="40" y="668" fill="#104f31" font-family="-apple-system, system-ui, sans-serif" font-size="14" font-weight="700">Treffen läuft</text>
+  <text x="40" y="690" fill="#3d6b53" font-family="-apple-system, system-ui, sans-serif" font-size="13">Runde 18 von 50 · seit 19:40 Uhr</text>
+
+  <!-- Primärbutton -->
+  <rect x="20" y="732" width="350" height="56" rx="28" fill="#104f31"/>
+  <text x="195" y="767" fill="#ffffff" font-family="-apple-system, system-ui, sans-serif" font-size="17" font-weight="650" text-anchor="middle">Neues Spiel eintragen</text>
+
+  <!-- Platzhalter-Markierung -->
+  <text x="195" y="818" fill="#a8b5ad" font-family="-apple-system, system-ui, sans-serif" font-size="11" letter-spacing="1.2" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
+</svg>

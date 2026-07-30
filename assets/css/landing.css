@@ -1,0 +1,532 @@
+/* ==========================================================================
+   Schafkopf Tracker – Landingpage
+   Bayerisch-modern: Wirtshaus-Grün (#104f31) als Akzent, Gold (#ceab33)
+   als Sekundärfarbe – beide aus dem App-Icon abgeleitet.
+   Mobile-first, keine externen Fonts/Skripte (Performance & Datenschutz).
+   ========================================================================== */
+
+:root {
+  --gruen: #104f31;
+  --gruen-dunkel: #0a3620;
+  --gruen-hell: #e6efe9;
+  --gold: #ceab33;
+  --gold-hell: #f7f0d8;
+
+  --text: #16211b;
+  --text-leise: #5b6b62;
+  --linie: #dfe6e1;
+  --bg: #ffffff;
+  --bg-sanft: #f7f9f7;
+
+  --radius: 16px;
+  --radius-gross: 28px;
+  --schatten: 0 1px 2px rgba(16, 79, 49, .04), 0 8px 24px rgba(16, 79, 49, .06);
+  --schatten-hoch: 0 2px 4px rgba(16, 79, 49, .06), 0 18px 48px rgba(16, 79, 49, .12);
+
+  --breite: 1080px;
+  --abstand-sektion: 4.5rem;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--gruen); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--gruen-dunkel); }
+
+h1, h2, h3 {
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 .6em;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2.1rem, 7vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.6rem, 4.6vw, 2.4rem); font-weight: 750; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+
+p { margin: 0 0 1.1em; }
+
+/* Fokus-Ring für Tastaturnutzung */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* --------------------------------------------------------------- Layout -- */
+
+.wrap {
+  width: 100%;
+  max-width: var(--breite);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+section { padding-block: var(--abstand-sektion); }
+
+.sektion-sanft { background: var(--bg-sanft); }
+
+.sektion-kopf {
+  max-width: 34ch;
+  margin-bottom: 2.5rem;
+}
+
+.sektion-kopf p {
+  color: var(--text-leise);
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  max-width: 52ch;
+}
+
+@media (min-width: 700px) {
+  .sektion-kopf { max-width: 56ch; }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gruen);
+  margin-bottom: .8rem;
+}
+
+/* ------------------------------------------------------------- Buttons -- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  padding: .95rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1.02rem;
+  font-weight: 650;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+
+.btn-primaer {
+  background: var(--gruen);
+  color: #fff;
+  box-shadow: var(--schatten);
+}
+
+.btn-primaer:hover {
+  background: var(--gruen-dunkel);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--schatten-hoch);
+}
+
+.btn-sekundaer {
+  background: transparent;
+  color: var(--gruen);
+  border-color: var(--linie);
+}
+
+.btn-sekundaer:hover {
+  border-color: var(--gruen);
+  background: var(--gruen-hell);
+}
+
+.btn svg { flex: none; }
+
+.btn-gruppe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  align-items: center;
+}
+
+/* Hinweis unter den CTAs – „bald verfügbar“ */
+/* Kein Flex-Container: sonst würde der Fließtext in einzelne Flex-Items
+   zerlegt und bräche mitten im Wort um. */
+.cta-hinweis {
+  margin-top: 1.1rem;
+  font-size: .93rem;
+  color: var(--text-leise);
+}
+
+.punkt {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  margin-right: .45rem;
+  border-radius: 50%;
+  background: var(--gold);
+  vertical-align: middle;
+}
+
+/* ---------------------------------------------------------------- Hero -- */
+
+.hero {
+  position: relative;
+  padding-block: 3.5rem 4rem;
+  background:
+    radial-gradient(120% 90% at 12% 0%, var(--gruen-hell) 0%, rgba(230, 239, 233, 0) 60%),
+    radial-gradient(90% 70% at 100% 10%, var(--gold-hell) 0%, rgba(247, 240, 216, 0) 55%);
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-icon {
+  width: 92px;
+  height: 92px;
+  border-radius: 22%;
+  box-shadow: var(--schatten-hoch);
+  background: #fff;
+  margin-bottom: 1.4rem;
+}
+
+.hero p.claim {
+  font-size: 1.15rem;
+  color: var(--text-leise);
+  max-width: 46ch;
+  margin-bottom: 1.8rem;
+}
+
+.hero .highlight {
+  color: var(--gruen);
+  font-weight: 700;
+}
+
+/* Kleine Faktenzeile unter dem Hero-CTA */
+.fakten {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.6rem;
+  margin: 2.2rem 0 0;
+  padding: 0;
+  font-size: .95rem;
+  color: var(--text-leise);
+}
+
+.fakten li {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.fakten li::before {
+  content: "";
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+  border-radius: 50%;
+  background: var(--gruen-hell);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23104f31' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6'/%3E%3C/svg%3E");
+  background-size: 78%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hero-Bild (Screenshot im Telefonrahmen) */
+.hero-visual {
+  justify-self: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+/* -------------------------------------------------------- Problem/Nutzen */
+
+.vergleich {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.karte {
+  background: #fff;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-gross);
+  padding: 1.9rem;
+}
+
+.karte h3 { margin-bottom: .9rem; }
+
+.karte-alt {
+  background: var(--bg-sanft);
+  border-style: dashed;
+}
+
+.karte-neu {
+  border-color: rgba(16, 79, 49, .22);
+  box-shadow: var(--schatten);
+}
+
+.liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .7rem;
+}
+
+.liste li {
+  display: flex;
+  gap: .7rem;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.liste .zeichen {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: .82rem;
+  font-weight: 700;
+  margin-top: .15rem;
+}
+
+.karte-alt .zeichen { background: #f1e4e1; color: #a2453a; }
+.karte-neu .zeichen { background: var(--gruen-hell); color: var(--gruen); }
+
+/* ------------------------------------------------------------- Features -- */
+
+.feature-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.feature {
+  background: #fff;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-gross);
+  padding: 1.9rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.feature:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--schatten);
+}
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--gruen-hell);
+  color: var(--gruen);
+  margin-bottom: 1.1rem;
+}
+
+.feature p {
+  margin-bottom: 0;
+  color: var(--text-leise);
+  font-size: .99rem;
+}
+
+/* ---------------------------------------------------------- Screenshots -- */
+
+.shots {
+  display: grid;
+  gap: 2rem;
+}
+
+.shot figcaption {
+  margin-top: 1rem;
+  font-size: .95rem;
+  color: var(--text-leise);
+  text-align: center;
+}
+
+.shot figcaption strong {
+  display: block;
+  color: var(--text);
+  font-size: 1.02rem;
+  margin-bottom: .15rem;
+}
+
+/* Telefonrahmen um die Screenshots */
+.phone {
+  position: relative;
+  margin-inline: auto;
+  max-width: 280px;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(160deg, #1d2a23, #0d1611);
+  border-radius: 40px;
+  box-shadow: var(--schatten-hoch);
+}
+
+.phone img {
+  width: 100%;
+  border-radius: 30px;
+  background: #fff;
+}
+
+/* ------------------------------------------------------ So funktioniert's */
+
+.schritte {
+  display: grid;
+  gap: 1.5rem;
+  counter-reset: schritt;
+  /* Eigene Nummernkreise statt der Standard-Zähler der <ol> */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.schritt {
+  position: relative;
+  padding: 1.9rem;
+  background: #fff;
+  border: 1px solid var(--linie);
+  border-radius: var(--radius-gross);
+}
+
+.schritt::before {
+  counter-increment: schritt;
+  content: counter(schritt);
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: var(--gruen);
+  color: #fff;
+  font-weight: 750;
+  font-size: 1.15rem;
+  margin-bottom: 1.1rem;
+}
+
+.schritt p {
+  margin-bottom: 0;
+  color: var(--text-leise);
+  font-size: .99rem;
+}
+
+/* ----------------------------------------------------------- Abschluss --- */
+
+.cta-block {
+  background: var(--gruen);
+  color: #fff;
+  border-radius: var(--radius-gross);
+  padding: 3rem 1.75rem;
+  text-align: center;
+  background-image: radial-gradient(90% 120% at 50% -20%, rgba(206, 171, 51, .28) 0%, rgba(206, 171, 51, 0) 60%);
+}
+
+.cta-block h2 { color: #fff; }
+
+.cta-block p {
+  color: rgba(255, 255, 255, .82);
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+.cta-block .btn-primaer {
+  background: #fff;
+  color: var(--gruen);
+}
+
+.cta-block .btn-primaer:hover { background: var(--gold-hell); color: var(--gruen-dunkel); }
+
+.cta-block .btn-gruppe { justify-content: center; }
+
+.cta-block .cta-hinweis { color: rgba(255, 255, 255, .78); }
+
+.cta-block a:not(.btn) { color: #fff; }
+
+/* -------------------------------------------------------------- Footer --- */
+
+.footer {
+  border-top: 1px solid var(--linie);
+  padding-block: 2.5rem;
+  font-size: .95rem;
+  color: var(--text-leise);
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.footer-marke {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-weight: 650;
+  color: var(--text);
+}
+
+.footer-marke img {
+  width: 38px;
+  height: 38px;
+  border-radius: 22%;
+}
+
+.footer nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer small { display: block; }
+
+/* ------------------------------------------------------- Breakpoints ----- */
+
+@media (min-width: 700px) {
+  :root { --abstand-sektion: 6rem; }
+
+  .vergleich { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .schritte { grid-template-columns: repeat(3, 1fr); }
+  .shots { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+  .cta-block { padding: 4rem 3rem; }
+
+  .footer-inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .footer nav { grid-column: 1 / -1; }
+}
+
+@media (min-width: 960px) {
+  .hero { padding-block: 5rem 6rem; }
+  .hero-inner { grid-template-columns: 1.15fr .85fr; gap: 4rem; }
+  .hero-visual { max-width: 330px; justify-self: end; }
+  .feature-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer nav { grid-column: auto; justify-self: center; }
+  .footer-inner { grid-template-columns: auto 1fr auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
