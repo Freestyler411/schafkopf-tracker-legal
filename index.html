@@ -73,8 +73,8 @@
           "Automatischer Sync: jeder Spieler mit eigenem Konto sieht jedes eingetragene Spiel sofort auf dem eigenen Gerät",
           "Ohne Konto nutzbar – ein Konto wird ausschließlich für die Synchronisierung benötigt",
           "Moderne, in Sekunden bedienbare Oberfläche – ein Bildschirm, kein Tab-Wechsel",
-          "Auswertungen auf Stammtisch-Ebene: Kontostand-Verlauf, Rekorde, Team-Bilanzen und Sonderfälle",
-          "Auswertungen auf Spielerebene: Spielerprofile mit Partner-Bilanz, persönlichen Rekorden und Monatsverlauf",
+          "Statistiken am Stammtisch: längste Serien, meiste Laufende, längste Abende, fleißigste Leger und Ramsch-Auswertung",
+          "Statistiken je Spieler: Siegquote je Spielart, Solo-Farben, Ø-Gewinn pro Spiel, Winrate, Solo-Wahrscheinlichkeit, Partner-Bilanz, Rekorde und Sonderfälle",
           "Stammtisch-Verwaltung ohne Begrenzung der Spiele je Treffen",
           "Spiele erfassen, abrechnen und synchronisieren dauerhaft kostenlos, mit einem Stammtisch und Statistiken der letzten 30 Tage",
           "Premium für einmalig 2,99 Euro ohne Abo: volle Statistik-Historie, alle Auswertungen, Spielerprofile und unbegrenzt viele Stammtische",
@@ -297,14 +297,12 @@
               <path d="m7.5 15 3.5-4.5 3 2.5 4.5-6"/>
             </svg>
           </div>
-          <!-- TODO: Sobald der App-Code vorliegt, die konkreten Diagramme und
-               Kennzahlen hier und im Abschnitt #statistiken nachziehen. Die
-               folgenden Angaben stammen aus der Premium-Ansicht der App. -->
           <h3>Statistiken &amp; Auswertungen</h3>
           <p>
-            Vom Kontostand-Verlauf des Treffens bis zum einzelnen Spieler:
-            Rekorde, Team-Bilanzen und Sonderfälle werden automatisch
-            ausgewertet – ohne dass ihr etwas zusätzlich erfassen müsst.
+            Siegquote je Spielart, längste Serien, Partner-Bilanz und
+            Solo-Farben: Aus den erfassten Spielen entstehen Auswertungen für
+            die Runde und für jeden Einzelnen.
+            <a href="#statistiken">Alle Statistiken ansehen</a>
           </p>
         </article>
       </div>
@@ -369,7 +367,67 @@
   </section>
 
   <!-- ======================================================================
-       5. SO FUNKTIONIERT'S
+       5. STATISTIKEN
+       Die aufgeführten Auswertungen entsprechen den Statistik-Ansichten der
+       App (Stammtisch-Statistik und Spielerprofil). Kommen dort neue
+       Diagramme hinzu, ist diese Liste mitzupflegen.
+       =================================================================== -->
+  <section id="statistiken">
+    <div class="wrap">
+      <div class="sektion-kopf">
+        <span class="eyebrow">Statistiken</span>
+        <h2>Jedes Spiel zählt – die App wertet es aus</h2>
+        <p>
+          Aus den erfassten Spielen entstehen automatisch Auswertungen: für die
+          ganze Runde und für jeden Spieler einzeln. Ohne zusätzlichen Aufwand,
+          nur aus dem, was ihr ohnehin eintragt.
+        </p>
+      </div>
+
+      <div class="stat-spalten">
+        <div class="stat-gruppe">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.5V20"/>
+              <circle cx="10" cy="7.5" r="3.2"/>
+              <path d="M20 20v-1.5a3.5 3.5 0 0 0-2.6-3.4M15.5 4.6a3.2 3.2 0 0 1 0 5.9"/>
+            </svg>
+            Am Stammtisch
+          </h3>
+          <ul class="stat-liste">
+            <li><b>Längste Serien</b><span>Siege und Niederlagen in Folge, je Spieler gegenübergestellt</span></li>
+            <li><b>Meiste Laufende</b><span>Wer die längsten Laufenden auf der Hand hatte</span></li>
+            <li><b>Längste Abende</b><span>Spieltage mit den meisten Spielen, samt Dauer des Abends</span></li>
+            <li><b>Fleißigste Leger</b><span>Anteil der gespielten Spiele je Spieler in Prozent</span></li>
+            <li><b>Ramsch</b><span>Verloren, Durchmarsch und Jungfrau im direkten Vergleich</span></li>
+          </ul>
+        </div>
+
+        <div class="stat-gruppe">
+          <h3>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.6"/>
+              <path d="M5 20v-1a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v1"/>
+            </svg>
+            Für jeden Spieler
+          </h3>
+          <ul class="stat-liste">
+            <li><b>Siegquote je Spielart</b><span>Gerufen, Solo und Wenz – gewertet werden nur eigene Ansagen</span></li>
+            <li><b>Solo-Farben</b><span>Welche Farbe du am liebsten spielst, als Ringdiagramm</span></li>
+            <li><b>Ø-Gewinn pro Spiel</b><span>Verlauf über die Spieltage, in Euro</span></li>
+            <li><b>Winrate</b><span>Wie sich deine Siegquote von Spieltag zu Spieltag entwickelt</span></li>
+            <li><b>Solo-Wahrscheinlichkeit</b><span>Wie oft du ein Solo wagst, im Verlauf</span></li>
+            <li><b>Partner</b><span>Gemeinsame Spiele im Rufer-Team, gewonnen und verloren</span></li>
+            <li><b>Rekorde</b><span>Dein bestes und dein schlechtestes Spiel</span></li>
+            <li><b>Sonderfälle</b><span>Gelegt, Ramsch verloren, Jungfrau und Gespritzt</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. SO FUNKTIONIERT'S
        =================================================================== -->
   <section id="ablauf">
     <div class="wrap">
@@ -409,7 +467,7 @@
   </section>
 
   <!-- ======================================================================
-       6. KOSTENLOS & PREMIUM
+       7. KOSTENLOS & PREMIUM
        Inhalte entsprechen der Premium-Ansicht in der App. Ändern sich dort
        Umfang oder Preis, muss dieser Abschnitt mitgepflegt werden – der
        Betrag steht an drei Stellen: Karten-Badge, Einleitungstext und
@@ -453,7 +511,7 @@
   </section>
 
   <!-- ======================================================================
-       7. ABSCHLUSS-CTA
+       8. ABSCHLUSS-CTA
        =================================================================== -->
   <section id="launch">
     <div class="wrap">
@@ -486,7 +544,7 @@
 </main>
 
 <!-- ========================================================================
-     8. FOOTER
+     9. FOOTER
      ===================================================================== -->
 <footer class="footer">
   <div class="wrap footer-inner">

@@ -413,6 +413,55 @@ section { padding-block: var(--abstand-sektion); }
   background: #fff;
 }
 
+/* ---------------------------------------------------------- Statistiken -- */
+
+.stat-spalten {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.stat-gruppe h3 {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding-bottom: .9rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid var(--linie);
+}
+
+.stat-gruppe h3 svg {
+  flex: none;
+  color: var(--gruen);
+}
+
+.stat-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.05rem;
+}
+
+.stat-liste li {
+  padding-left: 1rem;
+  border-left: 2px solid var(--gruen-hell);
+}
+
+.stat-liste b {
+  display: block;
+  font-weight: 650;
+  font-size: 1rem;
+}
+
+.stat-liste span {
+  color: var(--text-leise);
+  font-size: .95rem;
+}
+
+@media (min-width: 700px) {
+  .stat-spalten { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+}
+
 /* ------------------------------------------------------ So funktioniert's */
 
 .schritte {
