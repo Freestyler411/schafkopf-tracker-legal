@@ -76,7 +76,6 @@
     <circle cx="108" cy="714" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
     <path d="M103 714h10M108 709v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
     <text x="128" y="721" fill="#ffffff" font-size="17" font-weight="600">Spiel hinzufügen</text>
-    <text x="195" y="838" fill="#b4b4b9" font-size="11" letter-spacing="1" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
 
     <rect x="103" y="766" width="184" height="60" rx="30" fill="#ffffff"/>
     <rect x="107" y="770" width="88" height="52" rx="26" fill="#e4f2ea"/>

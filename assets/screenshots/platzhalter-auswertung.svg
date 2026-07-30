@@ -1,78 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  PLATZHALTER-SCREENSHOT 3 – „Statistik – Überblick“
-  Bildet den echten Statistik-Bildschirm der App im Light Mode nach:
-  Bilanz je Spieler und die Verteilung der Spielarten als Ringdiagramm.
-  Namen sind frei erfunden.
-
-  TODO: Durch echten Screenshot ersetzen (empfohlen 1170 × 2532 px).
+  SCREENSHOT 3 – „Statistik – Überblick“
+  Originalgetreue Nachbildung des Statistik-Bildschirms im Light Mode:
+  Bilanz und Ø pro Spiel für fünf Spieler, darunter angeschnitten die
+  Siegquote-Karte. Namen und Beträge entsprechen der Vorlage.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Statistik der Schafkopf-App mit Bilanz je Spieler und Verteilung der Spielarten">
-  <rect width="390" height="844" fill="#f2f2f7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Statistik der Schafkopf-App mit Bilanz und Durchschnittsgewinn pro Spiel für fünf Spieler">
+  <rect width="390" height="844" fill="#fdfdfd"/>
   <g font-family="-apple-system, system-ui, sans-serif">
 
     <!-- Kopfzeile -->
-    <circle cx="40" cy="42" r="21" fill="#ffffff"/>
-    <path d="M45 34l-8 8 8 8" fill="none" stroke="#16211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="37" cy="42" r="21" fill="#ffffff"/>
+    <path d="M42 34l-8 8 8 8" fill="none" stroke="#16211b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="195" y="38" fill="#16211b" font-size="17" font-weight="700" text-anchor="middle">Statistik</text>
-    <text x="195" y="57" fill="#8a8a8e" font-size="13" text-anchor="middle">Wirtshaus-Runde</text>
-    <text x="20" y="98" fill="#16211b" font-size="24" font-weight="700">Überblick</text>
+    <text x="195" y="57" fill="#8a8a8e" font-size="13" text-anchor="middle">Fr. 3. Juli</text>
+    <text x="16" y="106" fill="#16211b" font-size="25" font-weight="700">Überblick</text>
 
-    <!-- Bilanz -->
-    <rect x="16" y="118" width="358" height="290" rx="20" fill="#ffffff"/>
-    <text x="38" y="152" fill="#16211b" font-size="17" font-weight="700">Bilanz</text>
+    <!-- ================= Bilanz ================= -->
+    <rect x="16" y="126" width="358" height="312" rx="18" fill="#f0f0f5"/>
+    <text x="32" y="160" fill="#16211b" font-size="18" font-weight="700">Bilanz</text>
+
     <g font-size="12">
-      <rect x="200" y="168" width="1" height="212" fill="#eceff1"/>
+      <!-- Rasterlinien -->
+      <g stroke="#d9d9de" stroke-dasharray="2 3">
+        <line x1="98" y1="176" x2="98" y2="400"/>
+        <line x1="168" y1="176" x2="168" y2="400"/>
+        <line x1="308" y1="176" x2="308" y2="400"/>
+      </g>
+      <line x1="238" y1="176" x2="238" y2="400" stroke="#c9c9ce"/>
+      <g stroke="#e2e2e7">
+        <line x1="30" y1="176" x2="360" y2="176"/>
+        <line x1="30" y1="220" x2="360" y2="220"/>
+        <line x1="30" y1="264" x2="360" y2="264"/>
+        <line x1="30" y1="308" x2="360" y2="308"/>
+        <line x1="30" y1="352" x2="360" y2="352"/>
+        <line x1="30" y1="400" x2="360" y2="400"/>
+      </g>
 
-      <text x="38" y="188" fill="#8a8a8e">Sepp</text>
-      <rect x="201" y="194" width="98" height="20" rx="3" fill="#34c759"/>
-      <text x="307" y="209" fill="#16211b" font-weight="600">+5,25 €</text>
+      <!-- Dimmer  +5,25 € -->
+      <text x="34" y="192" fill="#8a8a8e">Dimmer</text>
+      <rect x="238" y="198" width="74" height="18" rx="2" fill="#34c759"/>
+      <text x="318" y="212" fill="#16211b" font-weight="600">+5,25 €</text>
 
-      <text x="38" y="234" fill="#8a8a8e">Vroni</text>
-      <rect x="201" y="240" width="72" height="20" rx="3" fill="#34c759"/>
-      <text x="281" y="255" fill="#16211b" font-weight="600">+3,85 €</text>
+      <!-- Julian  +3,85 € -->
+      <text x="34" y="236" fill="#8a8a8e">Julian</text>
+      <rect x="238" y="242" width="54" height="18" rx="2" fill="#34c759"/>
+      <text x="298" y="256" fill="#16211b" font-weight="600">+3,85 €</text>
 
-      <text x="38" y="280" fill="#8a8a8e">Toni</text>
-      <rect x="201" y="286" width="37" height="20" rx="3" fill="#34c759"/>
-      <text x="246" y="301" fill="#16211b" font-weight="600">+1,95 €</text>
+      <!-- Adrian  +1,95 € -->
+      <text x="34" y="280" fill="#8a8a8e">Adrian</text>
+      <rect x="238" y="286" width="27" height="18" rx="2" fill="#34c759"/>
+      <text x="271" y="300" fill="#16211b" font-weight="600">+1,95 €</text>
 
-      <text x="38" y="326" fill="#8a8a8e">Michl</text>
-      <rect x="190" y="332" width="11" height="20" rx="3" fill="#ff3b30"/>
-      <text x="182" y="347" fill="#16211b" font-weight="600" text-anchor="end">−0,60 €</text>
+      <!-- Ana  −0,60 € -->
+      <text x="34" y="324" fill="#8a8a8e">Ana</text>
+      <rect x="229" y="330" width="9" height="18" rx="2" fill="#ff3b30"/>
+      <text x="223" y="344" fill="#16211b" font-weight="600" text-anchor="end">−0,60 €</text>
 
-      <text x="38" y="372" fill="#8a8a8e">Resi</text>
-      <rect x="105" y="378" width="96" height="20" rx="3" fill="#ff3b30"/>
-      <text x="97" y="393" fill="#16211b" font-weight="600" text-anchor="end">−10,45 €</text>
+      <!-- Raffi  −10,45 € -->
+      <text x="34" y="368" fill="#8a8a8e">Raffi</text>
+      <rect x="92" y="374" width="146" height="18" rx="2" fill="#ff3b30"/>
+      <text x="86" y="388" fill="#16211b" font-weight="600" text-anchor="end">−10,45 €</text>
+
+      <!-- Achse -->
+      <g fill="#8a8a8e" text-anchor="middle">
+        <text x="98" y="420">-10 €</text>
+        <text x="168" y="420">-5 €</text>
+        <text x="238" y="420">0 €</text>
+        <text x="308" y="420">5 €</text>
+      </g>
     </g>
 
-    <!-- Spielarten als Ring -->
-    <rect x="16" y="424" width="358" height="392" rx="20" fill="#ffffff"/>
-    <text x="38" y="458" fill="#16211b" font-size="17" font-weight="700">Spielarten</text>
+    <!-- ================= Ø pro Spiel ================= -->
+    <rect x="16" y="456" width="358" height="312" rx="18" fill="#f0f0f5"/>
+    <text x="32" y="490" fill="#16211b" font-size="18" font-weight="700">Ø pro Spiel</text>
 
-    <!-- Ring: Umfang bei r=74 rund 465; Segmente über stroke-dasharray -->
-    <g transform="rotate(-90 195 610)" fill="none" stroke-width="44">
-      <circle cx="195" cy="610" r="74" stroke="#2e9e5b" stroke-dasharray="232 233"/>
-      <circle cx="195" cy="610" r="74" stroke="#3b7dd8" stroke-dasharray="79 386" stroke-dashoffset="-232"/>
-      <circle cx="195" cy="610" r="74" stroke="#e08b2e" stroke-dasharray="65 400" stroke-dashoffset="-311"/>
-      <circle cx="195" cy="610" r="74" stroke="#a855c7" stroke-dasharray="51 414" stroke-dashoffset="-376"/>
-      <circle cx="195" cy="610" r="74" stroke="#d94a52" stroke-dasharray="38 427" stroke-dashoffset="-427"/>
-    </g>
-    <g font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
-      <text x="264" y="596">50 %</text>
-      <text x="215" y="694">17 %</text>
-      <text x="139" y="661">14 %</text>
-      <text x="140" y="565">11 %</text>
-      <text x="185" y="528">8 %</text>
+    <g font-size="12">
+      <g stroke="#d9d9de" stroke-dasharray="2 3">
+        <line x1="68" y1="506" x2="68" y2="730"/>
+        <line x1="154" y1="506" x2="154" y2="730"/>
+        <line x1="326" y1="506" x2="326" y2="730"/>
+      </g>
+      <line x1="240" y1="506" x2="240" y2="730" stroke="#bcdccb" stroke-width="1.6"/>
+      <g stroke="#e2e2e7">
+        <line x1="30" y1="506" x2="360" y2="506"/>
+        <line x1="30" y1="550" x2="360" y2="550"/>
+        <line x1="30" y1="594" x2="360" y2="594"/>
+        <line x1="30" y1="638" x2="360" y2="638"/>
+        <line x1="30" y1="682" x2="360" y2="682"/>
+        <line x1="30" y1="730" x2="360" y2="730"/>
+      </g>
+
+      <text x="34" y="522" fill="#8a8a8e">Dimmer</text>
+      <rect x="240" y="528" width="60" height="18" rx="2" fill="#34c759"/>
+      <text x="306" y="542" fill="#16211b" font-weight="600">+0,14 €</text>
+
+      <text x="34" y="566" fill="#8a8a8e">Julian</text>
+      <rect x="240" y="572" width="43" height="18" rx="2" fill="#34c759"/>
+      <text x="289" y="586" fill="#16211b" font-weight="600">+0,10 €</text>
+
+      <text x="34" y="610" fill="#8a8a8e">Adrian</text>
+      <rect x="240" y="616" width="21" height="18" rx="2" fill="#34c759"/>
+      <text x="267" y="630" fill="#16211b" font-weight="600">+0,05 €</text>
+
+      <text x="34" y="654" fill="#8a8a8e">Ana</text>
+      <rect x="223" y="660" width="17" height="18" rx="2" fill="#ff3b30"/>
+      <text x="217" y="674" fill="#16211b" font-weight="600" text-anchor="end">−0,04 €</text>
+
+      <text x="34" y="698" fill="#8a8a8e">Raffi</text>
+      <rect x="94" y="704" width="146" height="18" rx="2" fill="#ff3b30"/>
+      <text x="88" y="718" fill="#16211b" font-weight="600" text-anchor="end">−0,34 €</text>
+
+      <g fill="#8a8a8e" text-anchor="middle">
+        <text x="68" y="750">-0,4 €</text>
+        <text x="154" y="750">-0,2 €</text>
+        <text x="240" y="750">0 €</text>
+        <text x="326" y="750">0…</text>
+      </g>
     </g>
 
-    <g font-size="12.5" fill="#3c3c43">
-      <circle cx="52" cy="726" r="5" fill="#2e9e5b"/><text x="63" y="730">Sauspiel 107</text>
-      <circle cx="156" cy="726" r="5" fill="#3b7dd8"/><text x="167" y="730">Solo 36</text>
-      <circle cx="240" cy="726" r="5" fill="#e08b2e"/><text x="251" y="730">Ramsch 30</text>
-      <circle cx="94" cy="754" r="5" fill="#a855c7"/><text x="105" y="758">Hochzeit 24</text>
-      <circle cx="196" cy="754" r="5" fill="#d94a52"/><text x="207" y="758">Wenz 18</text>
-    </g>
+    <!-- ================= Siegquote, angeschnitten ================= -->
+    <rect x="16" y="786" width="358" height="90" rx="18" fill="#f0f0f5"/>
+    <text x="90" y="822" fill="#16211b" font-size="18" font-weight="700">Siegquote</text>
 
-    <text x="195" y="800" fill="#b4b4b9" font-size="11" letter-spacing="1" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
+    <!-- Schwebende Schaltfläche -->
+    <circle cx="51" cy="812" r="27" fill="#ffffff" opacity=".96"/>
+    <g fill="#1a9a54">
+      <rect x="42" y="803" width="7.5" height="7.5" rx="1.8"/>
+      <rect x="52.5" y="803" width="7.5" height="7.5" rx="1.8"/>
+      <rect x="42" y="813.5" width="7.5" height="7.5" rx="1.8"/>
+      <rect x="52.5" y="813.5" width="7.5" height="7.5" rx="1.8"/>
+    </g>
   </g>
 </svg>
