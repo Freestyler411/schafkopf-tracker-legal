@@ -16,15 +16,16 @@ rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
 
 ## Noch offen (TODOs im Code markiert)
 
-1. **App-Store-Link.** Aktuell zeigen beide CTA-Buttons auf den Platzhalter
-   `href="#launch"`. Zu ersetzen an drei Stellen in `index.html`: CTA im Hero,
-   CTA am Seitenende und `installUrl`/`downloadUrl` im JSON-LD. Beim Launch
-   zusätzlich `availability` von `PreOrder` auf `InStock` umstellen.
-2. **Echte Screenshots.** Die drei SVGs unter `assets/screenshots/` sind
+1. **Echte Screenshots.** Die drei SVGs unter `assets/screenshots/` sind
    nachgebaute Platzhalter. Ersetzen durch echte Aufnahmen (empfohlen
    1170 × 2532 px, WebP oder PNG), danach Dateinamen, `width`/`height` und die
    Alt-Texte in `index.html` anpassen sowie die Pfade im JSON-LD
    (`screenshot`) aktualisieren.
+2. **JSON-LD ergänzen**, sobald verfügbar: `aggregateRating` (nach den ersten
+   Bewertungen), `softwareVersion` und `datePublished`.
+
+Der App-Store-Link ist eingetragen:
+<https://apps.apple.com/de/app/schafkopf-tracker/id6790808695>
 
 ## Lokale Vorschau
 
