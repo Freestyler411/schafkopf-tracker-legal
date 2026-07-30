@@ -75,17 +75,30 @@
           "Moderne, in Sekunden bedienbare Oberfläche – ein Bildschirm, kein Tab-Wechsel",
           "Verlauf und Auswertung je Spieler und Treffen",
           "Stammtisch-Verwaltung ohne Begrenzung der Spiele je Treffen",
-          "Spiele erfassen und abrechnen dauerhaft kostenlos, mit einem Stammtisch und Statistiken der letzten 30 Tage",
-          "Premium als einmaliger Kauf ohne Abo: volle Statistik-Historie, alle Auswertungen, Spielerprofile und unbegrenzt viele Stammtische",
+          "Spiele erfassen, abrechnen und synchronisieren dauerhaft kostenlos, mit einem Stammtisch und Statistiken der letzten 30 Tage",
+          "Premium für einmalig 2,99 Euro ohne Abo: volle Statistik-Historie, alle Auswertungen, Spielerprofile und unbegrenzt viele Stammtische",
           "Sauspiel inklusive Davonlaufen",
           "Frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus"
         ],
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock"
-        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Schafkopf Tracker – kostenlose Version",
+            "description": "Spiele erfassen, abrechnen und synchronisieren, ein Stammtisch, Statistiken der letzten 30 Tage.",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Schafkopf Tracker Premium",
+            "description": "Einmaliger In-App-Kauf ohne Abo: volle Statistik-Historie, alle Auswertungen, Spielerprofile in voller Tiefe und unbegrenzt viele Stammtische.",
+            "price": "2.99",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "category": "In-App-Kauf"
+          }
+        ],
         "author": {
           "@type": "Person",
           "name": "Adrian Pomayr"
@@ -393,10 +406,10 @@
 
   <!-- ======================================================================
        6. KOSTENLOS & PREMIUM
-       Inhalte entsprechen der Premium-Ansicht in der App. Ändert sich dort
-       etwas, muss dieser Abschnitt mitgepflegt werden.
-       TODO: Preis ergänzen, sobald der Euro-Betrag feststeht – bewusst
-       nicht angegeben, damit hier keine falsche Zahl steht.
+       Inhalte entsprechen der Premium-Ansicht in der App. Ändern sich dort
+       Umfang oder Preis, muss dieser Abschnitt mitgepflegt werden – der
+       Betrag steht an drei Stellen: Karten-Badge, Einleitungstext und
+       "offers" im JSON-LD im <head>.
        =================================================================== -->
   <section id="preise" class="sektion-sanft">
     <div class="wrap">
@@ -404,8 +417,9 @@
         <span class="eyebrow">Kostenlos &amp; Premium</span>
         <h2>Mitschreiben kostet nichts</h2>
         <p>
-          Spiele erfassen und abrechnen bleibt dauerhaft gratis. Premium ist ein
-          einmaliger Kauf – kein Abo, keine laufenden Kosten.
+          Spiele erfassen, abrechnen und synchronisieren bleibt dauerhaft gratis.
+          Premium kostet einmalig 2,99 € inkl. MwSt. – kein Abo, keine laufenden
+          Kosten.
         </p>
       </div>
 
@@ -415,13 +429,14 @@
           <ul class="liste">
             <li><span class="zeichen" aria-hidden="true">✓</span> Spiele erfassen und abrechnen – ohne Zeitlimit</li>
             <li><span class="zeichen" aria-hidden="true">✓</span> Runden von 3 bis 8 Spielern</li>
+            <li><span class="zeichen" aria-hidden="true">✓</span> Automatischer Sync für alle Mitspieler mit Konto</li>
             <li><span class="zeichen" aria-hidden="true">✓</span> Ein Stammtisch mit beliebig vielen Treffen</li>
             <li><span class="zeichen" aria-hidden="true">✓</span> Statistiken der letzten 30 Tage</li>
           </ul>
         </article>
 
         <article class="karte karte-premium">
-          <h3>Premium <span class="preis-hinweis">einmalig, kein Abo</span></h3>
+          <h3>Premium <span class="preis-hinweis">einmalig 2,99 €</span></h3>
           <ul class="liste">
             <li><span class="zeichen" aria-hidden="true">✦</span> Volle Statistik-Historie über jeden Zeitraum</li>
             <li><span class="zeichen" aria-hidden="true">✦</span> Alle Auswertungen: Rekorde, Teams und Sonderfälle</li>
@@ -442,8 +457,8 @@
         <h2>Der nächste Spielabend – ohne Zettel</h2>
         <p>
           Für Runden von 3 bis 8 Spielern, mit automatischem Sync für alle
-          Mitspieler mit Konto. Spiele erfassen und abrechnen bleibt immer
-          kostenlos – Premium ist ein einmaliger Kauf, kein Abo.
+          Mitspieler mit Konto. Erfassen, Abrechnen und Sync bleiben immer
+          kostenlos – Premium gibt es einmalig für 2,99 €, ohne Abo.
         </p>
 
         <div class="btn-gruppe">
