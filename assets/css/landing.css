@@ -311,6 +311,32 @@ section { padding-block: var(--abstand-sektion); }
 .karte-alt .zeichen { background: #f1e4e1; color: #a2453a; }
 .karte-neu .zeichen { background: var(--gruen-hell); color: var(--gruen); }
 
+/* Premium-Karte: Gold statt Grün, damit sich der Bezahlteil optisch
+   abhebt, ohne den kostenlosen Teil abzuwerten. */
+.karte-premium {
+  border-color: rgba(206, 171, 51, .5);
+  box-shadow: var(--schatten);
+}
+
+.karte-premium .zeichen {
+  background: var(--gold-hell);
+  color: #8a7220;
+}
+
+.preis-hinweis {
+  display: inline-block;
+  margin-left: .5rem;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  background: var(--gold-hell);
+  color: #8a7220;
+  font-size: .72rem;
+  font-weight: 650;
+  letter-spacing: .02em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
 /* ------------------------------------------------------------- Features -- */
 
 .feature-grid {
