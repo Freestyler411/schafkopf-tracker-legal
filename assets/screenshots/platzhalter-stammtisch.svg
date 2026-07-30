@@ -18,7 +18,7 @@
   <rect width="390" height="196" fill="url(#kopf)"/>
   <text x="28" y="74" fill="#ceab33" font-family="-apple-system, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">STAMMTISCH</text>
   <text x="28" y="110" fill="#ffffff" font-family="-apple-system, system-ui, sans-serif" font-size="27" font-weight="700">Wirtshaus-Runde</text>
-  <text x="28" y="140" fill="#b9cfc2" font-family="-apple-system, system-ui, sans-serif" font-size="14">4 Spieler · 12 Treffen · 5 ct Tarif</text>
+  <text x="28" y="140" fill="#b9cfc2" font-family="-apple-system, system-ui, sans-serif" font-size="14">6 Spieler · 12 Treffen · 5 ct Tarif</text>
 
   <!-- Bilanz-Karten -->
   <g font-family="-apple-system, system-ui, sans-serif">
