@@ -54,7 +54,7 @@
         "@id": "https://schafkopf-tracker.de/#app",
         "name": "Schafkopf Tracker",
         "alternateName": "Schafkopf App zum Punkte zählen",
-        "description": "Schafkopf App für Runden von 3 bis 8 Spielern: Spiele erfassen, Punkte zählen und automatisch abrechnen. Die App lässt sich ohne Konto nutzen; wer ein Konto anlegt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät synchronisiert. Unterstützt Sauspiel, Davonlaufen sowie frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus.",
+        "description": "Schafkopf App für Runden von 3 bis 8 Spielern: Spiele erfassen, Punkte zählen und automatisch abrechnen. Die App lässt sich ohne Konto nutzen; wer ein Konto anlegt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät synchronisiert. Unterstützt Sauspiel mit Davonlaufen, Solo, Wenz, Hochzeit sowie frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus. Aus den erfassten Spielen entstehen automatisch Statistiken für den Stammtisch und für jeden Spieler.",
         "applicationCategory": "GameApplication",
         "applicationSubCategory": "Punkte- und Abrechnungs-App für Schafkopf",
         "operatingSystem": "iOS",
@@ -73,7 +73,8 @@
           "Automatischer Sync: jeder Spieler mit eigenem Konto sieht jedes eingetragene Spiel sofort auf dem eigenen Gerät",
           "Ohne Konto nutzbar – ein Konto wird ausschließlich für die Synchronisierung benötigt",
           "Moderne, in Sekunden bedienbare Oberfläche – ein Bildschirm, kein Tab-Wechsel",
-          "Statistiken am Stammtisch: längste Serien, meiste Laufende, längste Abende, fleißigste Leger und Ramsch-Auswertung",
+          "Alle gängigen Spielarten: Sauspiel mit Davonlaufen, Solo, Wenz, Hochzeit und Ramsch",
+          "Statistiken am Stammtisch: Bilanz, Ø pro Spiel, Siegquote, Verteilung der Spielarten, Ansage- und Solo-Quoten, Direktvergleich zwischen Spielern, Team-Bilanzen, Rekorde und Marotten",
           "Statistiken je Spieler: Siegquote je Spielart, Solo-Farben, Ø-Gewinn pro Spiel, Winrate, Solo-Wahrscheinlichkeit, Partner-Bilanz, Rekorde und Sonderfälle",
           "Stammtisch-Verwaltung ohne Begrenzung der Spiele je Treffen",
           "Spiele erfassen, abrechnen und synchronisieren dauerhaft kostenlos, mit einem Stammtisch und Statistiken der letzten 30 Tage",
@@ -284,8 +285,8 @@
           <h3>Moderne Bedienung</h3>
           <p>
             Kein Menü-Labyrinth aus den Nullerjahren: ein einziger scrollbarer
-            Bildschirm für Spielart, Spieler und Ergebnis – Sauspiel und
-            Davonlaufen inklusive.
+            Bildschirm für Spielart, Spieler und Ergebnis – Sauspiel, Solo,
+            Wenz, Hochzeit und Ramsch inklusive.
           </p>
         </article>
 
@@ -395,11 +396,12 @@
             Am Stammtisch
           </h3>
           <ul class="stat-liste">
-            <li><b>Längste Serien</b><span>Siege und Niederlagen in Folge, je Spieler gegenübergestellt</span></li>
-            <li><b>Meiste Laufende</b><span>Wer die längsten Laufenden auf der Hand hatte</span></li>
-            <li><b>Längste Abende</b><span>Spieltage mit den meisten Spielen, samt Dauer des Abends</span></li>
-            <li><b>Fleißigste Leger</b><span>Anteil der gespielten Spiele je Spieler in Prozent</span></li>
-            <li><b>Ramsch</b><span>Verloren, Durchmarsch und Jungfrau im direkten Vergleich</span></li>
+            <li><b>Überblick</b><span>Bilanz, Ø pro Spiel und Siegquote je Spieler – dazu die Verteilung aller Spielarten als Ringdiagramm</span></li>
+            <li><b>Spielweise</b><span>Anteil der eigenen Ansagen, Soli und Wenzen – und wie viele davon gewonnen wurden</span></li>
+            <li><b>Direktvergleich</b><span>Wer spielt öfter Solo, bleibt öfter schneiderfrei oder legt häufiger – Spieler gegen Spieler</span></li>
+            <li><b>Teams</b><span>Gemeinsame Spiele aus Sicht des Rufer-Teams, gewonnen und verloren</span></li>
+            <li><b>Rekorde</b><span>Teuerstes Spiel, größter Gewinn und Verlust, bester Abend, längste Serien, meiste Laufende und längste Abende</span></li>
+            <li><b>Marotten</b><span>Fleißigste Leger und die Ramsch-Bilanz aus Verloren, Durchmarsch und Jungfrau</span></li>
           </ul>
         </div>
 
@@ -420,6 +422,7 @@
             <li><b>Partner</b><span>Gemeinsame Spiele im Rufer-Team, gewonnen und verloren</span></li>
             <li><b>Rekorde</b><span>Dein bestes und dein schlechtestes Spiel</span></li>
             <li><b>Sonderfälle</b><span>Gelegt, Ramsch verloren, Jungfrau und Gespritzt</span></li>
+            <li><b>Gewonnen &amp; verloren</b><span>Deine Bilanz über alle Spiele hinweg</span></li>
           </ul>
         </div>
       </div>
