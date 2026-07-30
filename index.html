@@ -40,11 +40,7 @@
 
   <link rel="stylesheet" href="/assets/css/landing.css">
 
-  <!-- ===== Strukturierte Daten (schema.org) ==============================
-       TODO: Sobald verfügbar ergänzen:
-       - "aggregateRating", sobald erste Bewertungen vorliegen
-       - "softwareVersion" und "datePublished"
-  -->
+  <!-- ===== Strukturierte Daten (schema.org) ============================ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -64,9 +60,9 @@
         "downloadUrl": "https://apps.apple.com/de/app/schafkopf-tracker/id6790808695",
         "image": "https://schafkopf-tracker.de/logo.png",
         "screenshot": [
-          "https://schafkopf-tracker.de/assets/screenshots/platzhalter-stammtisch.svg",
-          "https://schafkopf-tracker.de/assets/screenshots/platzhalter-spieleingabe.svg",
-          "https://schafkopf-tracker.de/assets/screenshots/platzhalter-auswertung.svg"
+          "https://schafkopf-tracker.de/assets/screenshots/treffen.svg",
+          "https://schafkopf-tracker.de/assets/screenshots/spiel-eintragen.svg",
+          "https://schafkopf-tracker.de/assets/screenshots/spielerprofil.svg"
         ],
         "featureList": [
           "Runden von 3 bis 8 Spielern – auch Dreierrunden werden abgerechnet",
@@ -174,10 +170,9 @@
       </ul>
     </div>
 
-    <!-- Hero-Screenshot; TODO: durch echten Screenshot ersetzen -->
     <div class="hero-visual">
       <div class="phone">
-        <img src="/assets/screenshots/platzhalter-spieleingabe.svg" width="390" height="844"
+        <img src="/assets/screenshots/spiel-eintragen.svg" width="390" height="844"
              alt="Schafkopf App Eingabemaske: Spielart wählen, Rufer antippen, Ergebnis je Spieler erfassen">
       </div>
     </div>
@@ -329,12 +324,8 @@
 
   <!-- ======================================================================
        4. SCREENSHOTS
-       HINWEIS: Alle drei Bilder sind Platzhalter-Grafiken (SVG).
-       TODO: Echte App-Screenshots einsetzen – Dateien unter
-       /assets/screenshots/ ablegen (empfohlen 1170 × 2532 px, WebP oder PNG),
-       hier Dateinamen sowie width/height anpassen und die Alt-Texte an das
-       tatsächlich gezeigte Bild angleichen. Die drei Pfade stehen zusätzlich
-       im JSON-LD ("screenshot") im <head> – dort ebenfalls aktualisieren.
+       Die drei Grafiken liegen unter /assets/screenshots/ und sind
+       zusätzlich im JSON-LD ("screenshot") im <head> verlinkt.
        =================================================================== -->
   <section id="screenshots" class="sektion-sanft">
     <div class="wrap">
@@ -350,7 +341,7 @@
       <div class="shots">
         <figure class="shot">
           <div class="phone">
-            <img src="/assets/screenshots/platzhalter-stammtisch.svg" width="390" height="844" loading="lazy" decoding="async"
+            <img src="/assets/screenshots/treffen.svg" width="390" height="844" loading="lazy" decoding="async"
                  alt="Treffen in der Schafkopf App: Punktestand von fünf Spielern und Verlaufsdiagramm des Abends">
           </div>
           <figcaption>
@@ -361,7 +352,7 @@
 
         <figure class="shot">
           <div class="phone">
-            <img src="/assets/screenshots/platzhalter-spieleingabe.svg" width="390" height="844" loading="lazy" decoding="async"
+            <img src="/assets/screenshots/spiel-eintragen.svg" width="390" height="844" loading="lazy" decoding="async"
                  alt="Schafkopf Punkte zählen: Eingabemaske mit Auswahl aus neun Spielarten, Rufer und Ergebnis je Spieler">
           </div>
           <figcaption>
@@ -372,7 +363,7 @@
 
         <figure class="shot">
           <div class="phone">
-            <img src="/assets/screenshots/platzhalter-auswertung.svg" width="390" height="844" loading="lazy" decoding="async"
+            <img src="/assets/screenshots/spielerprofil.svg" width="390" height="844" loading="lazy" decoding="async"
                  alt="Spielerprofil der Schafkopf App: Ringdiagramm mit gewonnenen und verlorenen Spielen sowie Verteilung der Spielarten">
           </div>
           <figcaption>

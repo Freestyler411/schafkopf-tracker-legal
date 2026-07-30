@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  PLATZHALTER-SCREENSHOT 1 – „Treffen“ mit Punktestand und Verlauf
-  Bildet den echten Treffen-Bildschirm der App im Light Mode nach.
+  Screenshot 1 – Treffen mit Punktestand und Verlauf.
   Fünf Spieler, damit die Aussage „3 bis 8 Spieler“ auch im Bild steht.
-  Namen sind frei erfunden.
-
-  TODO: Durch echten Screenshot ersetzen (empfohlen 1170 × 2532 px).
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Treffen-Übersicht der Schafkopf-App mit Punktestand und Verlauf">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Treffen-Übersicht der Schafkopf-App mit Punktestand und Verlauf">
   <rect width="390" height="844" fill="#f2f2f7"/>
   <g font-family="-apple-system, system-ui, sans-serif">
 

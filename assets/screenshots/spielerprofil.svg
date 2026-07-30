@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  SCREENSHOT 3 – Spielerprofil
-  Nachbildung des Spielerprofils im Light Mode: Ring mit gewonnenen und
-  verlorenen Spielen, darunter die Verteilung der Spielarten.
-  Zahlen entsprechen der Vorlage, der Name ist frei erfunden.
-
-  TODO: Durch echten Screenshot ersetzen (empfohlen 1170 × 2532 px).
+  Screenshot 3 – Spielerprofil: Ring mit gewonnenen und verlorenen
+  Spielen, darunter die Verteilung der Spielarten.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Spielerprofil der Schafkopf-App mit Ringdiagramm zu gewonnenen und verlorenen Spielen sowie der Verteilung der Spielarten">
   <rect width="390" height="844" fill="#fdfdfd"/>

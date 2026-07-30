@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  PLATZHALTER-SCREENSHOT 2 – „Spiel eintragen“
-  Bildet den echten Eingabe-Bildschirm der App im Light Mode nach:
-  Spielart-Raster, Rufer-Auswahl, Spielerzeilen mit Legen-Marke.
-  Namen sind frei erfunden.
-
-  TODO: Durch echten Screenshot ersetzen (empfohlen 1170 × 2532 px, WebP
-  oder PNG, ohne Statusleiste). Wird auch im Hero verwendet – danach
-  assets/og/render-og.mjs erneut laufen lassen.
+  Screenshot 2 – Spiel eintragen: Spielart-Raster, Rufer-Auswahl und
+  Spielerzeilen. Wird auch im Hero und im Social-Vorschaubild verwendet;
+  nach einer Änderung assets/og/render-og.mjs erneut laufen lassen.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Spiel-Eingabemaske der Schafkopf-App">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Eingabemaske der Schafkopf-App: Spielart, Rufer und Ergebnis je Spieler">
   <rect width="390" height="844" fill="#f2f2f7"/>
   <g font-family="-apple-system, system-ui, sans-serif">
 

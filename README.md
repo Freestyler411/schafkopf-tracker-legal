@@ -9,7 +9,7 @@ rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
 | --- | --- |
 | `index.html` | Onepage-Landingpage (Hero, Nutzen, Features, Screenshots, Ablauf, CTA, Footer) |
 | `assets/css/landing.css` | Styles der Landingpage – kein Framework, kein JavaScript |
-| `assets/screenshots/*.svg` | **Platzhalter**-Screenshots, siehe „Noch offen“ |
+| `assets/screenshots/*.svg` | App-Ansichten der Screenshot-Sektion (Treffen, Spiel eintragen, Spielerprofil) |
 | `assets/og/og-image.jpg` | Social-Vorschaubild (1200 × 630) für Open Graph und Twitter Card |
 | `assets/og/og-vorlage.html` | Quelle des Vorschaubilds – wird nicht verlinkt |
 | `assets/og/render-og.mjs` | Rendert die Vorlage zu `og-image.jpg` |
@@ -17,18 +17,12 @@ rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
 | `robots.txt`, `sitemap.xml` | Suchmaschinen-Basics |
 | `logo.svg`, `logo.png`, `apple-touch-icon.png` | App-Icon, Favicon, Social-Preview |
 
-## Noch offen (TODOs im Code markiert)
+App-Store-Link: <https://apps.apple.com/de/app/schafkopf-tracker/id6790808695>
 
-1. **Echte Screenshots.** Die drei SVGs unter `assets/screenshots/` sind
-   nachgebaute Platzhalter. Ersetzen durch echte Aufnahmen (empfohlen
-   1170 × 2532 px, WebP oder PNG), danach Dateinamen, `width`/`height` und die
-   Alt-Texte in `index.html` anpassen sowie die Pfade im JSON-LD
-   (`screenshot`) aktualisieren.
-2. **JSON-LD ergänzen**, sobald verfügbar: `aggregateRating` (nach den ersten
-   Bewertungen), `softwareVersion` und `datePublished`.
-
-Der App-Store-Link ist eingetragen:
-<https://apps.apple.com/de/app/schafkopf-tracker/id6790808695>
+Inhalte, die bei Änderungen an der App mitgepflegt werden müssen: die
+Spielarten-Zeile und die Statistik-Sektion in `index.html`, der Abschnitt
+„Kostenlos & Premium“ samt Preis (Karten-Badge, Einleitungstext und `offers`
+im JSON-LD) sowie die drei Screenshots.
 
 ## Lokale Vorschau
 
