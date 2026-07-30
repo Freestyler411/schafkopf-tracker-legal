@@ -1,73 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  PLATZHALTER-SCREENSHOT 3 – „Verlauf & Auswertung“
-  TODO: Durch echten App-Screenshot ersetzen.
-  Empfohlen: 1170 × 2532 px (iPhone), als WebP oder PNG, ohne Statusleiste.
+  PLATZHALTER-SCREENSHOT 3 – „Statistik – Überblick“
+  Bildet den echten Statistik-Bildschirm der App im Light Mode nach:
+  Bilanz je Spieler und die Verteilung der Spielarten als Ringdiagramm.
+  Namen sind frei erfunden.
+
+  TODO: Durch echten Screenshot ersetzen (empfohlen 1170 × 2532 px).
 -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Auswertung und Spielverlauf der Schafkopf-App">
-  <rect width="390" height="844" fill="#ffffff"/>
-
-  <rect width="390" height="96" fill="#f7f9f7"/>
-  <text x="24" y="60" fill="#104f31" font-family="-apple-system, system-ui, sans-serif" font-size="15">‹ Treffen</text>
-  <text x="195" y="60" fill="#16211b" font-family="-apple-system, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Auswertung</text>
-  <rect y="95" width="390" height="1" fill="#dfe6e1"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Statistik der Schafkopf-App mit Bilanz je Spieler und Verteilung der Spielarten">
+  <rect width="390" height="844" fill="#f2f2f7"/>
   <g font-family="-apple-system, system-ui, sans-serif">
-    <!-- Verlaufsdiagramm -->
-    <rect x="20" y="120" width="350" height="210" rx="20" fill="#f7f9f7"/>
-    <text x="40" y="152" fill="#16211b" font-size="15" font-weight="700">Kontostand-Verlauf</text>
-    <text x="40" y="172" fill="#5b6b62" font-size="12">18 Spiele · Treffen vom 14. März</text>
 
-    <!-- Nulllinie -->
-    <rect x="40" y="256" width="310" height="1" fill="#dfe6e1"/>
-    <!-- Linien -->
-    <polyline points="42,258 82,244 122,250 162,228 202,236 242,212 282,204 322,196 348,190"
-              fill="none" stroke="#104f31" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <polyline points="42,258 82,266 122,258 162,272 202,264 242,282 282,276 322,290 348,296"
-              fill="none" stroke="#ceab33" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <polyline points="42,258 82,252 122,272 162,262 202,284 242,270 282,292 322,282 348,300"
-              fill="none" stroke="#a8b5ad" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="348" cy="190" r="4.5" fill="#104f31"/>
+    <!-- Kopfzeile -->
+    <circle cx="40" cy="42" r="21" fill="#ffffff"/>
+    <path d="M45 34l-8 8 8 8" fill="none" stroke="#16211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="195" y="38" fill="#16211b" font-size="17" font-weight="700" text-anchor="middle">Statistik</text>
+    <text x="195" y="57" fill="#8a8a8e" font-size="13" text-anchor="middle">Wirtshaus-Runde</text>
+    <text x="20" y="98" fill="#16211b" font-size="24" font-weight="700">Überblick</text>
+
+    <!-- Bilanz -->
+    <rect x="16" y="118" width="358" height="290" rx="20" fill="#ffffff"/>
+    <text x="38" y="152" fill="#16211b" font-size="17" font-weight="700">Bilanz</text>
+    <g font-size="12">
+      <rect x="200" y="168" width="1" height="212" fill="#eceff1"/>
+
+      <text x="38" y="188" fill="#8a8a8e">Sepp</text>
+      <rect x="201" y="194" width="98" height="20" rx="3" fill="#34c759"/>
+      <text x="307" y="209" fill="#16211b" font-weight="600">+5,25 €</text>
+
+      <text x="38" y="234" fill="#8a8a8e">Vroni</text>
+      <rect x="201" y="240" width="72" height="20" rx="3" fill="#34c759"/>
+      <text x="281" y="255" fill="#16211b" font-weight="600">+3,85 €</text>
+
+      <text x="38" y="280" fill="#8a8a8e">Toni</text>
+      <rect x="201" y="286" width="37" height="20" rx="3" fill="#34c759"/>
+      <text x="246" y="301" fill="#16211b" font-weight="600">+1,95 €</text>
+
+      <text x="38" y="326" fill="#8a8a8e">Michl</text>
+      <rect x="190" y="332" width="11" height="20" rx="3" fill="#ff3b30"/>
+      <text x="182" y="347" fill="#16211b" font-weight="600" text-anchor="end">−0,60 €</text>
+
+      <text x="38" y="372" fill="#8a8a8e">Resi</text>
+      <rect x="105" y="378" width="96" height="20" rx="3" fill="#ff3b30"/>
+      <text x="97" y="393" fill="#16211b" font-weight="600" text-anchor="end">−10,45 €</text>
+    </g>
+
+    <!-- Spielarten als Ring -->
+    <rect x="16" y="424" width="358" height="392" rx="20" fill="#ffffff"/>
+    <text x="38" y="458" fill="#16211b" font-size="17" font-weight="700">Spielarten</text>
+
+    <!-- Ring: Umfang bei r=74 rund 465; Segmente über stroke-dasharray -->
+    <g transform="rotate(-90 195 610)" fill="none" stroke-width="44">
+      <circle cx="195" cy="610" r="74" stroke="#2e9e5b" stroke-dasharray="232 233"/>
+      <circle cx="195" cy="610" r="74" stroke="#3b7dd8" stroke-dasharray="79 386" stroke-dashoffset="-232"/>
+      <circle cx="195" cy="610" r="74" stroke="#e08b2e" stroke-dasharray="65 400" stroke-dashoffset="-311"/>
+      <circle cx="195" cy="610" r="74" stroke="#a855c7" stroke-dasharray="51 414" stroke-dashoffset="-376"/>
+      <circle cx="195" cy="610" r="74" stroke="#d94a52" stroke-dasharray="38 427" stroke-dashoffset="-427"/>
+    </g>
+    <g font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+      <text x="264" y="596">50 %</text>
+      <text x="215" y="694">17 %</text>
+      <text x="139" y="661">14 %</text>
+      <text x="140" y="565">11 %</text>
+      <text x="185" y="528">8 %</text>
+    </g>
+
+    <g font-size="12.5" fill="#3c3c43">
+      <circle cx="52" cy="726" r="5" fill="#2e9e5b"/><text x="63" y="730">Sauspiel 107</text>
+      <circle cx="156" cy="726" r="5" fill="#3b7dd8"/><text x="167" y="730">Solo 36</text>
+      <circle cx="240" cy="726" r="5" fill="#e08b2e"/><text x="251" y="730">Ramsch 30</text>
+      <circle cx="94" cy="754" r="5" fill="#a855c7"/><text x="105" y="758">Hochzeit 24</text>
+      <circle cx="196" cy="754" r="5" fill="#d94a52"/><text x="207" y="758">Wenz 18</text>
+    </g>
+
+    <text x="195" y="800" fill="#b4b4b9" font-size="11" letter-spacing="1" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
   </g>
-
-  <!-- Statistik-Kacheln -->
-  <g font-family="-apple-system, system-ui, sans-serif">
-    <rect x="20" y="348" width="110" height="88" rx="18" fill="#e6efe9"/>
-    <text x="38" y="378" fill="#3d6b53" font-size="11">Spiele</text>
-    <text x="38" y="408" fill="#104f31" font-size="22" font-weight="700">18</text>
-
-    <rect x="140" y="348" width="110" height="88" rx="18" fill="#f7f0d8"/>
-    <text x="158" y="378" fill="#8a7220" font-size="11">Ramsch</text>
-    <text x="158" y="408" fill="#8a7220" font-size="22" font-weight="700">5</text>
-
-    <rect x="260" y="348" width="110" height="88" rx="18" fill="#f7f9f7"/>
-    <text x="278" y="378" fill="#5b6b62" font-size="11">Solo</text>
-    <text x="278" y="408" fill="#16211b" font-size="22" font-weight="700">3</text>
-  </g>
-
-  <!-- Spielverlauf-Liste -->
-  <text x="24" y="482" fill="#16211b" font-family="-apple-system, system-ui, sans-serif" font-size="17" font-weight="700">Letzte Spiele</text>
-  <g font-family="-apple-system, system-ui, sans-serif">
-    <rect x="20" y="498" width="350" height="60" rx="16" fill="#f7f9f7"/>
-    <text x="40" y="524" fill="#16211b" font-size="15" font-weight="600">Sauspiel · Sepp &amp; Resi</text>
-    <text x="40" y="544" fill="#5b6b62" font-size="12">3 Laufende · Schneider</text>
-    <text x="352" y="536" fill="#104f31" font-size="16" font-weight="700" text-anchor="end">+ 0,70 €</text>
-
-    <rect x="20" y="568" width="350" height="60" rx="16" fill="#f7f9f7"/>
-    <text x="40" y="594" fill="#16211b" font-size="15" font-weight="600">Ramsch</text>
-    <text x="40" y="614" fill="#5b6b62" font-size="12">Michl · Jungfrau Resi</text>
-    <text x="352" y="606" fill="#a2453a" font-size="16" font-weight="700" text-anchor="end">− 0,45 €</text>
-
-    <rect x="20" y="638" width="350" height="60" rx="16" fill="#f7f9f7"/>
-    <text x="40" y="664" fill="#16211b" font-size="15" font-weight="600">Sauspiel · Toni &amp; Michl</text>
-    <text x="40" y="684" fill="#5b6b62" font-size="12">Davongelaufen</text>
-    <text x="352" y="676" fill="#104f31" font-size="16" font-weight="700" text-anchor="end">+ 0,20 €</text>
-
-    <rect x="20" y="708" width="350" height="60" rx="16" fill="#f7f9f7"/>
-    <text x="40" y="734" fill="#16211b" font-size="15" font-weight="600">Solo · Sepp</text>
-    <text x="40" y="754" fill="#5b6b62" font-size="12">Schwarz · 4 Laufende</text>
-    <text x="352" y="746" fill="#104f31" font-size="16" font-weight="700" text-anchor="end">+ 2,10 €</text>
-  </g>
-
-  <text x="195" y="806" fill="#a8b5ad" font-family="-apple-system, system-ui, sans-serif" font-size="11" letter-spacing="1.2" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
 </svg>

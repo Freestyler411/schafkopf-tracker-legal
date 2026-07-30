@@ -1,79 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  PLATZHALTER-SCREENSHOT 2 – „Spiel eintragen“ (Single-Screen-Eingabe)
-  TODO: Durch echten App-Screenshot ersetzen. Wird auch im Hero verwendet.
-  Empfohlen: 1170 × 2532 px (iPhone), als WebP oder PNG, ohne Statusleiste.
+  PLATZHALTER-SCREENSHOT 2 – „Spiel eintragen“
+  Bildet den echten Eingabe-Bildschirm der App im Light Mode nach:
+  Spielart-Raster, Rufer-Auswahl, Spielerzeilen mit Legen-Marke.
+  Namen sind frei erfunden.
+
+  TODO: Durch echten Screenshot ersetzen (empfohlen 1170 × 2532 px, WebP
+  oder PNG, ohne Statusleiste). Wird auch im Hero verwendet – danach
+  assets/og/render-og.mjs erneut laufen lassen.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Platzhalter: Spiel-Eingabemaske der Schafkopf-App">
-  <rect width="390" height="844" fill="#ffffff"/>
-
-  <!-- Navigationsleiste -->
-  <rect width="390" height="96" fill="#f7f9f7"/>
-  <text x="24" y="60" fill="#104f31" font-family="-apple-system, system-ui, sans-serif" font-size="15">‹ Zurück</text>
-  <text x="195" y="60" fill="#16211b" font-family="-apple-system, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Spiel 18</text>
-  <text x="366" y="60" fill="#104f31" font-family="-apple-system, system-ui, sans-serif" font-size="15" font-weight="650" text-anchor="end">Sichern</text>
-  <rect y="95" width="390" height="1" fill="#dfe6e1"/>
-
+  <rect width="390" height="844" fill="#f2f2f7"/>
   <g font-family="-apple-system, system-ui, sans-serif">
-    <!-- Spielart -->
-    <text x="24" y="134" fill="#5b6b62" font-size="12" font-weight="700" letter-spacing="1.2">SPIELART</text>
-    <rect x="20" y="148" width="112" height="46" rx="14" fill="#104f31"/>
-    <text x="76" y="177" fill="#ffffff" font-size="15" font-weight="650" text-anchor="middle">Sauspiel</text>
-    <rect x="140" y="148" width="112" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-    <text x="196" y="177" fill="#16211b" font-size="15" text-anchor="middle">Solo</text>
-    <rect x="260" y="148" width="110" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-    <text x="315" y="177" fill="#16211b" font-size="15" text-anchor="middle">Ramsch</text>
 
-    <!-- Spieler / Partner -->
-    <text x="24" y="234" fill="#5b6b62" font-size="12" font-weight="700" letter-spacing="1.2">SPIELER</text>
-    <rect x="20" y="248" width="350" height="56" rx="16" fill="#f7f9f7" stroke="#dfe6e1"/>
-    <text x="40" y="282" fill="#16211b" font-size="16">Spieler</text>
-    <text x="352" y="282" fill="#104f31" font-size="16" font-weight="650" text-anchor="end">Sepp ›</text>
+    <!-- Kopfzeile -->
+    <rect x="16" y="18" width="106" height="40" rx="20" fill="#ffffff"/>
+    <text x="69" y="44" fill="#1a9a54" font-size="16" text-anchor="middle">Abbrechen</text>
+    <rect x="152" y="20" width="86" height="36" rx="18" fill="#e6e6eb"/>
+    <text x="195" y="44" fill="#6b6b70" font-size="15" text-anchor="middle">Spiel 1</text>
 
-    <rect x="20" y="312" width="350" height="56" rx="16" fill="#f7f9f7" stroke="#dfe6e1"/>
-    <text x="40" y="346" fill="#16211b" font-size="16">Mitspieler (Sau)</text>
-    <text x="352" y="346" fill="#104f31" font-size="16" font-weight="650" text-anchor="end">Resi ›</text>
+    <!-- Spielart-Raster -->
+    <text x="20" y="88" fill="#8a8a8e" font-size="11" font-weight="600" letter-spacing="1">SPIELART</text>
+    <g font-size="15" font-weight="600" text-anchor="middle">
+      <rect x="16" y="98" width="112" height="46" rx="14" fill="#e4f2ea" stroke="#1a9a54" stroke-width="1.6"/>
+      <text x="72" y="127" fill="#15803d">Sauspiel</text>
+      <rect x="139" y="98" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="195" y="127" fill="#16211b">Wenz</text>
+      <rect x="262" y="98" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="318" y="127" fill="#16211b">Farbwenz</text>
 
-    <!-- Davonlaufen -->
-    <rect x="20" y="376" width="350" height="56" rx="16" fill="#e6efe9"/>
-    <text x="40" y="410" fill="#104f31" font-size="16" font-weight="600">Davongelaufen</text>
-    <rect x="300" y="390" width="52" height="30" rx="15" fill="#104f31"/>
-    <circle cx="337" cy="405" r="12" fill="#ffffff"/>
+      <rect x="16" y="153" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="72" y="182" fill="#16211b">Geier</text>
+      <rect x="139" y="153" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="195" y="182" fill="#16211b">Farbgeier</text>
+      <rect x="262" y="153" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="318" y="182" fill="#16211b">Solo</text>
 
-    <!-- Ergebnis -->
-    <text x="24" y="470" fill="#5b6b62" font-size="12" font-weight="700" letter-spacing="1.2">ERGEBNIS</text>
-    <rect x="20" y="484" width="170" height="46" rx="14" fill="#104f31"/>
-    <text x="105" y="513" fill="#ffffff" font-size="15" font-weight="650" text-anchor="middle">Gewonnen</text>
-    <rect x="200" y="484" width="170" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-    <text x="285" y="513" fill="#16211b" font-size="15" text-anchor="middle">Verloren</text>
+      <rect x="16" y="208" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="72" y="237" fill="#16211b">Bettel</text>
+      <rect x="139" y="208" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="195" y="237" fill="#16211b">Ramsch</text>
+      <rect x="262" y="208" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="318" y="237" fill="#16211b">Hochzeit</text>
 
-    <!-- Zusatz -->
-    <rect x="20" y="546" width="170" height="46" rx="14" fill="#f7f0d8"/>
-    <text x="105" y="575" fill="#8a7220" font-size="15" font-weight="650" text-anchor="middle">Schneider</text>
-    <rect x="200" y="546" width="170" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-    <text x="285" y="575" fill="#16211b" font-size="15" text-anchor="middle">Schwarz</text>
-
-    <!-- Laufende -->
-    <text x="24" y="632" fill="#5b6b62" font-size="12" font-weight="700" letter-spacing="1.2">LAUFENDE</text>
-    <g>
-      <rect x="20" y="646" width="66" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-      <text x="53" y="675" fill="#16211b" font-size="15" text-anchor="middle">0</text>
-      <rect x="94" y="646" width="66" height="46" rx="14" fill="#104f31"/>
-      <text x="127" y="675" fill="#ffffff" font-size="15" font-weight="650" text-anchor="middle">3</text>
-      <rect x="168" y="646" width="66" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-      <text x="201" y="675" fill="#16211b" font-size="15" text-anchor="middle">4</text>
-      <rect x="242" y="646" width="66" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-      <text x="275" y="675" fill="#16211b" font-size="15" text-anchor="middle">5</text>
-      <rect x="316" y="646" width="54" height="46" rx="14" fill="#f7f9f7" stroke="#dfe6e1"/>
-      <text x="343" y="675" fill="#5b6b62" font-size="15" text-anchor="middle">+</text>
+      <rect x="16" y="263" width="112" height="46" rx="14" fill="#ffffff"/>
+      <text x="72" y="292" fill="#16211b">Strafe</text>
     </g>
 
-    <!-- Live-Betrag -->
-    <rect x="20" y="712" width="350" height="76" rx="20" fill="#104f31"/>
-    <text x="44" y="744" fill="#b9cfc2" font-size="13">Betrag je Verlierer</text>
-    <text x="44" y="772" fill="#ffffff" font-size="24" font-weight="700">0,35 €</text>
-    <text x="348" y="762" fill="#ceab33" font-size="15" font-weight="650" text-anchor="end">Sichern ›</text>
-  </g>
+    <!-- Rufer -->
+    <text x="20" y="341" fill="#8a8a8e" font-size="11" font-weight="600" letter-spacing="1">WER HAT GERUFEN?</text>
+    <rect x="16" y="351" width="358" height="104" rx="18" fill="#e4f2ea" stroke="#bcdccb"/>
+    <g text-anchor="middle">
+      <rect x="26" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
+      <circle cx="66" cy="392" r="19" fill="#34c759"/>
+      <text x="66" y="399" fill="#ffffff" font-size="17" font-weight="700">S</text>
+      <text x="66" y="431" fill="#16211b" font-size="14" font-weight="600">Sepp</text>
 
-  <text x="195" y="822" fill="#a8b5ad" font-family="-apple-system, system-ui, sans-serif" font-size="11" letter-spacing="1.2" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
+      <rect x="114" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
+      <circle cx="154" cy="392" r="19" fill="#14b8a6"/>
+      <text x="154" y="399" fill="#ffffff" font-size="17" font-weight="700">V</text>
+      <text x="154" y="431" fill="#16211b" font-size="14" font-weight="600">Vroni</text>
+
+      <rect x="202" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
+      <circle cx="242" cy="392" r="19" fill="#34c759"/>
+      <text x="242" y="399" fill="#ffffff" font-size="17" font-weight="700">T</text>
+      <text x="242" y="431" fill="#16211b" font-size="14" font-weight="600">Toni</text>
+
+      <rect x="290" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
+      <circle cx="330" cy="392" r="19" fill="#14b8a6"/>
+      <text x="330" y="399" fill="#ffffff" font-size="17" font-weight="700">M</text>
+      <text x="330" y="431" fill="#16211b" font-size="14" font-weight="600">Michl</text>
+    </g>
+
+    <!-- Spielerzeilen -->
+    <text x="20" y="487" fill="#8a8a8e" font-size="11" font-weight="600" letter-spacing="1">SPIELER</text>
+    <text x="370" y="487" fill="#8a8a8e" font-size="12" text-anchor="end">Geber: Sepp</text>
+
+    <g>
+      <rect x="16" y="497" width="358" height="66" rx="16" fill="#ffffff"/>
+      <circle cx="46" cy="530" r="17" fill="#9fe0b4"/>
+      <text x="46" y="536" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">S</text>
+      <text x="74" y="525" fill="#16211b" font-size="15" font-weight="600">Sepp</text>
+      <rect x="74" y="533" width="46" height="19" rx="9" fill="#eeeef2"/>
+      <text x="97" y="547" fill="#6b6b70" font-size="11" text-anchor="middle">Legen</text>
+      <rect x="212" y="512" width="150" height="38" rx="12" fill="#f2f2f7"/>
+      <text x="249" y="536" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
+      <text x="325" y="536" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+
+      <rect x="16" y="573" width="358" height="66" rx="16" fill="#ffffff"/>
+      <circle cx="46" cy="606" r="17" fill="#7fd9cc"/>
+      <text x="46" y="612" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">V</text>
+      <text x="74" y="601" fill="#16211b" font-size="15" font-weight="600">Vroni</text>
+      <rect x="74" y="609" width="46" height="19" rx="9" fill="#eeeef2"/>
+      <text x="97" y="623" fill="#6b6b70" font-size="11" text-anchor="middle">Legen</text>
+      <rect x="212" y="588" width="150" height="38" rx="12" fill="#f2f2f7"/>
+      <text x="249" y="612" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
+      <text x="325" y="612" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+
+      <rect x="16" y="649" width="358" height="66" rx="16" fill="#ffffff"/>
+      <circle cx="46" cy="682" r="17" fill="#9fe0b4"/>
+      <text x="46" y="688" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">T</text>
+      <text x="74" y="677" fill="#16211b" font-size="15" font-weight="600">Toni</text>
+      <rect x="74" y="685" width="46" height="19" rx="9" fill="#eeeef2"/>
+      <text x="97" y="699" fill="#6b6b70" font-size="11" text-anchor="middle">Legen</text>
+      <rect x="212" y="664" width="150" height="38" rx="12" fill="#f2f2f7"/>
+      <text x="249" y="688" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
+      <text x="325" y="688" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+    </g>
+
+    <!-- Fußbereich -->
+    <rect x="0" y="735" width="390" height="109" fill="#eceff1"/>
+    <text x="195" y="761" fill="#6b6b70" font-size="13" text-anchor="middle">Erst das Megafon beim Rufer antippen</text>
+    <rect x="16" y="774" width="358" height="52" rx="26" fill="#dcdce1"/>
+    <text x="195" y="806" fill="#8a8a8e" font-size="17" font-weight="600" text-anchor="middle">Spiel speichern</text>
+    <text x="195" y="838" fill="#b4b4b9" font-size="11" letter-spacing="1" text-anchor="middle">PLATZHALTER – ECHTER SCREENSHOT FOLGT</text>
+  </g>
 </svg>
