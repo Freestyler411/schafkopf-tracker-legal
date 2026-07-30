@@ -10,6 +10,9 @@ rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
 | `index.html` | Onepage-Landingpage (Hero, Nutzen, Features, Screenshots, Ablauf, CTA, Footer) |
 | `assets/css/landing.css` | Styles der Landingpage – kein Framework, kein JavaScript |
 | `assets/screenshots/*.svg` | **Platzhalter**-Screenshots, siehe „Noch offen“ |
+| `assets/og/og-image.jpg` | Social-Vorschaubild (1200 × 630) für Open Graph und Twitter Card |
+| `assets/og/og-vorlage.html` | Quelle des Vorschaubilds – wird nicht verlinkt |
+| `assets/og/render-og.mjs` | Rendert die Vorlage zu `og-image.jpg` |
 | `datenschutz.html`, `impressum.html`, `support.html` | Bestehende Seiten, unverändert |
 | `robots.txt`, `sitemap.xml` | Suchmaschinen-Basics |
 | `logo.svg`, `logo.png`, `apple-touch-icon.png` | App-Icon, Favicon, Social-Preview |
@@ -33,3 +36,23 @@ Der App-Store-Link ist eingetragen:
 python3 -m http.server 8000
 # http://localhost:8000
 ```
+
+Die Seite muss über den Server aufgerufen werden – CSS und Bilder sind mit
+absoluten Pfaden eingebunden und laden per `file://` nicht.
+
+## Social-Vorschaubild neu erzeugen
+
+Nötig, wenn sich Claim, Logo oder Screenshot ändern:
+
+```sh
+npm install playwright        # einmalig
+pip install Pillow            # einmalig
+python3 -m http.server 8000   # in einem zweiten Terminal
+node assets/og/render-og.mjs
+```
+
+Das Skript rendert `assets/og/og-vorlage.html` mit doppelter Pixeldichte,
+rechnet auf exakt 1200 × 630 px herunter und speichert als JPEG (~100 KB).
+Nach einer Änderung des Bildes den Cache der Plattformen erneuern lassen –
+etwa über den [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+oder den [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/).

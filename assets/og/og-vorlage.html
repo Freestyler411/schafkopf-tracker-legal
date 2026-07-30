@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+  VORLAGE für das Social-Vorschaubild (Open Graph / Twitter Card).
+
+  Diese Datei wird NICHT verlinkt und nicht ausgeliefert – sie dient nur als
+  Quelle, aus der assets/og/og-image.png gerendert wird. So lässt sich das
+  Vorschaubild jederzeit neu erzeugen, etwa wenn echte Screenshots vorliegen
+  oder sich der Claim ändert.
+
+  Neu rendern (im Repo-Wurzelverzeichnis):
+
+    python3 -m http.server 8000
+    node assets/og/render-og.mjs
+
+  Ergebnis: assets/og/og-image.png im Format 1200 × 630 px.
+
+  Achtung: Es werden bewusst nur systemweit vorhandene Schriften verwendet,
+  damit das Rendering ohne Netzwerkzugriff reproduzierbar bleibt.
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Open-Graph-Vorlage – Schafkopf Tracker</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+
+  body {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    padding: 0 64px;
+    font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(70% 120% at 88% 18%, rgba(206, 171, 51, .34) 0%, rgba(206, 171, 51, 0) 62%),
+      radial-gradient(80% 110% at 6% 96%, rgba(206, 171, 51, .12) 0%, rgba(206, 171, 51, 0) 55%),
+      linear-gradient(145deg, #15603b 0%, #0a3620 100%);
+    background-color: #104f31;
+    position: relative;
+  }
+
+  /* Dezente Goldkante oben – greift die Akzentfarbe des App-Icons auf,
+     ohne ins Folkloristische zu kippen. */
+  .rauten {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 7px;
+    background: #ceab33;
+  }
+
+  .links {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .marke {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 34px;
+  }
+
+  .marke img {
+    width: 76px;
+    height: 76px;
+    border-radius: 20%;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  }
+
+  .marke span {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+  }
+
+  h1 {
+    font-size: 58px;
+    line-height: 1.13;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    margin-bottom: 24px;
+  }
+
+  h1 em {
+    display: block;
+    font-style: normal;
+    color: #ceab33;
+  }
+
+  p.unter {
+    font-size: 25px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, .84);
+    max-width: 30ch;
+    margin-bottom: 36px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 999px;
+    background: #ceab33;
+    color: #10351f;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: .2px;
+  }
+
+  /* Telefon rechts: oben vollständig sichtbar, unten bewusst über die
+     Bildkante hinauslaufend – so wirkt der Anschnitt gewollt. */
+  .rechts {
+    flex: 0 0 auto;
+    width: 300px;
+    align-self: flex-start;
+    margin-top: 54px;
+    transform: rotate(3deg);
+  }
+
+  .phone {
+    padding: 11px;
+    background: linear-gradient(160deg, #23312a, #0c1510);
+    border-radius: 46px;
+    box-shadow: 0 34px 70px rgba(0, 0, 0, .42);
+  }
+
+  .phone img {
+    display: block;
+    width: 100%;
+    height: 620px;         /* läuft unten aus dem Bild – Platzhalter-Hinweis
+                              im SVG wird dadurch mit abgeschnitten */
+    object-fit: cover;
+    object-position: top;
+    border-radius: 35px;
+    background: #fff;
+  }
+</style>
+</head>
+<body>
+  <div class="rauten"></div>
+
+  <div class="links">
+    <div class="marke">
+      <img src="/logo.svg" alt="">
+      <span>Schafkopf Tracker</span>
+    </div>
+
+    <h1>Schafkopf Punkte&nbsp;zählen<em>ohne Zettel, ohne Streit</em></h1>
+
+    <p class="unter">
+      Sauspiel, Davonlaufen und eure eigenen Ramsch-Regeln – die App rechnet mit.
+    </p>
+
+    <span class="badge">Jetzt im App&nbsp;Store</span>
+  </div>
+
+  <!-- TODO: Nach dem Austausch der Platzhalter hier den echten Screenshot
+       eintragen und das Bild neu rendern (siehe Kommentar oben). -->
+  <div class="rechts">
+    <div class="phone">
+      <img src="/assets/screenshots/platzhalter-spieleingabe.svg" alt="">
+    </div>
+  </div>
+</body>
+</html>

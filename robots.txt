@@ -4,4 +4,7 @@
 User-agent: *
 Allow: /
 
+# Reine Render-Vorlage für das Social-Vorschaubild, keine eigenständige Seite
+Disallow: /assets/og/og-vorlage.html
+
 Sitemap: https://schafkopf-tracker.de/sitemap.xml
