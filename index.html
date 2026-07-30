@@ -7,7 +7,7 @@
   <!-- ===== SEO: Titel & Description (Haupt-Keyword vorne) ================= -->
   <title>Schafkopf App zum Punkte zählen &amp; abrechnen – Schafkopf Tracker</title>
   <meta name="description" content="Schafkopf App für 3 bis 8 Spieler: Punkte zählen und automatisch abrechnen – ohne Konto nutzbar, mit Konto synchron auf allen Handys der Runde. Schafkopf Tracker fürs iPhone, modern gestaltet statt Zahlenkolonnen.">
-  <meta name="keywords" content="Schafkopf App, Schafkopf Punkte zählen, Schafkopf Tracker, Schafkopf abrechnen, Sauspiel App, Ramsch Regeln App, Schafkopf Abrechnung, Stammtisch App, Schafkopf App mehrere Spieler">
+  <meta name="keywords" content="Schafkopf App, Schafkopf Punkte zählen, Schafkopf Tracker, Schafkopf abrechnen, Sauspiel App, Ramsch Regeln App, Schafkopf Abrechnung, Stammtisch App, Schafkopf App mehrere Spieler, Wenz Geier Bettel abrechnen">
   <meta name="author" content="Adrian Pomayr">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#104f31">
@@ -54,7 +54,7 @@
         "@id": "https://schafkopf-tracker.de/#app",
         "name": "Schafkopf Tracker",
         "alternateName": "Schafkopf App zum Punkte zählen",
-        "description": "Schafkopf App für Runden von 3 bis 8 Spielern: Spiele erfassen, Punkte zählen und automatisch abrechnen. Die App lässt sich ohne Konto nutzen; wer ein Konto anlegt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät synchronisiert. Unterstützt Sauspiel mit Davonlaufen, Solo, Wenz, Hochzeit sowie frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus. Aus den erfassten Spielen entstehen automatisch Statistiken für den Stammtisch und für jeden Spieler.",
+        "description": "Schafkopf App für Runden von 3 bis 8 Spielern: Spiele erfassen, Punkte zählen und automatisch abrechnen. Die App lässt sich ohne Konto nutzen; wer ein Konto anlegt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät synchronisiert. Unterstützt Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo, Bettel, Hochzeit und Strafen sowie frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus. Aus den erfassten Spielen entstehen automatisch Statistiken für den Stammtisch und für jeden Spieler.",
         "applicationCategory": "GameApplication",
         "applicationSubCategory": "Punkte- und Abrechnungs-App für Schafkopf",
         "operatingSystem": "iOS",
@@ -73,13 +73,13 @@
           "Automatischer Sync: jeder Spieler mit eigenem Konto sieht jedes eingetragene Spiel sofort auf dem eigenen Gerät",
           "Ohne Konto nutzbar – ein Konto wird ausschließlich für die Synchronisierung benötigt",
           "Moderne, in Sekunden bedienbare Oberfläche – ein Bildschirm, kein Tab-Wechsel",
-          "Alle gängigen Spielarten: Sauspiel mit Davonlaufen, Solo, Wenz, Hochzeit und Ramsch",
+          "Alle gängigen Spielarten: Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo, Bettel, Ramsch und Hochzeit – dazu Strafen",
+          "Helle und dunkle Oberfläche (Dark Mode)",
           "Statistiken am Stammtisch: Bilanz, Ø pro Spiel, Siegquote, Verteilung der Spielarten, Ansage- und Solo-Quoten, Direktvergleich zwischen Spielern, Team-Bilanzen, Rekorde und Marotten",
           "Statistiken je Spieler: Siegquote je Spielart, Solo-Farben, Ø-Gewinn pro Spiel, Winrate, Solo-Wahrscheinlichkeit, Partner-Bilanz, Rekorde und Sonderfälle",
           "Stammtisch-Verwaltung ohne Begrenzung der Spiele je Treffen",
           "Spiele erfassen, abrechnen und synchronisieren dauerhaft kostenlos, mit einem Stammtisch und Statistiken der letzten 30 Tage",
           "Premium für einmalig 2,99 Euro ohne Abo: volle Statistik-Historie, alle Auswertungen, Spielerprofile und unbegrenzt viele Stammtische",
-          "Sauspiel inklusive Davonlaufen",
           "Frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus"
         ],
         "offers": [
@@ -285,8 +285,8 @@
           <h3>Moderne Bedienung</h3>
           <p>
             Kein Menü-Labyrinth aus den Nullerjahren: ein einziger scrollbarer
-            Bildschirm für Spielart, Spieler und Ergebnis – Sauspiel, Solo,
-            Wenz, Hochzeit und Ramsch inklusive.
+            Bildschirm für Spielart, Spieler und Ergebnis – auf Wunsch im
+            Dark Mode.
           </p>
         </article>
 
@@ -306,6 +306,23 @@
             <a href="#statistiken">Alle Statistiken ansehen</a>
           </p>
         </article>
+      </div>
+
+      <!-- Entspricht der Spielart-Auswahl im Eingabe-Bildschirm der App -->
+      <div class="spielarten">
+        <p>Diese Spielarten rechnet die App ab</p>
+        <ul>
+          <li>Sauspiel</li>
+          <li>Wenz</li>
+          <li>Farbwenz</li>
+          <li>Geier</li>
+          <li>Farbgeier</li>
+          <li>Solo</li>
+          <li>Bettel</li>
+          <li>Ramsch</li>
+          <li>Hochzeit</li>
+          <li class="zusatz">dazu Strafen</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -452,7 +469,7 @@
         <li class="schritt">
           <h3>Spiel eintragen</h3>
           <p>
-            Nach jeder Runde: Spielart antippen, Spieler und Ergebnis wählen,
+            Nach jeder Runde: eine der neun Spielarten antippen, Spieler und Ergebnis wählen,
             fertig. Alles auf einem Bildschirm, auch mit der Halben in der
             anderen Hand.
           </p>
