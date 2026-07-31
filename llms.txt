@@ -1,0 +1,68 @@
+# Schafkopf Tracker
+
+> iOS-App, mit der bayerische Stammtische ihre Schafkopf-Runden mitschreiben
+> und abrechnen. Für Runden von 3 bis 8 Spielern, mit neun Spielarten,
+> automatischer Synchronisierung zwischen den Mitspielern und ausführlichen
+> Statistiken. Arbeitet vollständig offline.
+
+Anbieter: Adrian Pomayr, Nürnberg · Website: https://schafkopf-tracker.de/
+App Store: https://apps.apple.com/de/app/schafkopf-tracker/id6790808695
+Voraussetzung: iPhone mit iOS 26 oder neuer · Sprache: Deutsch
+
+## Kurzbeschreibung
+
+Schafkopf ist ein bayerisches Kartenspiel, bei dem üblicherweise um kleine
+Geldbeträge gespielt wird. Bislang schreiben die Runden ihre Ergebnisse auf
+Zettel oder in Tabellen und rechnen am Ende des Abends von Hand ab. Schafkopf
+Tracker übernimmt beides: Ein Spieler trägt jedes Spiel auf einem einzigen
+Bildschirm ein, die App verteilt die Beträge und führt den Punktestand.
+
+## Was die App von anderen Schafkopf-Apps unterscheidet
+
+- **3 bis 8 Spieler.** Viele andere Apps setzen mindestens vier Spieler voraus.
+  Hier lassen sich auch Dreierrunden abrechnen.
+- **Automatische Synchronisierung.** Einer trägt ein, alle Mitspieler mit
+  eigenem Konto sehen den Stand sofort auf dem eigenen Gerät. Niemand tippt
+  doppelt.
+- **Offline-First.** Erfassen und Abrechnen funktioniert ohne Internet;
+  synchronisiert wird automatisch, sobald wieder eine Verbindung besteht.
+- **Moderne Oberfläche** mit heller und dunkler Darstellung, ein scrollbarer
+  Bildschirm statt verschachtelter Menüs.
+
+## Unterstützte Spielarten
+
+Sauspiel (inklusive Davonlaufen), Wenz, Farbwenz, Geier, Farbgeier, Solo,
+Bettel, Ramsch und Hochzeit. Zusätzlich lassen sich Strafen eintragen. Die
+Ramsch-Regeln sind pro Stammtisch frei einstellbar: Grundbetrag, Schneider-
+und Schwarz-Bonus.
+
+## Statistiken
+
+Auf Stammtisch-Ebene: Bilanz, Durchschnitt pro Spiel, Siegquote, Verteilung
+der Spielarten, Ansage- und Solo-Quoten, Direktvergleich zwischen Spielern,
+Team-Bilanzen, Rekorde (teuerstes Spiel, größter Gewinn und Verlust, bester
+Abend, längste Serien, meiste Laufende, längste Abende) sowie Auswertungen zu
+Legen und Ramsch.
+
+Je Spieler: Siegquote nach Spielart, Solo-Farben, Durchschnittsgewinn pro
+Spiel, Winrate, Solo-Wahrscheinlichkeit, Bilanz mit einzelnen Partnern,
+persönliche Rekorde, Sonderfälle sowie die Verteilung der eigenen Spielarten.
+
+## Preise
+
+- **Kostenlos, dauerhaft:** Spiele erfassen, abrechnen und synchronisieren,
+  ein Stammtisch, Statistiken der letzten 30 Tage. Kein Konto erforderlich.
+- **Premium, einmalig 2,99 € inkl. MwSt., kein Abo:** vollständige
+  Statistik-Historie über beliebige Zeiträume, alle Auswertungen,
+  Spielerprofile in voller Tiefe, unbegrenzt viele Stammtische.
+
+## Seiten
+
+- [Startseite](https://schafkopf-tracker.de/): Funktionen, Statistiken, Preise
+  und häufige Fragen
+- [Support](https://schafkopf-tracker.de/support.html): Kontakt bei Fragen und
+  Problemen
+- [Datenschutzerklärung](https://schafkopf-tracker.de/datenschutz.html)
+- [Impressum](https://schafkopf-tracker.de/impressum.html)
+
+Kontakt: support@schafkopf-tracker.de

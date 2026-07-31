@@ -15,7 +15,8 @@ rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
 | `assets/og/og-vorlage.html` | Quelle des Vorschaubilds – wird nicht verlinkt |
 | `assets/og/render-og.mjs` | Rendert die Vorlage zu `og-image.jpg` |
 | `datenschutz.html`, `impressum.html`, `support.html` | Bestehende Seiten, unverändert |
-| `robots.txt`, `sitemap.xml` | Suchmaschinen-Basics |
+| `robots.txt`, `sitemap.xml` | Suchmaschinen-Basics, KI-Crawler ausdrücklich erlaubt |
+| `llms.txt` | Kurzfassung der Seite in Markdown für Sprachmodelle |
 | `logo.svg`, `logo.png`, `apple-touch-icon.png` | App-Icon, Favicon, Social-Preview |
 
 App-Store-Link: <https://apps.apple.com/de/app/schafkopf-tracker/id6790808695>
@@ -24,6 +25,11 @@ Inhalte, die bei Änderungen an der App mitgepflegt werden müssen: die
 Spielarten-Zeile und die Statistik-Sektion in `index.html`, der Abschnitt
 „Kostenlos & Premium“ samt Preis (Karten-Badge, Einleitungstext und `offers`
 im JSON-LD) sowie die drei Screenshots.
+
+Die häufigen Fragen stehen doppelt: als `<details>` im Markup und als
+`FAQPage` im JSON-LD. Beides muss übereinstimmen, sonst wertet Google die
+strukturierten Daten ab. Ebenfalls mitzuführen bei inhaltlichen Änderungen:
+`llms.txt` und `dateModified` im `WebPage`-Knoten.
 
 ## Lokale Vorschau
 

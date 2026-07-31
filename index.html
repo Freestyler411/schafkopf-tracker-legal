@@ -50,10 +50,10 @@
         "@id": "https://schafkopf-tracker.de/#app",
         "name": "Schafkopf Tracker",
         "alternateName": "Schafkopf App zum Punkte zählen",
-        "description": "Schafkopf App für Runden von 3 bis 8 Spielern: Spiele erfassen, Punkte zählen und automatisch abrechnen. Die App lässt sich ohne Konto nutzen; wer ein Konto anlegt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät synchronisiert. Unterstützt Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo, Bettel, Hochzeit und Strafen sowie frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus. Aus den erfassten Spielen entstehen automatisch Statistiken für den Stammtisch und für jeden Spieler.",
+        "description": "Schafkopf App für Runden von 3 bis 8 Spielern: Spiele erfassen, Punkte zählen und automatisch abrechnen. Die App lässt sich ohne Konto nutzen; wer ein Konto anlegt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät synchronisiert. Unterstützt Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo, Bettel, Hochzeit und Strafen sowie frei konfigurierbare Ramsch-Regeln mit Grundbetrag, Schneider- und Schwarz-Bonus. Aus den erfassten Spielen entstehen automatisch Statistiken für den Stammtisch und für jeden Spieler. Die App arbeitet vollständig offline; synchronisiert wird automatisch, sobald wieder eine Verbindung besteht.",
         "applicationCategory": "GameApplication",
         "applicationSubCategory": "Punkte- und Abrechnungs-App für Schafkopf",
-        "operatingSystem": "iOS",
+        "operatingSystem": "iOS 26.0 oder neuer",
         "inLanguage": "de-DE",
         "url": "https://schafkopf-tracker.de/",
         "installUrl": "https://apps.apple.com/de/app/schafkopf-tracker/id6790808695",
@@ -68,6 +68,7 @@
           "Runden von 3 bis 8 Spielern – auch Dreierrunden werden abgerechnet",
           "Automatischer Sync: jeder Spieler mit eigenem Konto sieht jedes eingetragene Spiel sofort auf dem eigenen Gerät",
           "Ohne Konto nutzbar – ein Konto wird ausschließlich für die Synchronisierung benötigt",
+          "Offline-First: Spiele lassen sich ohne Internetverbindung erfassen und abrechnen; die Synchronisierung erfolgt automatisch, sobald wieder eine Verbindung besteht",
           "Moderne, in Sekunden bedienbare Oberfläche – ein Bildschirm, kein Tab-Wechsel",
           "Alle gängigen Spielarten: Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo, Bettel, Ramsch und Hochzeit – dazu Strafen",
           "Helle und dunkle Oberfläche (Dark Mode)",
@@ -101,7 +102,13 @@
           "@type": "Person",
           "name": "Adrian Pomayr"
         },
-        "publisher": { "@id": "https://schafkopf-tracker.de/#publisher" }
+        "publisher": {
+          "@id": "https://schafkopf-tracker.de/#publisher"
+        },
+        "datePublished": "2026-07-16",
+        "sameAs": [
+          "https://apps.apple.com/de/app/schafkopf-tracker/id6790808695"
+        ]
       },
       {
         "@type": "Organization",
@@ -117,8 +124,103 @@
         "url": "https://schafkopf-tracker.de/",
         "name": "Schafkopf Tracker",
         "inLanguage": "de-DE",
-        "publisher": { "@id": "https://schafkopf-tracker.de/#publisher" },
-        "about": { "@id": "https://schafkopf-tracker.de/#app" }
+        "publisher": {
+          "@id": "https://schafkopf-tracker.de/#publisher"
+        },
+        "about": {
+          "@id": "https://schafkopf-tracker.de/#app"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://schafkopf-tracker.de/#webpage",
+        "url": "https://schafkopf-tracker.de/",
+        "name": "Schafkopf App zum Punkte zählen und abrechnen – Schafkopf Tracker",
+        "description": "Schafkopf Tracker ist eine App für iPhone, mit der bayerische Stammtische ihre Schafkopf-Runden mitschreiben und abrechnen. Sie eignet sich für Runden von drei bis acht Spielern, rechnet neun Spielarten samt Strafen ab und arbeitet vollständig offline.",
+        "inLanguage": "de-DE",
+        "isPartOf": {
+          "@id": "https://schafkopf-tracker.de/#website"
+        },
+        "about": {
+          "@id": "https://schafkopf-tracker.de/#app"
+        },
+        "primaryImageOfPage": "https://schafkopf-tracker.de/assets/og/og-image.jpg",
+        "datePublished": "2026-07-30",
+        "dateModified": "2026-07-31"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://schafkopf-tracker.de/#faq",
+        "isPartOf": {
+          "@id": "https://schafkopf-tracker.de/#webpage"
+        },
+        "inLanguage": "de-DE",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Für wie viele Spieler ist Schafkopf Tracker geeignet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Für Runden von drei bis acht Spielern. Viele andere Schafkopf-Apps setzen mindestens vier Spieler voraus – hier lassen sich auch Dreierrunden abrechnen, und größere Runden mit wechselnden Aussetzern sind kein Sonderfall."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Spielarten rechnet die App ab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo, Bettel, Ramsch und Hochzeit. Zusätzlich lassen sich Strafen eintragen. Die Ramsch-Regeln sind pro Stammtisch frei einstellbar – Grundbetrag, Schneider- und Schwarz-Bonus."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was kostet Schafkopf Tracker?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Der Download ist kostenlos, und Spiele erfassen, abrechnen und synchronisieren bleibt dauerhaft gratis. Die kostenlose Version umfasst einen Stammtisch und Statistiken der letzten 30 Tage. Premium kostet einmalig 2,99 Euro inklusive Mehrwertsteuer, ist kein Abo und schaltet die vollständige Statistik-Historie, alle Auswertungen, die Spielerprofile in voller Tiefe sowie beliebig viele Stammtische frei."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Funktioniert die App ohne Internet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Schafkopf Tracker ist von Grund auf für den Betrieb ohne Verbindung gebaut: Alle Spiele werden auf dem Gerät gespeichert und sofort abgerechnet, auch ohne Empfang. Sobald wieder eine Verbindung besteht, gleicht die App die Daten automatisch mit den Mitspielern ab."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Brauche ich ein Konto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nein. Ohne Konto lässt sich die App vollständig zum Mitschreiben und Abrechnen nutzen. Ein Konto wird ausschließlich für die Synchronisierung benötigt: Wer eines anlegt und dem Stammtisch beitritt, bekommt jedes eingetragene Spiel automatisch auf das eigene Gerät."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie funktioniert die Synchronisierung am Tisch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Einer aus der Runde trägt das Spiel ein. Alle Mitspieler, die ein eigenes Konto haben und dem Stammtisch beigetreten sind, sehen den aktualisierten Punktestand danach auf ihrem eigenen Handy, ohne selbst etwas zu tippen. Wer kein Konto hat, spielt einfach mit und steht trotzdem in der Abrechnung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche iOS-Version wird benötigt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Schafkopf Tracker läuft auf iPhone ab iOS 26. Ältere iOS-Versionen werden nicht unterstützt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Statistiken wertet die App aus?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Auf Stammtisch-Ebene: Bilanz, Durchschnitt pro Spiel, Siegquote, die Verteilung der Spielarten, Ansage- und Solo-Quoten, ein Direktvergleich zwischen einzelnen Spielern, Team-Bilanzen, Rekorde wie das teuerste Spiel oder den besten Abend sowie Auswertungen zu Legen und Ramsch. Je Spieler: Siegquote nach Spielart, bevorzugte Solo-Farben, Durchschnittsgewinn pro Spiel, Winrate und Solo-Wahrscheinlichkeit im Zeitverlauf, die Bilanz mit einzelnen Partnern, persönliche Rekorde und Sonderfälle."
+            }
+          }
+        ]
       }
     ]
   }
@@ -266,8 +368,8 @@
           <h3>Alle am Tisch synchron</h3>
           <p>
             Einer trägt das Spiel ein, jeder Mitspieler mit eigenem Konto bekommt
-            es automatisch aufs Gerät. Ein Konto braucht nur, wer den Sync will –
-            mitschreiben kannst du auch ohne.
+            es automatisch aufs Gerät. Im Wirtshauskeller ohne Empfang läuft alles
+            weiter – synchronisiert wird, sobald wieder Verbindung besteht.
           </p>
         </article>
 
@@ -403,14 +505,20 @@
             </svg>
             Am Stammtisch
           </h3>
-          <ul class="stat-liste">
-            <li><b>Überblick</b><span>Bilanz, Ø pro Spiel und Siegquote je Spieler – dazu die Verteilung aller Spielarten als Ringdiagramm</span></li>
-            <li><b>Spielweise</b><span>Anteil der eigenen Ansagen, Soli und Wenzen – und wie viele davon gewonnen wurden</span></li>
-            <li><b>Direktvergleich</b><span>Wer spielt öfter Solo, bleibt öfter schneiderfrei oder legt häufiger – Spieler gegen Spieler</span></li>
-            <li><b>Teams</b><span>Gemeinsame Spiele aus Sicht des Rufer-Teams, gewonnen und verloren</span></li>
-            <li><b>Rekorde</b><span>Teuerstes Spiel, größter Gewinn und Verlust, bester Abend, längste Serien, meiste Laufende und längste Abende</span></li>
-            <li><b>Marotten</b><span>Fleißigste Leger und die Ramsch-Bilanz aus Verloren, Durchmarsch und Jungfrau</span></li>
-          </ul>
+          <dl class="stat-liste">
+            <dt>Überblick</dt>
+            <dd>Bilanz, Ø pro Spiel und Siegquote je Spieler – dazu die Verteilung aller Spielarten als Ringdiagramm</dd>
+            <dt>Spielweise</dt>
+            <dd>Anteil der eigenen Ansagen, Soli und Wenzen – und wie viele davon gewonnen wurden</dd>
+            <dt>Direktvergleich</dt>
+            <dd>Wer spielt öfter Solo, bleibt öfter schneiderfrei oder legt häufiger – Spieler gegen Spieler</dd>
+            <dt>Teams</dt>
+            <dd>Gemeinsame Spiele aus Sicht des Rufer-Teams, gewonnen und verloren</dd>
+            <dt>Rekorde</dt>
+            <dd>Teuerstes Spiel, größter Gewinn und Verlust, bester Abend, längste Serien, meiste Laufende und längste Abende</dd>
+            <dt>Marotten</dt>
+            <dd>Fleißigste Leger und die Ramsch-Bilanz aus Verloren, Durchmarsch und Jungfrau</dd>
+          </dl>
         </div>
 
         <div class="stat-gruppe">
@@ -421,18 +529,28 @@
             </svg>
             Für jeden Spieler
           </h3>
-          <ul class="stat-liste">
-            <li><b>Siegquote je Spielart</b><span>Gerufen, Solo und Wenz – gewertet werden nur eigene Ansagen</span></li>
-            <li><b>Solo-Farben</b><span>Welche Farbe du am liebsten spielst, als Ringdiagramm</span></li>
-            <li><b>Ø-Gewinn pro Spiel</b><span>Verlauf über die Spieltage, in Euro</span></li>
-            <li><b>Winrate</b><span>Wie sich deine Siegquote von Spieltag zu Spieltag entwickelt</span></li>
-            <li><b>Solo-Wahrscheinlichkeit</b><span>Wie oft du ein Solo wagst, im Verlauf</span></li>
-            <li><b>Partner</b><span>Gemeinsame Spiele im Rufer-Team, gewonnen und verloren</span></li>
-            <li><b>Rekorde</b><span>Dein bestes und dein schlechtestes Spiel</span></li>
-            <li><b>Sonderfälle</b><span>Gelegt, Ramsch verloren, Jungfrau und Gespritzt</span></li>
-            <li><b>Gewonnen &amp; verloren</b><span>Deine Bilanz über alle Spiele, inklusive der Runden, die du ausgesetzt hast</span></li>
-            <li><b>Spielarten</b><span>Welche Spielarten bei dir wie oft vorkommen, als Ringdiagramm</span></li>
-          </ul>
+          <dl class="stat-liste">
+            <dt>Siegquote je Spielart</dt>
+            <dd>Gerufen, Solo und Wenz – gewertet werden nur eigene Ansagen</dd>
+            <dt>Solo-Farben</dt>
+            <dd>Welche Farbe du am liebsten spielst, als Ringdiagramm</dd>
+            <dt>Ø-Gewinn pro Spiel</dt>
+            <dd>Verlauf über die Spieltage, in Euro</dd>
+            <dt>Winrate</dt>
+            <dd>Wie sich deine Siegquote von Spieltag zu Spieltag entwickelt</dd>
+            <dt>Solo-Wahrscheinlichkeit</dt>
+            <dd>Wie oft du ein Solo wagst, im Verlauf</dd>
+            <dt>Partner</dt>
+            <dd>Gemeinsame Spiele im Rufer-Team, gewonnen und verloren</dd>
+            <dt>Rekorde</dt>
+            <dd>Dein bestes und dein schlechtestes Spiel</dd>
+            <dt>Sonderfälle</dt>
+            <dd>Gelegt, Ramsch verloren, Jungfrau und Gespritzt</dd>
+            <dt>Gewonnen &amp; verloren</dt>
+            <dd>Deine Bilanz über alle Spiele, inklusive der Runden, die du ausgesetzt hast</dd>
+            <dt>Spielarten</dt>
+            <dd>Welche Spielarten bei dir wie oft vorkommen, als Ringdiagramm</dd>
+          </dl>
         </div>
       </div>
     </div>
@@ -523,7 +641,119 @@
   </section>
 
   <!-- ======================================================================
-       8. ABSCHLUSS-CTA
+       8. HÄUFIGE FRAGEN
+       Die Antworten sind zusätzlich als FAQPage im JSON-LD im <head>
+       hinterlegt. Ändert sich hier etwas, muss es dort mitgeführt werden.
+       =================================================================== -->
+  <section id="fragen">
+    <div class="wrap">
+      <div class="sektion-kopf">
+        <span class="eyebrow">Häufige Fragen</span>
+        <h2>Auf einen Blick</h2>
+        <p>
+          Schafkopf Tracker ist eine App für iPhone, mit der bayerische
+          Stammtische ihre Schafkopf-Runden mitschreiben und abrechnen. Sie
+          eignet sich für Runden von drei bis acht Spielern, rechnet neun
+          Spielarten samt Strafen ab und arbeitet vollständig offline. Das
+          Erfassen und Abrechnen ist dauerhaft kostenlos; Premium kostet
+          einmalig 2,99 Euro und ist kein Abonnement.
+        </p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Für wie viele Spieler ist Schafkopf Tracker geeignet?</summary>
+          <p>
+            Für Runden von drei bis acht Spielern. Viele andere Schafkopf-Apps
+            setzen mindestens vier Spieler voraus – hier lassen sich auch
+            Dreierrunden abrechnen, und größere Runden mit wechselnden
+            Aussetzern sind kein Sonderfall.
+          </p>
+        </details>
+
+        <details>
+          <summary>Welche Spielarten rechnet die App ab?</summary>
+          <p>
+            Sauspiel mit Davonlaufen, Wenz, Farbwenz, Geier, Farbgeier, Solo,
+            Bettel, Ramsch und Hochzeit. Zusätzlich lassen sich Strafen
+            eintragen. Die Ramsch-Regeln sind pro Stammtisch frei einstellbar –
+            Grundbetrag, Schneider- und Schwarz-Bonus.
+          </p>
+        </details>
+
+        <details>
+          <summary>Was kostet Schafkopf Tracker?</summary>
+          <p>
+            Der Download ist kostenlos, und Spiele erfassen, abrechnen und
+            synchronisieren bleibt dauerhaft gratis. Die kostenlose Version
+            umfasst einen Stammtisch und Statistiken der letzten 30 Tage.
+            Premium kostet einmalig 2,99 Euro inklusive Mehrwertsteuer, ist
+            kein Abo und schaltet die vollständige Statistik-Historie, alle
+            Auswertungen, die Spielerprofile in voller Tiefe sowie beliebig
+            viele Stammtische frei.
+          </p>
+        </details>
+
+        <details>
+          <summary>Funktioniert die App ohne Internet?</summary>
+          <p>
+            Ja. Schafkopf Tracker ist von Grund auf für den Betrieb ohne
+            Verbindung gebaut: Alle Spiele werden auf dem Gerät gespeichert und
+            sofort abgerechnet, auch ohne Empfang. Sobald wieder eine Verbindung
+            besteht, gleicht die App die Daten automatisch mit den Mitspielern
+            ab.
+          </p>
+        </details>
+
+        <details>
+          <summary>Brauche ich ein Konto?</summary>
+          <p>
+            Nein. Ohne Konto lässt sich die App vollständig zum Mitschreiben und
+            Abrechnen nutzen. Ein Konto wird ausschließlich für die
+            Synchronisierung benötigt: Wer eines anlegt und dem Stammtisch
+            beitritt, bekommt jedes eingetragene Spiel automatisch auf das
+            eigene Gerät.
+          </p>
+        </details>
+
+        <details>
+          <summary>Wie funktioniert die Synchronisierung am Tisch?</summary>
+          <p>
+            Einer aus der Runde trägt das Spiel ein. Alle Mitspieler, die ein
+            eigenes Konto haben und dem Stammtisch beigetreten sind, sehen den
+            aktualisierten Punktestand danach auf ihrem eigenen Handy, ohne
+            selbst etwas zu tippen. Wer kein Konto hat, spielt einfach mit und
+            steht trotzdem in der Abrechnung.
+          </p>
+        </details>
+
+        <details>
+          <summary>Welche iOS-Version wird benötigt?</summary>
+          <p>
+            Schafkopf Tracker läuft auf iPhone ab iOS 26. Ältere iOS-Versionen
+            werden nicht unterstützt.
+          </p>
+        </details>
+
+        <details>
+          <summary>Welche Statistiken wertet die App aus?</summary>
+          <p>
+            Auf Stammtisch-Ebene: Bilanz, Durchschnitt pro Spiel, Siegquote, die
+            Verteilung der Spielarten, Ansage- und Solo-Quoten, ein
+            Direktvergleich zwischen einzelnen Spielern, Team-Bilanzen, Rekorde
+            wie das teuerste Spiel oder den besten Abend sowie Auswertungen zu
+            Legen und Ramsch. Je Spieler: Siegquote nach Spielart, bevorzugte
+            Solo-Farben, Durchschnittsgewinn pro Spiel, Winrate und
+            Solo-Wahrscheinlichkeit im Zeitverlauf, die Bilanz mit einzelnen
+            Partnern, persönliche Rekorde und Sonderfälle.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       9. ABSCHLUSS-CTA
        =================================================================== -->
   <section id="launch">
     <div class="wrap">
@@ -556,7 +786,7 @@
 </main>
 
 <!-- ========================================================================
-     9. FOOTER
+     10. FOOTER
      ===================================================================== -->
 <footer class="footer">
   <div class="wrap footer-inner">
