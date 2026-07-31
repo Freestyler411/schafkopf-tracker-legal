@@ -1,7 +1,7 @@
 # Schafkopf Tracker
 
-> iOS-App, mit der bayerische Stammtische ihre Schafkopf-Runden mitschreiben
-> und abrechnen. Für Runden von 3 bis 8 Spielern, mit neun Spielarten,
+> iOS-App, mit der Stammtische und Spielrunden ihre Schafkopf-Partien
+> mitschreiben und abrechnen. Für Runden von 3 bis 8 Spielern, mit neun Spielarten,
 > automatischer Synchronisierung zwischen den Mitspielern und ausführlichen
 > Statistiken. Arbeitet vollständig offline.
 
@@ -11,7 +11,7 @@ Voraussetzung: iPhone mit iOS 26 oder neuer · Sprache: Deutsch
 
 ## Kurzbeschreibung
 
-Schafkopf ist ein bayerisches Kartenspiel, bei dem üblicherweise um kleine
+Schafkopf ist ein Kartenspiel, bei dem üblicherweise um kleine
 Geldbeträge gespielt wird. Bislang schreiben die Runden ihre Ergebnisse auf
 Zettel oder in Tabellen und rechnen am Ende des Abends von Hand ab. Schafkopf
 Tracker übernimmt beides: Ein Spieler trägt jedes Spiel auf einem einzigen
