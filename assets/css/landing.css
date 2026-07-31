@@ -147,21 +147,20 @@ section { padding-block: var(--abstand-sektion); }
 
 /* Offizielles App-Store-Abzeichen von Apple. Die Grafik darf nicht
    verändert werden – deshalb nur Größe und Hover, keine Filter oder
-   Rahmen. Apple verlangt ringsum Freiraum von mindestens 10 % der
-   Abzeichenhöhe; den liefert das Bild bereits mit. */
+   Rahmen. Die SVGs sind randlos, deshalb sorgt margin für den von Apple
+   geforderten Freiraum von mindestens 10 % der Abzeichenhöhe. */
 .store-badge {
   display: inline-block;
   line-height: 0;
-  border-radius: 12px;
+  margin: 6px;
+  border-radius: 8px;
   transition: transform .15s ease, opacity .15s ease;
 }
 
 .store-badge img {
   display: block;
-  width: 245px;
-  height: 82px;
-  max-width: 100%;
-  object-fit: contain;
+  width: auto;
+  height: 60px;
 }
 
 .store-badge:hover {

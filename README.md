@@ -10,6 +10,7 @@ rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
 | `index.html` | Onepage-Landingpage (Hero, Nutzen, Features, Screenshots, Ablauf, CTA, Footer) |
 | `assets/css/landing.css` | Styles der Landingpage – kein Framework, kein JavaScript |
 | `assets/screenshots/*.svg` | App-Ansichten der Screenshot-Sektion (Treffen, Spiel eintragen, Spielerprofil) |
+| `assets/badges/*.svg` | App-Store-Abzeichen von Apple, unverändert – dunkle Variante im Hero, helle im Abschluss-CTA |
 | `assets/og/og-image.jpg` | Social-Vorschaubild (1200 × 630) für Open Graph und Twitter Card |
 | `assets/og/og-vorlage.html` | Quelle des Vorschaubilds – wird nicht verlinkt |
 | `assets/og/render-og.mjs` | Rendert die Vorlage zu `og-image.jpg` |
