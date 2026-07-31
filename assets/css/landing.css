@@ -127,19 +127,6 @@ section { padding-block: var(--abstand-sektion); }
   transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
 }
 
-.btn-primaer {
-  background: var(--gruen);
-  color: #fff;
-  box-shadow: var(--schatten);
-}
-
-.btn-primaer:hover {
-  background: var(--gruen-dunkel);
-  color: #fff;
-  transform: translateY(-1px);
-  box-shadow: var(--schatten-hoch);
-}
-
 .btn-sekundaer {
   background: transparent;
   color: var(--gruen);
@@ -151,8 +138,6 @@ section { padding-block: var(--abstand-sektion); }
   background: var(--gruen-hell);
 }
 
-.btn svg { flex: none; }
-
 .btn-gruppe {
   display: flex;
   flex-wrap: wrap;
@@ -160,9 +145,32 @@ section { padding-block: var(--abstand-sektion); }
   align-items: center;
 }
 
-/* Hinweis unter den CTAs – „bald verfügbar“ */
-/* Kein Flex-Container: sonst würde der Fließtext in einzelne Flex-Items
-   zerlegt und bräche mitten im Wort um. */
+/* Offizielles App-Store-Abzeichen von Apple. Die Grafik darf nicht
+   verändert werden – deshalb nur Größe und Hover, keine Filter oder
+   Rahmen. Apple verlangt ringsum Freiraum von mindestens 10 % der
+   Abzeichenhöhe; den liefert das Bild bereits mit. */
+.store-badge {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 12px;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.store-badge img {
+  display: block;
+  width: 245px;
+  height: 82px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.store-badge:hover {
+  transform: translateY(-1px);
+  opacity: .88;
+}
+
+/* Hinweiszeile unter den CTAs. Kein Flex-Container: sonst würde der
+   Fließtext in einzelne Flex-Items zerlegt und bräche mitten im Wort um. */
 .cta-hinweis {
   margin-top: 1.1rem;
   font-size: .93rem;
@@ -561,13 +569,6 @@ section { padding-block: var(--abstand-sektion); }
   max-width: 46ch;
   margin-inline: auto;
 }
-
-.cta-block .btn-primaer {
-  background: #fff;
-  color: var(--gruen);
-}
-
-.cta-block .btn-primaer:hover { background: var(--gold-hell); color: var(--gruen-dunkel); }
 
 .cta-block .btn-gruppe { justify-content: center; }
 
