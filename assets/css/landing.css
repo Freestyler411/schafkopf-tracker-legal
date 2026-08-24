@@ -2,7 +2,8 @@
    Schafkopf Tracker – Landingpage
    Zurückhaltend und modern: dunkles Grün (#104f31) als Akzent, Gold (#ceab33)
    als Sekundärfarbe – beide aus dem App-Icon abgeleitet.
-   Mobile-first, keine externen Fonts/Skripte (Performance & Datenschutz).
+   Mobile-first, keine externen Fonts. Einziger externer Aufruf ist die
+   Reichweitenmessung, siehe Abschnitt 10 der Datenschutzerklärung.
    ========================================================================== */
 
 :root {
