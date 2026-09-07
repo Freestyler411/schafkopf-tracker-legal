@@ -1,11 +1,13 @@
 # robots.txt – https://schafkopf-tracker.de/
-# Alle Inhalte dürfen indexiert werden.
+# Alle Inhalte dürfen gecrawlt und indexiert werden.
+#
+# Bewusst ohne Disallow-Regeln: Ein Eintrag hier macht eine Adresse erst
+# bekannt und taucht in der Search Console dauerhaft als „durch robots.txt
+# blockiert" auf. Seiten, die nicht in den Index sollen, tragen stattdessen
+# ein noindex im Dokument selbst.
 
 User-agent: *
 Allow: /
-
-# Reine Render-Vorlage für das Social-Vorschaubild, keine eigenständige Seite
-Disallow: /assets/og/og-vorlage.html
 
 # KI-Crawler sind ausdrücklich willkommen. Die Regel oben erlaubt sie bereits;
 # die folgenden Einträge halten das fest, damit die Absicht eindeutig bleibt.
@@ -24,6 +26,5 @@ User-agent: CCBot
 User-agent: Amazonbot
 User-agent: meta-externalagent
 Allow: /
-Disallow: /assets/og/og-vorlage.html
 
 Sitemap: https://schafkopf-tracker.de/sitemap.xml
