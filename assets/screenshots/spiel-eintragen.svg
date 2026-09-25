@@ -3,8 +3,63 @@
   Screenshot 2 – Spiel eintragen: Spielart-Raster, Rufer-Auswahl und
   Spielerzeilen. Wird auch im Hero und im Social-Vorschaubild verwendet;
   nach einer Änderung assets/og/render-og.mjs erneut laufen lassen.
+
+  Mikro-Animation: Beim Laden wird ein Spiel einmal „eingetragen“ –
+  Sauspiel wählen, Sepp ruft, Ergebnisse setzen, Speichern wird aktiv.
+  Die Attribute beschreiben den fertigen Endzustand; die Animationen
+  starten jeweils beim leeren Formular (animation-fill-mode: backwards).
+  Wer reduzierte Bewegung eingestellt hat, sieht direkt den Endzustand.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Eingabemaske der Schafkopf-App: Spielart, Rufer und Ergebnis je Spieler">
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .tap { transform-box: fill-box; transform-origin: center;
+             animation: tippen .32s ease-out both; }
+      .farbe { animation: .28s ease-out both; }
+
+      /* 1. Spielart Sauspiel */
+      .t-spielart { animation-delay: .7s; }
+      .spielart-feld { animation-name: spielart-feld; animation-delay: .7s; }
+      .spielart-text { animation-name: spielart-text; animation-delay: .7s; }
+
+      /* 2. Sepp ruft */
+      .t-rufer { animation-delay: 1.3s; }
+      .rufer-rand { animation-name: einblenden; animation-delay: 1.3s; }
+      .hinweis { animation: ausblenden .3s ease-out 1.3s both; }
+
+      /* 3. Ergebnisse je Spieler */
+      .t-sepp  { animation-delay: 2s; }
+      .t-vroni { animation-delay: 2.45s; }
+      .t-toni  { animation-delay: 2.9s; }
+      .erg-sepp  { animation-name: einblenden; animation-delay: 2s; }
+      .erg-vroni { animation-name: einblenden; animation-delay: 2.45s; }
+      .erg-toni  { animation-name: einblenden; animation-delay: 2.9s; }
+      .ergtext-sepp  { animation-name: text-grau; animation-delay: 2s; }
+      .ergtext-vroni { animation-name: text-grau; animation-delay: 2.45s; }
+      .ergtext-toni  { animation-name: text-grau; animation-delay: 2.9s; }
+      .ava-sepp  { animation-name: ava-gruen; animation-delay: 2s; }
+      .ava-vroni { animation-name: ava-tuerkis; animation-delay: 2.45s; }
+      .ava-toni  { animation-name: ava-gruen; animation-delay: 2.9s; }
+
+      /* 4. Speichern wird aktiv */
+      .speichern-feld { animation-name: speichern-feld; animation-delay: 3.4s; animation-duration: .4s; }
+      .speichern-text { animation-name: text-grau; animation-delay: 3.4s; animation-duration: .4s; }
+    }
+
+    @keyframes tippen {
+      0%, 100% { transform: scale(1); }
+      40%      { transform: scale(.94); }
+    }
+    @keyframes einblenden  { from { opacity: 0; } }
+    @keyframes ausblenden  { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes spielart-feld { from { fill: #ffffff; stroke-opacity: 0; } }
+    @keyframes spielart-text { from { fill: #16211b; } }
+    @keyframes text-grau   { from { fill: #8a8a8e; } }
+    @keyframes ava-gruen   { from { fill: #9fe0b4; } }
+    @keyframes ava-tuerkis { from { fill: #7fd9cc; } }
+    @keyframes speichern-feld { from { fill: #dcdce1; } }
+  </style>
+
   <rect width="390" height="844" fill="#f2f2f7"/>
   <g font-family="-apple-system, system-ui, sans-serif">
 
@@ -17,8 +72,10 @@
     <!-- Spielart-Raster -->
     <text x="20" y="88" fill="#8a8a8e" font-size="11" font-weight="600" letter-spacing="1">SPIELART</text>
     <g font-size="15" font-weight="600" text-anchor="middle">
-      <rect x="16" y="98" width="112" height="46" rx="14" fill="#e4f2ea" stroke="#1a9a54" stroke-width="1.6"/>
-      <text x="72" y="127" fill="#15803d">Sauspiel</text>
+      <g class="tap t-spielart">
+        <rect class="farbe spielart-feld" x="16" y="98" width="112" height="46" rx="14" fill="#e4f2ea" stroke="#1a9a54" stroke-width="1.6"/>
+        <text class="farbe spielart-text" x="72" y="127" fill="#15803d">Sauspiel</text>
+      </g>
       <rect x="139" y="98" width="112" height="46" rx="14" fill="#ffffff"/>
       <text x="195" y="127" fill="#16211b">Wenz</text>
       <rect x="262" y="98" width="112" height="46" rx="14" fill="#ffffff"/>
@@ -46,10 +103,13 @@
     <text x="20" y="341" fill="#8a8a8e" font-size="11" font-weight="600" letter-spacing="1">WER HAT GERUFEN?</text>
     <rect x="16" y="351" width="358" height="104" rx="18" fill="#e4f2ea" stroke="#bcdccb"/>
     <g text-anchor="middle">
-      <rect x="26" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
-      <circle cx="66" cy="392" r="19" fill="#34c759"/>
-      <text x="66" y="399" fill="#ffffff" font-size="17" font-weight="700">S</text>
-      <text x="66" y="431" fill="#16211b" font-size="14" font-weight="600">Sepp</text>
+      <g class="tap t-rufer">
+        <rect x="26" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
+        <rect class="farbe rufer-rand" x="27" y="362" width="78" height="82" rx="13" fill="none" stroke="#1a9a54" stroke-width="2"/>
+        <circle cx="66" cy="392" r="19" fill="#34c759"/>
+        <text x="66" y="399" fill="#ffffff" font-size="17" font-weight="700">S</text>
+        <text x="66" y="431" fill="#16211b" font-size="14" font-weight="600">Sepp</text>
+      </g>
 
       <rect x="114" y="361" width="80" height="84" rx="14" fill="#ffffff"/>
       <circle cx="154" cy="392" r="19" fill="#14b8a6"/>
@@ -73,40 +133,49 @@
 
     <g>
       <rect x="16" y="497" width="358" height="66" rx="16" fill="#ffffff"/>
-      <circle cx="46" cy="530" r="17" fill="#9fe0b4"/>
+      <circle class="farbe ava-sepp" cx="46" cy="530" r="17" fill="#34c759"/>
       <text x="46" y="536" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">S</text>
       <text x="74" y="525" fill="#16211b" font-size="15" font-weight="600">Sepp</text>
       <rect x="74" y="533" width="46" height="19" rx="9" fill="#eeeef2"/>
       <text x="97" y="547" fill="#6b6b70" font-size="11" text-anchor="middle">Legen</text>
       <rect x="212" y="512" width="150" height="38" rx="12" fill="#f2f2f7"/>
-      <text x="249" y="536" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
-      <text x="325" y="536" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+      <g class="tap t-sepp">
+        <rect class="farbe erg-sepp" x="214" y="514" width="72" height="34" rx="10" fill="#1a9a54"/>
+        <text class="farbe ergtext-sepp" x="249" y="536" fill="#ffffff" font-size="13" text-anchor="middle">Gewonnen</text>
+        <text x="325" y="536" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+      </g>
 
       <rect x="16" y="573" width="358" height="66" rx="16" fill="#ffffff"/>
-      <circle cx="46" cy="606" r="17" fill="#7fd9cc"/>
+      <circle class="farbe ava-vroni" cx="46" cy="606" r="17" fill="#14b8a6"/>
       <text x="46" y="612" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">V</text>
       <text x="74" y="601" fill="#16211b" font-size="15" font-weight="600">Vroni</text>
       <rect x="74" y="609" width="46" height="19" rx="9" fill="#eeeef2"/>
       <text x="97" y="623" fill="#6b6b70" font-size="11" text-anchor="middle">Legen</text>
       <rect x="212" y="588" width="150" height="38" rx="12" fill="#f2f2f7"/>
-      <text x="249" y="612" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
-      <text x="325" y="612" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+      <g class="tap t-vroni">
+        <rect class="farbe erg-vroni" x="214" y="590" width="72" height="34" rx="10" fill="#1a9a54"/>
+        <text class="farbe ergtext-vroni" x="249" y="612" fill="#ffffff" font-size="13" text-anchor="middle">Gewonnen</text>
+        <text x="325" y="612" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+      </g>
 
       <rect x="16" y="649" width="358" height="66" rx="16" fill="#ffffff"/>
-      <circle cx="46" cy="682" r="17" fill="#9fe0b4"/>
+      <circle class="farbe ava-toni" cx="46" cy="682" r="17" fill="#34c759"/>
       <text x="46" y="688" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">T</text>
       <text x="74" y="677" fill="#16211b" font-size="15" font-weight="600">Toni</text>
       <rect x="74" y="685" width="46" height="19" rx="9" fill="#eeeef2"/>
       <text x="97" y="699" fill="#6b6b70" font-size="11" text-anchor="middle">Legen</text>
       <rect x="212" y="664" width="150" height="38" rx="12" fill="#f2f2f7"/>
-      <text x="249" y="688" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
-      <text x="325" y="688" fill="#8a8a8e" font-size="13" text-anchor="middle">Verloren</text>
+      <g class="tap t-toni">
+        <rect class="farbe erg-toni" x="288" y="666" width="72" height="34" rx="10" fill="#ff3b30"/>
+        <text x="249" y="688" fill="#8a8a8e" font-size="13" text-anchor="middle">Gewonnen</text>
+        <text class="farbe ergtext-toni" x="325" y="688" fill="#ffffff" font-size="13" text-anchor="middle">Verloren</text>
+      </g>
     </g>
 
     <!-- Fußbereich -->
     <rect x="0" y="735" width="390" height="109" fill="#eceff1"/>
-    <text x="195" y="761" fill="#6b6b70" font-size="13" text-anchor="middle">Erst das Megafon beim Rufer antippen</text>
-    <rect x="16" y="774" width="358" height="52" rx="26" fill="#dcdce1"/>
-    <text x="195" y="806" fill="#8a8a8e" font-size="17" font-weight="600" text-anchor="middle">Spiel speichern</text>
+    <text class="hinweis" x="195" y="761" fill="#6b6b70" font-size="13" text-anchor="middle" opacity="0">Erst das Megafon beim Rufer antippen</text>
+    <rect class="farbe speichern-feld" x="16" y="774" width="358" height="52" rx="26" fill="#1a9a54"/>
+    <text class="farbe speichern-text" x="195" y="806" fill="#ffffff" font-size="17" font-weight="600" text-anchor="middle">Spiel speichern</text>
   </g>
 </svg>

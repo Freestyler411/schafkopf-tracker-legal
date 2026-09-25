@@ -31,9 +31,14 @@ const browser = await chromium.launch({
 const seite = await browser.newPage({
   viewport: { width: 1200, height: 630 },
   deviceScaleFactor: 2,
+  reducedMotion: 'reduce',
 });
 
 await seite.goto(URL_VORLAGE, { waitUntil: 'networkidle' });
+
+// Der Screenshot „Spiel eintragen" spielt beim Laden eine kurze Animation
+// ab (rund 4 Sekunden). Abwarten, damit der fertige Endzustand im Bild ist.
+await seite.waitForTimeout(5000);
 
 const fehlend = await seite.evaluate(() =>
   [...document.images].filter((i) => !i.complete || !i.naturalWidth).map((i) => i.src)

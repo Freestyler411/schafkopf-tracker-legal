@@ -31,6 +31,26 @@ Die häufigen Fragen stehen doppelt: als `<details>` im Markup und als
 strukturierten Daten ab. Ebenfalls mitzuführen bei inhaltlichen Änderungen:
 `llms.txt` und `dateModified` im `WebPage`-Knoten.
 
+## Mikro-Animationen
+
+Reines CSS, kein JavaScript. Ohne Animation (ältere Browser oder
+„Bewegung reduzieren“ im System) steht überall sofort der fertige
+Endzustand.
+
+- **Hero „Spiel eintragen“:** Die Grafik trägt beim Laden einmal ein Spiel
+  ein. Die Animation steckt in `assets/screenshots/spiel-eintragen.svg`
+  selbst; die Attribute dort beschreiben den Endzustand.
+- **Screenshots „Dein Treffen“ und „Dein Spielerprofil“:** Linien zeichnen
+  sich, Ringe füllen sich beim Scrollen (scroll-getriebene Animationen,
+  Chrome/Edge/Safari 26+). Dafür stehen beide Grafiken als Kopie inline in
+  `index.html` – wer die SVG-Datei ändert, muss die Kopie nachziehen.
+- **Kleinere Effekte:** Häkchen der Faktenzeile, weiches Einblenden der
+  FAQ-Antworten, Auftauchen der Karten beim Scrollen, Eindrück-Effekt beim
+  Antippen von Buttons.
+
+Alle Regeln stehen in `assets/css/landing.css` im Abschnitt
+„Mikro-Animationen“.
+
 ## Lokale Vorschau
 
 ```sh
@@ -43,7 +63,8 @@ absoluten Pfaden eingebunden und laden per `file://` nicht.
 
 ## Social-Vorschaubild neu erzeugen
 
-Nötig, wenn sich Claim, Logo oder Screenshot ändern:
+Nötig, wenn sich Claim, Logo oder Screenshot ändern. Das Skript wartet die
+Animation der Hero-Grafik ab, damit der ausgefüllte Endzustand im Bild ist:
 
 ```sh
 npm install playwright        # einmalig

@@ -227,7 +227,7 @@
   </script>
 </head>
 
-<body>
+<body ontouchstart="">
 
 <!-- ========================================================================
      1. HERO
@@ -428,6 +428,10 @@
        4. SCREENSHOTS
        Die drei Grafiken liegen unter /assets/screenshots/ und sind
        zusätzlich im JSON-LD ("screenshot") im <head> verlinkt.
+       „Dein Treffen" und „Dein Spielerprofil" stehen als Kopie inline,
+       damit sich Linien und Ringe beim Scrollen per CSS aufbauen
+       (siehe landing.css, Abschnitt Mikro-Animationen). Wer eine der
+       beiden Dateien ändert, muss die Kopie hier nachziehen.
        =================================================================== -->
   <section id="screenshots" class="sektion-sanft">
     <div class="wrap">
@@ -443,8 +447,84 @@
       <div class="shots">
         <figure class="shot">
           <div class="phone">
-            <img src="/assets/screenshots/treffen.svg" width="390" height="844" loading="lazy" decoding="async"
-                 alt="Treffen in der Schafkopf App: Punktestand von fünf Spielern und Verlaufsdiagramm des Abends">
+            <svg class="screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Treffen in der Schafkopf App: Punktestand von fünf Spielern und Verlaufsdiagramm des Abends">
+              <rect width="390" height="844" fill="#f2f2f7"/>
+              <g font-family="-apple-system, system-ui, sans-serif">
+
+                <circle cx="40" cy="42" r="21" fill="#ffffff"/>
+                <path d="M45 34l-8 8 8 8" fill="none" stroke="#16211b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="195" y="49" fill="#16211b" font-size="18" font-weight="700" text-anchor="middle">4. Juli 2026</text>
+                <circle cx="350" cy="42" r="21" fill="#ffffff"/>
+                <circle cx="342" cy="42" r="2.4" fill="#1a9a54"/><circle cx="350" cy="42" r="2.4" fill="#1a9a54"/><circle cx="358" cy="42" r="2.4" fill="#1a9a54"/>
+
+                <rect x="16" y="78" width="358" height="280" rx="20" fill="#ffffff"/>
+                <text x="38" y="112" fill="#16211b" font-size="17" font-weight="700">Punktestand</text>
+                <g font-size="16">
+                  <circle cx="52" cy="146" r="16" fill="#34c759"/><text x="52" y="152" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">S</text>
+                  <text x="78" y="152" fill="#16211b">Sepp</text>
+                  <text x="352" y="152" fill="#1a9a54" font-weight="700" text-anchor="end">+5,25 €</text>
+
+                  <circle cx="52" cy="188" r="16" fill="#14b8a6"/><text x="52" y="194" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">V</text>
+                  <text x="78" y="194" fill="#16211b">Vroni</text>
+                  <text x="352" y="194" fill="#1a9a54" font-weight="700" text-anchor="end">+3,85 €</text>
+
+                  <circle cx="52" cy="230" r="16" fill="#34c759"/><text x="52" y="236" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">T</text>
+                  <text x="78" y="236" fill="#16211b">Toni</text>
+                  <text x="352" y="236" fill="#1a9a54" font-weight="700" text-anchor="end">+1,95 €</text>
+
+                  <circle cx="52" cy="272" r="16" fill="#ff3b30"/><text x="52" y="278" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">M</text>
+                  <text x="78" y="278" fill="#16211b">Michl</text>
+                  <text x="352" y="278" fill="#ff3b30" font-weight="700" text-anchor="end">−0,60 €</text>
+
+                  <circle cx="52" cy="314" r="16" fill="#ff3b30"/><text x="52" y="320" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">R</text>
+                  <text x="78" y="320" fill="#16211b">Resi</text>
+                  <text x="352" y="320" fill="#ff3b30" font-weight="700" text-anchor="end">−10,45 €</text>
+                </g>
+                <rect x="38" y="336" width="314" height="1" fill="#eceff1"/>
+                <text x="38" y="352" fill="#8a8a8e" font-size="13">Geber: Michl</text>
+
+                <rect x="16" y="374" width="358" height="286" rx="20" fill="#ffffff"/>
+                <text x="38" y="408" fill="#16211b" font-size="17" font-weight="700">Verlauf</text>
+                <g>
+                  <rect x="38" y="432" width="314" height="1" fill="#eceff1"/>
+                  <text x="358" y="436" fill="#8a8a8e" font-size="11" text-anchor="end">10 €</text>
+                  <rect x="38" y="516" width="314" height="1" fill="#eceff1"/>
+                  <text x="358" y="520" fill="#8a8a8e" font-size="11" text-anchor="end">0 €</text>
+                  <rect x="38" y="600" width="314" height="1" fill="#eceff1"/>
+                  <text x="358" y="604" fill="#8a8a8e" font-size="11" text-anchor="end">−10 €</text>
+
+                  <polyline class="linie" style="--len:326" points="40,516 78,505 116,498 154,486 192,472 230,468 268,455 306,448 348,472" fill="none" stroke="#34c759" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="linie" style="--len:317" points="40,516 78,512 116,500 154,504 192,492 230,486 268,478 306,486 348,484" fill="none" stroke="#14b8a6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="linie" style="--len:315" points="40,516 78,520 116,512 154,516 192,506 230,510 268,500 306,496 348,500" fill="none" stroke="#a855c7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="linie" style="--len:320" points="40,516 78,524 116,530 154,522 192,536 230,528 268,540 306,532 348,522" fill="none" stroke="#e08b2e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline class="linie" style="--len:325" points="40,516 78,530 116,544 154,556 192,572 230,584 268,596 306,604 348,608" fill="none" stroke="#3b7dd8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+                  <g font-size="11" fill="#6b6b70">
+                    <circle cx="44" cy="632" r="4" fill="#34c759"/><text x="54" y="636">Sepp</text>
+                    <circle cx="104" cy="632" r="4" fill="#14b8a6"/><text x="114" y="636">Vroni</text>
+                    <circle cx="164" cy="632" r="4" fill="#a855c7"/><text x="174" y="636">Toni</text>
+                    <circle cx="220" cy="632" r="4" fill="#e08b2e"/><text x="230" y="636">Michl</text>
+                    <circle cx="282" cy="632" r="4" fill="#3b7dd8"/><text x="292" y="636">Resi</text>
+                  </g>
+                </g>
+
+                <rect x="16" y="686" width="358" height="56" rx="28" fill="#1a9a54"/>
+                <circle cx="108" cy="714" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+                <path d="M103 714h10M108 709v10" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                <text x="128" y="721" fill="#ffffff" font-size="17" font-weight="600">Spiel hinzufügen</text>
+
+                <rect x="103" y="766" width="184" height="60" rx="30" fill="#ffffff"/>
+                <rect x="107" y="770" width="88" height="52" rx="26" fill="#e4f2ea"/>
+                <g fill="#1a9a54">
+                  <rect x="142" y="782" width="7" height="7" rx="1.6"/><rect x="152" y="782" width="7" height="7" rx="1.6"/>
+                  <rect x="142" y="792" width="7" height="7" rx="1.6"/><rect x="152" y="792" width="7" height="7" rx="1.6"/>
+                </g>
+                <text x="151" y="815" fill="#1a9a54" font-size="11" font-weight="600" text-anchor="middle">Tische</text>
+                <circle cx="234" cy="786" r="5" fill="#8a8a8e"/><circle cx="246" cy="788" r="4" fill="#8a8a8e"/>
+                <path d="M226 799c0-5 4-8 8-8s8 3 8 8M242 799c0-4 3-6 6-6s6 2 6 6" fill="none" stroke="#8a8a8e" stroke-width="2.4" stroke-linecap="round"/>
+                <text x="240" y="815" fill="#8a8a8e" font-size="11" font-weight="600" text-anchor="middle">Spieler</text>
+              </g>
+            </svg>
           </div>
           <figcaption>
             <strong>Dein Treffen</strong>
@@ -465,8 +545,73 @@
 
         <figure class="shot">
           <div class="phone">
-            <img src="/assets/screenshots/spielerprofil.svg" width="390" height="844" loading="lazy" decoding="async"
-                 alt="Spielerprofil der Schafkopf App: Ringdiagramm mit gewonnenen und verlorenen Spielen sowie Verteilung der Spielarten">
+            <svg class="screen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Spielerprofil der Schafkopf App: Ringdiagramm mit gewonnenen und verlorenen Spielen sowie Verteilung der Spielarten">
+              <rect width="390" height="844" fill="#fdfdfd"/>
+              <g font-family="-apple-system, system-ui, sans-serif">
+
+                <circle cx="37" cy="40" r="21" fill="#ffffff"/>
+                <path d="M42 32l-8 8 8 8" fill="none" stroke="#16211b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="195" y="47" fill="#16211b" font-size="18" font-weight="700" text-anchor="middle">Sepp</text>
+                <circle cx="353" cy="40" r="21" fill="#ffffff"/>
+                <circle cx="345" cy="40" r="2.5" fill="#1a9a54"/><circle cx="353" cy="40" r="2.5" fill="#1a9a54"/><circle cx="361" cy="40" r="2.5" fill="#1a9a54"/>
+
+                <rect x="16" y="76" width="358" height="336" rx="18" fill="#f0f0f5"/>
+
+                <g transform="rotate(-90 195 226)" fill="none" stroke-width="44">
+                  <circle cx="195" cy="226" r="80" stroke="#34c759" stroke-dasharray="271.4 502.7"/>
+                  <circle cx="195" cy="226" r="80" stroke="#ff3b30" stroke-dasharray="231.3 502.7" stroke-dashoffset="-271.4"/>
+                  <circle class="abdeckung ring-oben" cx="195" cy="226" r="80" stroke="#f0f0f5" stroke-width="48" stroke-dasharray="502.7 502.7" stroke-dashoffset="-502.7"/>
+                </g>
+                <g class="anteile anteile-oben" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">
+                  <text x="274" y="241">54 %</text>
+                  <text x="116" y="221">46 %</text>
+                </g>
+                <text x="195" y="238" fill="#16211b" font-size="38" font-weight="700" text-anchor="middle">319</text>
+                <text x="195" y="262" fill="#8a8a8e" font-size="15" text-anchor="middle">Spiele</text>
+
+                <g font-size="14" fill="#3c3c43">
+                  <circle cx="80" cy="356" r="6" fill="#34c759"/><text x="93" y="361">Gewonnen 171</text>
+                  <circle cx="212" cy="356" r="6" fill="#ff3b30"/><text x="225" y="361">Verloren 148</text>
+                </g>
+                <text x="195" y="386" fill="#8a8a8e" font-size="14" text-anchor="middle">Ausgesetzt: 5×</text>
+
+                <rect x="16" y="430" width="358" height="356" rx="18" fill="#f0f0f5"/>
+                <text x="32" y="466" fill="#16211b" font-size="18" font-weight="700">Spielarten</text>
+
+                <g transform="rotate(-90 195 604)" fill="none" stroke-width="42">
+                  <circle cx="195" cy="604" r="72" stroke="#2e9e5b" stroke-dasharray="226.2 452.4"/>
+                  <circle cx="195" cy="604" r="72" stroke="#3b7dd8" stroke-dasharray="77.8 452.4" stroke-dashoffset="-226.2"/>
+                  <circle cx="195" cy="604" r="72" stroke="#e08b2e" stroke-dasharray="69.3 452.4" stroke-dashoffset="-304.0"/>
+                  <circle cx="195" cy="604" r="72" stroke="#a855c7" stroke-dasharray="40.2 452.4" stroke-dashoffset="-373.3"/>
+                  <circle cx="195" cy="604" r="72" stroke="#d94a52" stroke-dasharray="37.5 452.4" stroke-dashoffset="-413.5"/>
+                  <circle cx="195" cy="604" r="72" stroke="#14b8a6" stroke-dasharray="1.4 452.4" stroke-dashoffset="-451.0"/>
+                  <circle class="abdeckung ring-unten" cx="195" cy="604" r="72" stroke="#f0f0f5" stroke-width="46" stroke-dasharray="452.4 452.4" stroke-dashoffset="-452.4"/>
+                </g>
+                <g class="anteile anteile-unten" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">
+                  <text x="267" y="609">50 %</text>
+                  <text x="158" y="671">17 %</text>
+                  <text x="123" y="609">15 %</text>
+                  <text x="142" y="560">9 %</text>
+                  <text x="175" y="540">8 %</text>
+                </g>
+
+                <g font-size="13" fill="#3c3c43">
+                  <circle cx="52" cy="724" r="5.5" fill="#2e9e5b"/><text x="64" y="729">Sauspiel 163</text>
+                  <circle cx="164" cy="724" r="5.5" fill="#3b7dd8"/><text x="176" y="729">Ramsch 56</text>
+                  <circle cx="266" cy="724" r="5.5" fill="#e08b2e"/><text x="278" y="729">Solo 50</text>
+                  <circle cx="60" cy="752" r="5.5" fill="#a855c7"/><text x="72" y="757">Hochzeit 29</text>
+                  <circle cx="168" cy="752" r="5.5" fill="#d94a52"/><text x="180" y="757">Wenz 27</text>
+                  <circle cx="256" cy="752" r="5.5" fill="#14b8a6"/><text x="268" y="757">Farbwenz 1</text>
+                </g>
+
+                <text x="90" y="822" fill="#16211b" font-size="21" font-weight="700">Spielweise</text>
+                <circle cx="51" cy="812" r="27" fill="#ffffff" opacity=".96"/>
+                <g fill="#1a9a54">
+                  <circle cx="45" cy="806" r="5"/><circle cx="57" cy="808" r="4"/>
+                  <path d="M37 819c0-5 4-8 8-8s8 3 8 8M53 819c0-4 3-6 6-6s6 2 6 6" fill="none" stroke="#1a9a54" stroke-width="2.4" stroke-linecap="round"/>
+                </g>
+              </g>
+            </svg>
           </div>
           <figcaption>
             <strong>Dein Spielerprofil</strong>

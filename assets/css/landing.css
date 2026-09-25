@@ -238,11 +238,14 @@ section { padding-block: var(--abstand-sektion); }
 }
 
 .fakten li {
+  position: relative;
   display: flex;
   align-items: center;
   gap: .45rem;
 }
 
+/* Kreis und Haken getrennt, damit sich der Haken einzeln zeichnen lässt
+   (siehe Mikro-Animationen) */
 .fakten li::before {
   content: "";
   width: 1.05rem;
@@ -250,10 +253,16 @@ section { padding-block: var(--abstand-sektion); }
   flex: none;
   border-radius: 50%;
   background: var(--gruen-hell);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23104f31' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6'/%3E%3C/svg%3E");
-  background-size: 78%;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.fakten li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(50% - .525rem);
+  width: 1.05rem;
+  height: 1.05rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23104f31' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6'/%3E%3C/svg%3E") center / 78% no-repeat;
 }
 
 /* Hero-Bild (Screenshot im Telefonrahmen) */
@@ -415,11 +424,18 @@ section { padding-block: var(--abstand-sektion); }
   box-shadow: var(--schatten-hoch);
 }
 
-.phone img {
+.phone img,
+.phone svg {
+  display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 390 / 844;
   border-radius: 30px;
   background: #fff;
 }
+
+/* Inline-SVG: border-radius allein beschneidet den Inhalt nicht überall */
+.phone svg { clip-path: inset(0 round 30px); }
 
 /* ------------------------------------------------------ Spielarten-Zeile -- */
 
@@ -698,7 +714,119 @@ section { padding-block: var(--abstand-sektion); }
   .footer-inner { grid-template-columns: auto 1fr auto; }
 }
 
+/* ---------------------------------------------------- Mikro-Animationen --
+
+   Grundsatz: Ohne Animation steht überall der fertige Endzustand. Die
+   Animationen beschreiben nur den Weg dorthin (animation-fill-mode:
+   both/backwards) und laufen ausschließlich über transform, translate,
+   opacity, clip-path und Strichlängen – nichts davon verschiebt das
+   Layout (CLS bleibt 0). Überschrift und Claim im Hero bleiben bewusst
+   unanimiert, damit das LCP-Element sofort steht.
+
+   Die Hero-Grafik („Spiel eintragen") animiert sich selbst, siehe
+   assets/screenshots/spiel-eintragen.svg. */
+
+/* Tipp-Rückmeldung für Touch-Geräte: kurzes Eindrücken statt des grauen
+   Standard-Aufblitzens. iOS löst :active nur aus, wenn ein Touch-Listener
+   existiert – daher ontouchstart="" am <body>. */
+a, summary, button { -webkit-tap-highlight-color: transparent; }
+
+.btn:active,
+.store-badge:active { transform: scale(.97); }
+
+.faq summary { border-radius: calc(var(--radius) - 1px); }
+.faq summary:active { background: var(--gruen-hell); }
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* Häkchen der Faktenzeile zeichnen sich nacheinander */
+  .fakten li::after {
+    animation: haken-zeichnen .45s ease-out both;
+    animation-delay: .5s;
+  }
+  .fakten li:nth-child(2)::after { animation-delay: .65s; }
+  .fakten li:nth-child(3)::after { animation-delay: .8s; }
+  .fakten li:nth-child(4)::after { animation-delay: .95s; }
+
+  /* Antworten im FAQ blenden weich ein */
+  .faq details[open] p { animation: aufklappen .28s ease-out; }
+}
+
+@keyframes haken-zeichnen {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes aufklappen {
+  from { opacity: 0; translate: 0 -4px; }
+}
+
+/* Scroll-getrieben (Chrome, Edge, Safari 26+). Browser ohne
+   Unterstützung zeigen einfach den Endzustand. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+
+    /* Karten tauchen beim Hereinscrollen dezent auf. translate statt
+       transform, damit der Hover-Effekt der Features unberührt bleibt. */
+    .karte,
+    .feature,
+    .schritt {
+      animation: auftauchen linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+
+    /* Screenshots: Zeitleiste ist der jeweilige Telefonrahmen */
+    .shot .phone { view-timeline: --screen block; }
+
+    /* „Dein Treffen": Verlaufslinien zeichnen sich */
+    .screen .linie {
+      stroke-dasharray: calc(var(--len) * 1px);
+      animation: linie-zeichnen ease-out both;
+      animation-timeline: --screen;
+      animation-range: cover 20% cover 46%;
+    }
+
+    /* „Dein Spielerprofil": Ringe füllen sich im Uhrzeigersinn, danach
+       erscheinen die Prozentwerte */
+    .screen .abdeckung {
+      animation: ring-fuellen ease-in-out both;
+      animation-timeline: --screen;
+    }
+    .screen .ring-oben  { animation-range: cover 16% cover 38%; }
+    .screen .ring-unten { animation-range: cover 30% cover 52%; }
+
+    .screen .anteile {
+      animation: einblenden linear both;
+      animation-timeline: --screen;
+    }
+    .screen .anteile-oben  { animation-range: cover 36% cover 42%; }
+    .screen .anteile-unten { animation-range: cover 50% cover 56%; }
+  }
+}
+
+@keyframes auftauchen {
+  from { opacity: 0; translate: 0 18px; }
+}
+
+@keyframes linie-zeichnen {
+  from { stroke-dashoffset: calc(var(--len) * 1px); }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* Endzustand steht im SVG-Attribut (−Umfang = Abdeckung unsichtbar) */
+@keyframes ring-fuellen {
+  from { stroke-dashoffset: 0; }
+}
+
+@keyframes einblenden {
+  from { opacity: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }
