@@ -330,8 +330,8 @@ section { padding-block: var(--abstand-sektion); }
 /* Kompakter Block für Wechsler von anderen Schafkopf-Apps – bewusst ohne
    Kartenrahmen, damit er dem Vergleich darüber nicht die Schau stiehlt */
 .wechsel {
-  margin-top: 2.75rem;
-  padding-top: 2rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
   border-top: 1px solid var(--linie);
 }
 
