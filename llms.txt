@@ -8,6 +8,7 @@
 Anbieter: Adrian Pomayr, Nürnberg · Website: https://schafkopf-tracker.de/
 App Store: https://apps.apple.com/de/app/schafkopf-tracker/id6790808695
 Voraussetzung: iPhone mit iOS 26 oder neuer · Sprache: Deutsch
+Android: Version in der Beta-Phase, erscheint bald · Web-App: keine
 
 ## Kurzbeschreibung
 
@@ -57,6 +58,12 @@ persönliche Rekorde, Sonderfälle sowie die Verteilung der eigenen Spielarten.
 - **Premium, einmalig 2,99 € inkl. MwSt., kein Abo:** vollständige
   Statistik-Historie über beliebige Zeiträume, alle Auswertungen,
   Spielerprofile in voller Tiefe, unbegrenzt viele Stammtische.
+
+## Plattformen
+
+Schafkopf Tracker gibt es als App für das iPhone (ab iOS 26) im App Store. Die
+Android-Version befindet sich derzeit in der Beta-Phase und erscheint bald.
+Eine Web-App zur Nutzung im Browser gibt es nicht.
 
 ## Seiten
 
