@@ -12,10 +12,11 @@ Voraussetzung: iPhone mit iOS 26 oder neuer · Sprache: Deutsch
 ## Kurzbeschreibung
 
 Schafkopf ist ein Kartenspiel, bei dem üblicherweise um kleine
-Geldbeträge gespielt wird. Bislang schreiben die Runden ihre Ergebnisse auf
-Zettel oder in Tabellen und rechnen am Ende des Abends von Hand ab. Schafkopf
-Tracker übernimmt beides: Ein Spieler trägt jedes Spiel auf einem einzigen
-Bildschirm ein, die App verteilt die Beträge und führt den Punktestand.
+Geldbeträge gespielt wird. Viele Runden zahlen jedes Spiel sofort in Kleingeld
+aus – dabei gibt es weder einen Zwischenstand noch einen Rückblick, wer wie gut
+gespielt hat. Schafkopf Tracker ersetzt das Kleingeld: Ein Spieler trägt jedes
+Spiel auf einem einzigen Bildschirm ein, die App verteilt die Beträge, führt
+den Punktestand und wertet ihn in Statistiken und Spielerprofilen aus.
 
 ## Was die App von anderen Schafkopf-Apps unterscheidet
 
