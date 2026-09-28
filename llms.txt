@@ -16,7 +16,8 @@ Geldbeträge gespielt wird. Viele Runden zahlen jedes Spiel sofort in Kleingeld
 aus – dabei gibt es weder einen Zwischenstand noch einen Rückblick, wer wie gut
 gespielt hat. Schafkopf Tracker ersetzt das Kleingeld: Ein Spieler trägt jedes
 Spiel auf einem einzigen Bildschirm ein, die App verteilt die Beträge, führt
-den Punktestand und wertet ihn in Statistiken und Spielerprofilen aus.
+den Punktestand und zeigt, wer wem wie viel zahlt – auch über mehrere Abende
+hinweg. Statistiken und Spielerprofile werten die Spiele aus.
 
 ## Was die App von anderen Schafkopf-Apps unterscheidet
 
