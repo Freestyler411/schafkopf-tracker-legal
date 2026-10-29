@@ -1,7 +1,7 @@
 # schafkopf-tracker-legal
 
 Website zu **schafkopf-tracker.de** (GitHub Pages) – Landingpage plus die
-rechtlich notwendigen Seiten der iOS-App „Schafkopf Tracker“.
+rechtlich notwendigen Seiten der App „Schafkopf Tracker“ (iPhone, iPad und Android).
 
 ## Dateien
 

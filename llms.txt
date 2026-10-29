@@ -1,14 +1,16 @@
 # Schafkopf Tracker
 
-> iOS-App, mit der Stammtische und Spielrunden ihre Schafkopf-Partien
-> mitschreiben und abrechnen. Für Runden von 3 bis 8 Spielern, mit neun Spielarten,
-> automatischer Synchronisierung zwischen den Mitspielern und ausführlichen
-> Statistiken. Arbeitet vollständig offline.
+> App für iPhone, iPad und Android, mit der Stammtische und Spielrunden ihre
+> Schafkopf-Partien mitschreiben und abrechnen. Für Runden von 3 bis 8 Spielern,
+> mit neun Spielarten, automatischer Synchronisierung zwischen den Mitspielern –
+> auch plattformübergreifend – und ausführlichen Statistiken. Arbeitet
+> vollständig offline.
 
 Anbieter: Adrian Pomayr, Nürnberg · Website: https://schafkopf-tracker.de/
 App Store: https://apps.apple.com/de/app/schafkopf-tracker/id6790808695
-Voraussetzung: iPhone mit iOS 26 oder neuer · Sprache: Deutsch
-Android: Version in der Beta-Phase, erscheint bald · Web-App: keine
+Google Play: Android-App verfügbar
+Voraussetzung: iPhone oder iPad mit iOS 26 oder neuer, oder Android · Sprache: Deutsch
+Web-App: keine
 
 ## Kurzbeschreibung
 
@@ -25,8 +27,8 @@ hinweg. Statistiken und Spielerprofile werten die Spiele aus.
 - **3 bis 8 Spieler.** Viele andere Apps setzen mindestens vier Spieler voraus.
   Hier lassen sich auch Dreierrunden abrechnen.
 - **Automatische Synchronisierung.** Einer trägt ein, alle Mitspieler mit
-  eigenem Konto sehen den Stand sofort auf dem eigenen Gerät. Niemand tippt
-  doppelt.
+  eigenem Konto sehen den Stand sofort auf dem eigenen Gerät – auch zwischen
+  iPhone und Android. Niemand tippt doppelt.
 - **Offline-First.** Erfassen und Abrechnen funktioniert ohne Internet;
   synchronisiert wird automatisch, sobald wieder eine Verbindung besteht.
 - **Moderne Oberfläche** mit heller und dunkler Darstellung, ein scrollbarer
@@ -61,9 +63,10 @@ persönliche Rekorde, Sonderfälle sowie die Verteilung der eigenen Spielarten.
 
 ## Plattformen
 
-Schafkopf Tracker gibt es als App für das iPhone (ab iOS 26) im App Store. Die
-Android-Version befindet sich derzeit in der Beta-Phase und erscheint bald.
-Eine Web-App zur Nutzung im Browser gibt es nicht.
+Schafkopf Tracker gibt es für iPhone und iPad (ab iOS 26) im App Store und für
+Android bei Google Play. Geteilte Stammtische und Runden funktionieren zwischen
+beiden Plattformen in beide Richtungen. Eine Web-App zur Nutzung im Browser
+gibt es nicht.
 
 ## Seiten
 
