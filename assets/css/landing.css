@@ -169,62 +169,17 @@ section { padding-block: var(--abstand-sektion); }
   opacity: .88;
 }
 
-/* Google Play: eigener Text-Button in Größe und Form des App-Store-
-   Abzeichens. Übergangslösung, bis das offizielle Google-Play-Abzeichen
-   vorliegt – Googles Grafik darf nicht nachgebaut werden, daher bewusst
-   ohne Logo. Dunkel im Hero, hell im Abschluss-CTA. */
-.store-play {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  width: 180px;
-  height: 60px;
-  margin: 6px;
-  padding: 0 1.1rem;
-  border-radius: 10px;
-  border: 1px solid #a6a6a6;
-  background: #000;
-  color: #fff;
-  line-height: 1.1;
-  text-align: left;
-  text-decoration: none;
-  transition: transform .15s ease, opacity .15s ease;
-}
-
-.store-play .klein { font-size: .72rem; letter-spacing: .02em; }
-.store-play .gross { font-size: 1.32rem; font-weight: 600; letter-spacing: -.01em; }
-
-.store-play:hover {
-  color: #fff;
-  transform: translateY(-1px);
-  opacity: .88;
-}
-
-/* Doppelte Klasse, damit die weiße Linkfarbe des CTA-Blocks nicht greift */
-.cta-block a.store-play.store-play-hell,
-.cta-block a.store-play.store-play-hell:hover {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-/* Schmale Handys: beide Store-Buttons etwas kleiner, damit sie
-   nebeneinander passen */
+/* Schmale Handys: beide Store-Abzeichen etwas kleiner, damit sie
+   nebeneinander passen. Beide behalten dieselbe Höhe, damit sie als
+   Paar wirken. */
 @media (max-width: 420px) {
-  .store-badge img { height: 52px; }
-  .store-play { width: 156px; height: 52px; padding: 0 .95rem; }
-  .store-play .klein { font-size: .66rem; }
-  .store-play .gross { font-size: 1.14rem; }
+  .store-badge img { height: 48px; }
 }
 
 @media (max-width: 380px) {
   .btn-gruppe { gap: .5rem; }
-  .store-badge { margin: 5px; }  /* Apple-Freiraum: 10 % von 48 px */
-  .store-badge img { height: 48px; }
-  .store-play { width: 144px; height: 48px; margin: 5px; padding: 0 .85rem; }
-  .store-play .klein { font-size: .62rem; }
-  .store-play .gross { font-size: 1.05rem; }
+  .store-badge { margin: 5px; }  /* Apple-Freiraum: 10 % der Höhe */
+  .store-badge img { height: 44px; }
 }
 
 /* Hinweiszeile unter den CTAs. Kein Flex-Container: sonst würde der
@@ -828,8 +783,7 @@ section { padding-block: var(--abstand-sektion); }
 a, summary, button { -webkit-tap-highlight-color: transparent; }
 
 .btn:active,
-.store-badge:active,
-.store-play:active { transform: scale(.97); }
+.store-badge:active { transform: scale(.97); }
 
 .faq summary { border-radius: calc(var(--radius) - 1px); }
 .faq summary:active { background: var(--gruen-hell); }
