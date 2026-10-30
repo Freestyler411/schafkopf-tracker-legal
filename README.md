@@ -19,7 +19,8 @@ rechtlich notwendigen Seiten der App „Schafkopf Tracker“ (iPhone, iPad und A
 | `llms.txt` | Kurzfassung der Seite in Markdown für Sprachmodelle |
 | `logo.svg`, `logo.png`, `apple-touch-icon.png` | App-Icon, Favicon, Social-Preview |
 
-App-Store-Link: <https://apps.apple.com/de/app/schafkopf-tracker/id6790808695>
+App-Store-Link: <https://apps.apple.com/de/app/schafkopf-tracker/id6790808695>  
+Google-Play-Link: <https://play.google.com/store/apps/details?id=de.adrianpomayr.schafkopftracker>
 
 Inhalte, die bei Änderungen an der App mitgepflegt werden müssen: die
 Spielarten-Zeile und die Statistik-Sektion in `index.html`, der Abschnitt
