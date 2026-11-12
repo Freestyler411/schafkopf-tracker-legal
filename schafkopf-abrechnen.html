@@ -71,6 +71,9 @@
       margin-bottom: 1rem;
     }
     .inhalt ol { margin: .4rem 0 0; }
+    /* Wenig Inhalt, also nur so breit wie nötig */
+    .inhalt { width: fit-content; max-width: 100%; padding-right: 2rem; }
+    .tabelle-kompakt { max-width: 22rem; }
 
     .tabelle-rahmen { overflow-x: auto; margin: 0 0 1.4rem; }
     table { border-collapse: collapse; width: 100%; font-size: .97rem; }
@@ -574,7 +577,7 @@
         <strong>Kurz gesagt:</strong> Im Spiel sind 120 Augen. Die
         Spielerpartei gewinnt mit 61 Augen, bei 60 zu 60 verliert sie.
       </p>
-      <div class="tabelle-rahmen">
+      <div class="tabelle-rahmen tabelle-kompakt">
         <table>
           <thead><tr><th>Karte</th><th class="zahl">Augen</th></tr></thead>
           <tbody>
