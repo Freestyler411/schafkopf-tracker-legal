@@ -178,6 +178,7 @@
 
     /* Beispiel-Punkteliste */
     .liste-beispiel { display: grid; gap: 1.5rem; align-items: start; }
+    .liste-beispiel > * { min-width: 0; }
     .papier {
       background: #fffdf6; border: 1px solid #eadfb8; border-radius: 12px; padding: .8rem;
     }
@@ -274,7 +275,7 @@
           "name": "Was ist ein üblicher Schafkopf-Tarif?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Der Grundtarif ist der Preis für das Sauspiel, der Solotarif der für das Solo. Bei zwei Zahlen gilt der Grundtarif auch für Schneider, Schwarz und Laufende; bei drei Zahlen steht vorne ein eigener, kleinerer Zuschlag dafür. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht."
+            "text": "Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Der Grundtarif ist der Preis für das Sauspiel, der Solotarif der für das Solo. Bei zwei Zahlen wird für Schneider, Schwarz und Laufende üblicherweise der Grundtarif berechnet; bei drei Zahlen steht vorne ein eigener, kleinerer Zuschlag dafür. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht."
           }
         },
         {
@@ -387,7 +388,7 @@
         {
           "@type": "DefinedTerm",
           "name": "Zuschlag",
-          "description": "Der Betrag für jeden Schneider, jedes Schwarz und jeden Laufenden. Bei zwei Zahlen so hoch wie der Grundtarif, bei drei Zahlen die erste Zahl.",
+          "description": "Der Betrag für jeden Schneider, jedes Schwarz und jeden Laufenden. Bei zwei Zahlen wird üblicherweise der Grundtarif berechnet, bei drei Zahlen ist es die erste Zahl.",
           "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-zuschlag"
         },
         {
@@ -603,8 +604,9 @@
       <p class="kurz">
         <strong>Kurz gesagt:</strong> Der Grundtarif ist der Preis für das
         Sauspiel, der Solotarif der Preis für das Solo. Bei zwei Zahlen wie
-        10/50 gilt der Grundtarif auch für Schneider, Schwarz und Laufende.
-        Bei drei Zahlen wie 10/20/50 steht die erste Zahl für diese Zuschläge,
+        10/50 wird für Schneider, Schwarz und Laufende üblicherweise der
+        Grundtarif berechnet. Bei drei Zahlen wie 10/20/50 steht die erste
+        Zahl für diese Zuschläge,
         die zweite für den Grundtarif und die dritte für das Solo. Häufig
         genannt werden 5/20, 10/20, 10/50 und 10/20/50 – einen einzigen
         Standard gibt es nicht.
@@ -614,8 +616,9 @@
         <strong>Solotarif</strong> gilt für Solo, Wenz und Geier; er richtet sich
         weniger nach dem Grundtarif als nach bequemen Münzbeträgen. Dazu kommt
         der <strong>Zuschlag</strong> für jeden Schneider, jedes Schwarz und jeden
-        Laufenden. Bei zwei Zahlen ist der Zuschlag so hoch wie der Grundtarif,
-        bei drei Zahlen ist er kleiner und steht vorne.
+        Laufenden. Bei zwei Zahlen nennt der Tarif ihn nicht eigens – üblicherweise
+        wird dann der Grundtarif berechnet. Bei drei Zahlen steht dafür ein
+        eigener, kleinerer Betrag vorne.
       </p>
       <div class="tabelle-rahmen">
         <table>
@@ -623,14 +626,14 @@
             <tr><th>Tarif</th><th class="zahl">Grundtarif</th><th class="zahl">Zuschlag*</th><th class="zahl">Solo</th></tr>
           </thead>
           <tbody>
-            <tr><td>5/20</td><td class="zahl">5 ct</td><td class="zahl">5 ct</td><td class="zahl">20 ct</td></tr>
-            <tr><td>10/20</td><td class="zahl">10 ct</td><td class="zahl">10 ct</td><td class="zahl">20 ct</td></tr>
-            <tr><td>10/50</td><td class="zahl">10 ct</td><td class="zahl">10 ct</td><td class="zahl">50 ct</td></tr>
+            <tr><td>5/20</td><td class="zahl">5 ct</td><td class="zahl">= Grundtarif</td><td class="zahl">20 ct</td></tr>
+            <tr><td>10/20</td><td class="zahl">10 ct</td><td class="zahl">= Grundtarif</td><td class="zahl">20 ct</td></tr>
+            <tr><td>10/50</td><td class="zahl">10 ct</td><td class="zahl">= Grundtarif</td><td class="zahl">50 ct</td></tr>
             <tr><td>10/20/50</td><td class="zahl">20 ct</td><td class="zahl">10 ct</td><td class="zahl">50 ct</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="stand">Grundtarif = Preis des Sauspiels. * Zuschlag = Betrag je Schneider, Schwarz und Laufendem.</p>
+      <p class="stand">Grundtarif = Preis des Sauspiels. * Zuschlag = Betrag je Schneider, Schwarz und Laufendem; bei zwei Zahlen üblicherweise der Grundtarif.</p>
       <p>
         Welcher Tarif der häufigste ist, lässt sich nicht eindeutig sagen:
         Für Freizeitrunden werden vor allem 5/20, 10/20 und 10/50 genannt,
@@ -1119,7 +1122,7 @@
         <dt id="begriff-grundtarif">Grundtarif</dt>
         <dd>Der Preis für ein Sauspiel. Bei einem Tarif mit zwei Zahlen wie 10/50 die erste Zahl, bei drei Zahlen wie 10/20/50 die mittlere.</dd>
         <dt id="begriff-zuschlag">Zuschlag</dt>
-        <dd>Der Betrag für jeden Schneider, jedes Schwarz und jeden Laufenden. Bei zwei Zahlen so hoch wie der Grundtarif, bei drei Zahlen die erste Zahl.</dd>
+        <dd>Der Betrag für jeden Schneider, jedes Schwarz und jeden Laufenden. Bei zwei Zahlen wird üblicherweise der Grundtarif berechnet, bei drei Zahlen ist es die erste Zahl.</dd>
         <dt id="begriff-solotarif">Solotarif</dt>
         <dd>Der Betrag für Solo, Wenz und Geier, den der Alleinspieler von jedem Gegner bekommt oder jedem zahlt.</dd>
         <dt id="begriff-laufende">Laufende</dt>
@@ -1169,7 +1172,7 @@
         </details>
         <details>
           <summary>Was ist ein üblicher Schafkopf-Tarif?</summary>
-          <p>Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Der Grundtarif ist der Preis für das Sauspiel, der Solotarif der für das Solo. Bei zwei Zahlen gilt der Grundtarif auch für Schneider, Schwarz und Laufende; bei drei Zahlen steht vorne ein eigener, kleinerer Zuschlag dafür. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht.</p>
+          <p>Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Der Grundtarif ist der Preis für das Sauspiel, der Solotarif der für das Solo. Bei zwei Zahlen wird für Schneider, Schwarz und Laufende üblicherweise der Grundtarif berechnet; bei drei Zahlen steht vorne ein eigener, kleinerer Zuschlag dafür. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht.</p>
         </details>
         <details>
           <summary>Was kostet ein Sauspiel und was ein Solo?</summary>
