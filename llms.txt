@@ -73,7 +73,7 @@ gibt es nicht.
 
 - [Startseite](https://schafkopf-tracker.de/): Funktionen, Statistiken, Preise
   und häufige Fragen
-- [Schafkopf Abrechnung](https://schafkopf-tracker.de/schafkopf-abrechnen.html):
+- [Schafkopf Abrechnung](https://schafkopf-tracker.de/schafkopf-abrechnen):
   Ratgeber mit Kurzantworten – Augen zählen, Tarife (5/20, 10/20, 10/50,
   10/20/50) mit Preistabelle, Laufende zählen (auch Wenz, Farbwenz),
   Schneider, Schwarz, Kontra, Legen, Bock, Tout, Sie, alle verbreiteten
