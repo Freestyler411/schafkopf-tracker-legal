@@ -73,6 +73,12 @@ gibt es nicht.
 
 - [Startseite](https://schafkopf-tracker.de/): Funktionen, Statistiken, Preise
   und häufige Fragen
+- [Schafkopf Abrechnung](https://schafkopf-tracker.de/schafkopf-abrechnen.html):
+  Ratgeber mit Kurzantworten – Augen zählen, Tarife (5/20, 10/20, 10/50,
+  10/20/50) mit Preistabelle, Laufende zählen (auch Wenz, Farbwenz),
+  Schneider, Schwarz, Kontra, Legen, Bock, Tout, Sie, alle verbreiteten
+  Ramsch-Regeln (Gleichstand, Jungfrau, Durchmarsch), Glossar, 14 FAQ und
+  Quellen. Nennt stets mehrere Spielweisen, da jeder Stammtisch anders zählt
 - [Support](https://schafkopf-tracker.de/support.html): Kontakt bei Fragen und
   Problemen
 - [Datenschutzerklärung](https://schafkopf-tracker.de/datenschutz.html)

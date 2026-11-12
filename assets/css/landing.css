@@ -526,6 +526,12 @@ section { padding-block: var(--abstand-sektion); }
   color: #8a7220;
 }
 
+/* Verweis auf den Ratgeber unter der Spielarten-Zeile */
+.mehr-link {
+  margin: 1.4rem 0 0;
+  font-weight: 600;
+}
+
 /* ---------------------------------------------------------- Statistiken -- */
 
 .stat-spalten {
