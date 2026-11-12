@@ -14,7 +14,7 @@ rechtlich notwendigen Seiten der App „Schafkopf Tracker“ (iPhone, iPad und A
 | `assets/og/og-image.jpg` | Social-Vorschaubild (1200 × 630) für Open Graph und Twitter Card |
 | `assets/og/og-vorlage.html` | Quelle des Vorschaubilds – wird nicht verlinkt |
 | `assets/og/render-og.mjs` | Rendert die Vorlage zu `og-image.jpg` |
-| `schafkopf-abrechnen.html` | Ratgeber zur Abrechnung: Augen, Tarife mit Preistabelle, Laufende, Verdopplungen, Ramsch, Glossar und FAQ. FAQ und Glossar stehen auch im JSON-LD (FAQPage, DefinedTermSet) – beide Stellen gleich halten |
+| `schafkopf-abrechnen.html` | Erreichbar unter `/schafkopf-abrechnen` (ohne Endung; Canonical, Links und Sitemap nutzen diese Adresse). Ratgeber zur Abrechnung: Augen, Tarife mit Preistabelle, Laufende, Verdopplungen, Ramsch, Glossar und FAQ. FAQ und Glossar stehen auch im JSON-LD (FAQPage, DefinedTermSet) – beide Stellen gleich halten |
 | `datenschutz.html`, `impressum.html`, `support.html` | Bestehende Seiten, unverändert |
 | `robots.txt`, `sitemap.xml` | Suchmaschinen-Basics, KI-Crawler ausdrücklich erlaubt |
 | `llms.txt` | Kurzfassung der Seite in Markdown für Sprachmodelle |
