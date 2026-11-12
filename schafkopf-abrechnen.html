@@ -48,7 +48,8 @@
     .artikel-hero h1 { font-size: clamp(1.9rem, 6vw, 3rem); }
     .artikel-hero .claim { font-size: 1.1rem; color: var(--text-leise); max-width: 60ch; }
 
-    .artikel { max-width: 72ch; }
+    /* Lesespalte: mittig wie die Startseite, aber schmaler für längere Texte */
+    .wrap.schmal { max-width: 800px; }
     .artikel section { padding-block: 2.2rem; border-top: 1px solid var(--linie); }
     .artikel h2 { font-size: clamp(1.45rem, 4vw, 1.9rem); scroll-margin-top: 1rem; }
     .artikel h3 { margin-top: 1.6rem; }
@@ -514,7 +515,7 @@
 </svg>
 
 <div class="kopfzeile">
-  <div class="wrap">
+  <div class="wrap schmal">
     <a href="/">
       <img src="/logo.svg" width="34" height="34" alt="">
       Schafkopf Tracker
@@ -523,7 +524,7 @@
 </div>
 
 <header class="artikel-hero">
-  <div class="wrap">
+  <div class="wrap schmal">
     <span class="eyebrow">Ratgeber</span>
     <h1>Schafkopf Abrechnung: Punkte zählen, Tarif, Laufende &amp; Ramsch</h1>
     <p class="claim">
@@ -535,7 +536,7 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="wrap schmal">
   <div class="artikel">
 
     <div class="hinweis">
