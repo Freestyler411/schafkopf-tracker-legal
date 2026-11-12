@@ -5,7 +5,7 @@
 
   Diese Grafik steht zusätzlich inline in index.html (Abschnitt
   Screenshots), damit sich die Linien beim Scrollen zeichnen lassen. Die
-  Klasse „linie“ und --len (Linienlänge) nutzt die Animation in
+  Klasse „linie“ und die CSS-Variable „len“ (Linienlänge) nutzt die Animation in
   landing.css. Änderungen bitte in beiden Fassungen nachziehen.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844" role="img" aria-label="Treffen-Übersicht der Schafkopf-App mit Punktestand und Verlauf">

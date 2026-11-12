@@ -104,6 +104,98 @@
     .glossar dd { margin: .15rem 0 0; color: var(--text-leise); }
     @media (max-width: 420px) { table { font-size: .9rem; } th, td { padding: .5rem .4rem; } }
     .tabelle-titel { caption-side: top; text-align: left; font-weight: 700; padding: 0 0 .5rem; }
+
+    /* ---------- Grafiken ---------- */
+    figure.grafik { margin: 1.4rem 0 1.6rem; }
+    figure.grafik figcaption { font-size: .92rem; color: var(--text-leise); margin-top: .7rem; }
+
+    /* Augen-Leiste */
+    .leiste { display: flex; border-radius: 12px; overflow: hidden; font-size: .78rem; line-height: 1.25; }
+    .leiste > div { padding: .6rem .45rem; min-width: 0; }
+    .leiste b { display: block; font-size: .9rem; }
+    .seg-1 { flex: 31; background: #f1e4e1; color: #8e3a30; }
+    .seg-2 { flex: 30; background: #f8efed; color: #8e3a30; border-right: 3px solid var(--gold); }
+    .seg-3 { flex: 30; background: var(--gruen-hell); color: var(--gruen-dunkel); }
+    .seg-4 { flex: 30; background: #cfe3d6; color: var(--gruen-dunkel); }
+    .skala { position: relative; height: 1.4rem; font-size: .78rem; color: var(--text-leise); }
+    .skala span { position: absolute; top: .25rem; transform: translateX(-50%); }
+    .skala span:first-child { transform: none; }
+    .skala span:last-child { transform: translateX(-100%); }
+
+    /* Spielkarten */
+    .spk-reihe { display: flex; flex-wrap: wrap; gap: .5rem; }
+    .spk {
+      position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      width: 3.3rem; height: 4.5rem; border: 1px solid var(--linie); border-radius: 9px; background: #fff;
+      box-shadow: 0 1px 2px rgba(16,79,49,.06);
+    }
+    .spk b { font-size: 1.05rem; line-height: 1; }
+    .spk svg { width: 1.45rem; height: 1.45rem; margin: .25rem 0 .1rem; }
+    .spk small { font-size: .62rem; color: var(--text-leise); }
+    .spk.lauf { border: 2px solid var(--gruen); background: var(--gruen-hell); }
+    .spk.lauf i {
+      position: absolute; top: -.55rem; right: -.45rem; width: 1.3rem; height: 1.3rem; border-radius: 50%;
+      background: var(--gold); color: #fff; font: 700 .72rem/1.3rem system-ui, sans-serif; font-style: normal; text-align: center;
+    }
+    .spk.fehlt { border: 2px dashed #b9584c; background: #fbf3f1; }
+    .spk.fehlt small { color: #a2453a; font-weight: 700; }
+    .spk.aus { opacity: .4; }
+    .spk-mini { gap: .3rem; }
+    .spk-mini .spk { width: 2.15rem; height: 2.9rem; border-radius: 6px; }
+    .spk-mini .spk b { font-size: .78rem; }
+    .spk-mini .spk svg { width: .95rem; height: .95rem; margin: .15rem 0 0; }
+    .trumpfreihe { margin-bottom: 1rem; }
+    .trumpfreihe p { margin: 0 0 .4rem; font-size: .95rem; }
+    .trumpfreihe p span { color: var(--text-leise); }
+
+    /* Wer zahlt wem */
+    .zahlwege { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+    .zahlwege figure { margin: 0; text-align: center; }
+    .zahlwege svg { width: 100%; height: auto; max-width: 200px; }
+    .zahlwege figcaption { font-size: .82rem; color: var(--text-leise); line-height: 1.35; }
+    .zahlwege figcaption strong { display: block; color: var(--text); font-size: .9rem; }
+
+    /* Rechenweg als Bausteine */
+    .rechnung { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: .2rem 0 .9rem; }
+    .baustein {
+      display: inline-flex; flex-direction: column; align-items: center; padding: .35rem .6rem;
+      border-radius: 10px; background: var(--gruen-hell); color: var(--gruen-dunkel); font-size: .74rem; line-height: 1.2;
+    }
+    .baustein b { font-size: .98rem; }
+    .baustein.mal { background: var(--gold-hell); color: #7a6418; }
+    .baustein.ergebnis { background: var(--gruen); color: #fff; }
+    .rechnung .op { font-weight: 700; color: var(--text-leise); }
+
+    /* Ablauf bei Gleichstand */
+    .ablauf { display: grid; gap: 0; max-width: 34rem; }
+    .ablauf-box {
+      border: 1px solid var(--linie); border-radius: 12px; background: #fff; padding: .7rem 1rem;
+      display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+    }
+    .ablauf-box span { font-weight: 700; color: #a2453a; white-space: nowrap; }
+    .ablauf-pfeil { padding: .3rem 0 .3rem 1.4rem; font-size: .85rem; color: var(--text-leise); position: relative; }
+    .ablauf-pfeil::before { content: "↓"; position: absolute; left: .45rem; color: var(--gold); font-weight: 700; }
+
+    /* Beispiel-Punkteliste */
+    .liste-beispiel { display: grid; gap: 1.5rem; align-items: start; }
+    .papier {
+      background: #fffdf6; border: 1px solid #eadfb8; border-radius: 12px; padding: .8rem;
+    }
+    .papier table { font-size: .85rem; }
+    .papier th, .papier td { background: transparent; border-bottom: 1px dashed #e2d6a8; padding: .45rem .3rem; }
+    .papier tr:last-child td { border-bottom: 0; }
+    .papier th { color: var(--text); }
+    .papier td.plus { color: var(--gruen); }
+    .papier td.minus { color: #a2453a; }
+    .papier td.summe { color: var(--text-leise); }
+    .liste-beispiel .phone { max-width: 210px; }
+    @media (min-width: 700px) {
+      .liste-beispiel { grid-template-columns: 1fr 210px; }
+    }
+    @media (max-width: 420px) {
+      .zahlwege { grid-template-columns: 1fr 1fr; }
+      .spk { width: 3rem; }
+    }
   </style>
 
   <!-- FAQ und Glossar werden aus derselben Quelle erzeugt wie das sichtbare
@@ -397,6 +489,15 @@
 
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="f-eichel" viewBox="0 0 24 24"><rect x="11" y="1.5" width="2" height="4" rx="1" fill="#6e4a24"/><ellipse cx="12" cy="15" rx="5.8" ry="7" fill="#b07a3c"/><path d="M5 11.5c0-4.2 3.1-6.8 7-6.8s7 2.6 7 6.8z" fill="#6e4a24"/></symbol>
+    <symbol id="f-gras" viewBox="0 0 24 24"><path d="M12 2C6 7 4 12 6 17c1.5 3.4 4 5 6 5s4.5-1.6 6-5c2-5 0-10-6-15z" fill="#3a8d3f"/><path d="M12 6v15" stroke="#e9f4ea" stroke-width="1.3" fill="none"/></symbol>
+    <symbol id="f-herz" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 5 6.3 5c2.1 0 3.9 1.3 5.7 3.3C13.8 6.3 15.6 5 17.7 5 21 5 23.1 8.4 21.6 11.8 19.5 16.4 12 21 12 21z" fill="#c8323c"/></symbol>
+    <symbol id="f-schellen" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="#e0a526"/><rect x="3" y="10.4" width="18" height="3.2" fill="#b5801a"/><circle cx="12" cy="17" r="1.7" fill="#6b4a10"/></symbol>
+  </defs>
+</svg>
+
 <div class="kopfzeile">
   <div class="wrap">
     <a href="/">
@@ -471,6 +572,18 @@
           </tbody>
         </table>
       </div>
+      <figure class="grafik">
+        <div class="leiste" role="img" aria-label="Augen der Spielerpartei: 0 bis 30 verloren mit Schneider, 31 bis 60 verloren, 61 bis 90 gewonnen, 91 bis 120 gewonnen und Gegner Schneider.">
+          <div class="seg-1"><b>0–30</b>verloren, Schneider</div>
+          <div class="seg-2"><b>31–60</b>verloren</div>
+          <div class="seg-3"><b>61–90</b>gewonnen</div>
+          <div class="seg-4"><b>91–120</b>gewonnen, Gegner Schneider</div>
+        </div>
+        <div class="skala" aria-hidden="true">
+          <span style="left:0">0</span><span style="left:25.6%">31</span><span style="left:50.4%">61</span><span style="left:75.2%">91</span><span style="left:100%">120</span>
+        </div>
+        <figcaption>Augen der Spielerpartei nach der Regel der Schafkopfordnung. Die goldene Linie ist die Gewinngrenze: Bei 60 zu 60 verliert die Spielerpartei. Schwarz hängt nicht an den Augen, sondern daran, ob eine Partei überhaupt einen Stich macht.</figcaption>
+      </figure>
       <ul>
         <li><strong>Gewonnen</strong> hat die Spielerpartei mit 61 Augen. Den Gegenspielern reichen 60 – bei Gleichstand 60 zu 60 verliert also die Spielerpartei.</li>
         <li><strong>Schneider</strong> ist, wer 30 Augen oder weniger hat. Am verbreitetsten ist die Regel aus der offiziellen Schafkopfordnung: Die Spielerpartei braucht 31 Augen, um „schneiderfrei“ zu sein, den Gegenspielern reichen 30. Manche Runden setzen die Grenze für beide Seiten gleich.</li>
@@ -521,6 +634,32 @@
       </ul>
 
       <h3>Wer zahlt wem?</h3>
+      <figure class="grafik">
+        <div class="zahlwege">
+        <figure>
+          <svg viewBox="0 0 220 200" role="img" aria-label="Sauspiel: Die beiden Gegner zahlen je 20 Cent an Spieler und Partner.">
+            <defs><marker id="pf-sau" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ceab33"/></marker></defs>
+            <g font-family="-apple-system, system-ui, sans-serif"><rect x="74" y="14" width="72" height="28" rx="14" fill="#104f31"/><text x="110" y="32.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Spieler</text><rect x="74" y="158" width="72" height="28" rx="14" fill="#104f31"/><text x="110" y="176.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Partner</text><rect x="140" y="86" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="176" y="104.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Gegner</text><rect x="8" y="86" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="44" y="104.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Gegner</text><line x1="162.6" y1="85.3" x2="126.1" y2="45.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-sau)"/><text x="158.4" y="65.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">20 ct</text><line x1="57.4" y1="114.7" x2="93.9" y2="154.4" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-sau)"/><text x="61.6" y="134.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">20 ct</text></g>
+          </svg>
+          <figcaption><strong>Sauspiel</strong>Jeder Verlierer zahlt einem Gewinner</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 220 200" role="img" aria-label="Solo gewonnen: Alle drei Gegner zahlen je 50 Cent an den Alleinspieler.">
+            <defs><marker id="pf-solo" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ceab33"/></marker></defs>
+            <g font-family="-apple-system, system-ui, sans-serif"><rect x="74" y="14" width="72" height="28" rx="14" fill="#104f31"/><text x="110" y="32.5" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Solo</text><rect x="140" y="86" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="176" y="104.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Gegner</text><rect x="74" y="158" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="110" y="176.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Gegner</text><rect x="8" y="86" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="44" y="104.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Gegner</text><line x1="162.6" y1="85.3" x2="126.1" y2="45.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-solo)"/><text x="160.4" y="71.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">50 ct</text><line x1="110.0" y1="156.0" x2="110.0" y2="48.0" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-solo)"/><text x="128.0" y="102.0" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">50 ct</text><line x1="57.4" y1="85.3" x2="93.9" y2="45.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-solo)"/><text x="59.6" y="71.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">50 ct</text></g>
+          </svg>
+          <figcaption><strong>Solo gewonnen</strong>Alle drei zahlen dem Alleinspieler</figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 220 200" role="img" aria-label="Ramsch: Der Verlierer zahlt allen drei Mitspielern je 10 Cent.">
+            <defs><marker id="pf-ramsch" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ceab33"/></marker></defs>
+            <g font-family="-apple-system, system-ui, sans-serif"><rect x="74" y="158" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="110" y="176.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Verlierer</text><rect x="74" y="14" width="72" height="28" rx="14" fill="#e6efe9"/><text x="110" y="32.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><rect x="140" y="86" width="72" height="28" rx="14" fill="#e6efe9"/><text x="176" y="104.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><rect x="8" y="86" width="72" height="28" rx="14" fill="#e6efe9"/><text x="44" y="104.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><line x1="110.0" y1="156.0" x2="110.0" y2="48.0" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="128.0" y="102.0" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">10 ct</text><line x1="123.4" y1="157.3" x2="159.9" y2="117.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="161.6" y="149.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">10 ct</text><line x1="96.6" y1="157.3" x2="60.1" y2="117.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="58.4" y="149.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">10 ct</text></g>
+          </svg>
+          <figcaption><strong>Ramsch</strong>Der Verlierer zahlt allen</figcaption>
+        </figure>
+        </div>
+        <figcaption>Beispielbeträge mit Tarif 10/20/50. Verliert der Alleinspieler, laufen die Pfeile beim Solo in die andere Richtung.</figcaption>
+      </figure>
       <ul>
         <li><strong>Sauspiel und Hochzeit:</strong> Die beiden Verlierer zahlen den beiden Gewinnern jeweils denselben Betrag.</li>
         <li><strong>Solo, Wenz, Geier, Bettel:</strong> Der Alleinspieler bekommt den Spielwert von allen drei Mitspielern – oder zahlt ihn allen dreien, wenn er verliert.</li>
@@ -623,11 +762,14 @@
         <li>Der Reihe nach weiterzählen: Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, dann Eichel-Unter, Gras-Unter, Herz-Unter, Schellen-Unter, dann die Trumpffarbe vom Ass abwärts.</li>
         <li>Beim ersten fehlenden Trumpf aufhören. Die Zahl bis dahin sind die Laufenden.</li>
       </ol>
+      <figure class="grafik">
+        <div class="spk-reihe" role="img" aria-label="Kartenreihe: Eichel-, Gras-, Herz- und Schellen-Ober sowie Eichel- und Gras-Unter sind bei der Spielerpartei, der Herz-Unter beim Gegner. Ergebnis: 6 Laufende.">
+          <span class="spk lauf" title="Eichel-Ober"><i>1</i><b>O</b><svg aria-hidden="true"><use href="#f-eichel"/></svg><small>Eichel</small></span><span class="spk lauf" title="Gras-Ober"><i>2</i><b>O</b><svg aria-hidden="true"><use href="#f-gras"/></svg><small>Gras</small></span><span class="spk lauf" title="Herz-Ober"><i>3</i><b>O</b><svg aria-hidden="true"><use href="#f-herz"/></svg><small>Herz</small></span><span class="spk lauf" title="Schellen-Ober"><i>4</i><b>O</b><svg aria-hidden="true"><use href="#f-schellen"/></svg><small>Schellen</small></span><span class="spk lauf" title="Eichel-Unter"><i>5</i><b>U</b><svg aria-hidden="true"><use href="#f-eichel"/></svg><small>Eichel</small></span><span class="spk lauf" title="Gras-Unter"><i>6</i><b>U</b><svg aria-hidden="true"><use href="#f-gras"/></svg><small>Gras</small></span><span class="spk fehlt" title="Herz-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-herz"/></svg><small>Gegner</small></span><span class="spk aus" title="Schellen-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-schellen"/></svg><small>Schellen</small></span>
+        </div>
+        <figcaption>Die Spielerpartei hat alle vier Ober sowie den Eichel- und den Gras-Unter. Der Herz-Unter liegt beim Gegner – dort bricht die Reihe ab: <strong>6 Laufende</strong>.</figcaption>
+      </figure>
       <p>
-        <strong>Beispiel:</strong> Die Spielerpartei hat alle vier Ober, den
-        Eichel- und den Gras-Unter, aber nicht den Herz-Unter. Das sind
-        <strong>6 Laufende</strong>. Mit allen vier Ober und allen vier Unter
-        wären es <strong>8 Laufende</strong>.
+        Mit allen vier Ober und allen vier Unter wären es <strong>8 Laufende</strong>.
       </p>
 
       <h3>Ab wie vielen Laufenden wird gezahlt?</h3>
@@ -643,6 +785,31 @@
         <li><strong>Turniere:</strong> meist höchstens vier, also nur die Ober.</li>
         <li><strong>Privatrunden:</strong> mal nur die Ober, mal Ober und Unter, mal alle Trümpfe – häufig mit einer Obergrenze von acht.</li>
       </ul>
+
+      <h3>Trumpf-Reihenfolge je Spielart</h3>
+      <figure class="grafik">
+        <div class="trumpfreihe" role="img" aria-label="Sauspiel und Herz-Solo: 14 Trümpfe in der Reihenfolge Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, Eichel-Unter, Gras-Unter, Herz-Unter, Schellen-Unter, Herz-Ass, Herz-Zehn, Herz-König, Herz-Neun, Herz-Acht, Herz-Sieben">
+          <p><strong>Sauspiel und Herz-Solo</strong> <span>– 14 Trümpfe</span></p>
+          <div class="spk-reihe spk-mini"><span class="spk" title="Eichel-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Gras-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-gras"/></svg></span><span class="spk" title="Herz-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Schellen-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-schellen"/></svg></span><span class="spk" title="Eichel-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Gras-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-gras"/></svg></span><span class="spk" title="Herz-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Schellen-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-schellen"/></svg></span><span class="spk" title="Herz-Ass"><b>A</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Herz-Zehn"><b>10</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Herz-König"><b>K</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Herz-Neun"><b>9</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Herz-Acht"><b>8</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Herz-Sieben"><b>7</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span></div>
+        </div>
+        <div class="trumpfreihe" role="img" aria-label="Wenz: 4 Trümpfe in der Reihenfolge Eichel-Unter, Gras-Unter, Herz-Unter, Schellen-Unter">
+          <p><strong>Wenz</strong> <span>– 4 Trümpfe</span></p>
+          <div class="spk-reihe spk-mini"><span class="spk" title="Eichel-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Gras-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-gras"/></svg></span><span class="spk" title="Herz-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Schellen-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-schellen"/></svg></span></div>
+        </div>
+        <div class="trumpfreihe" role="img" aria-label="Geier: 4 Trümpfe in der Reihenfolge Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober">
+          <p><strong>Geier</strong> <span>– 4 Trümpfe</span></p>
+          <div class="spk-reihe spk-mini"><span class="spk" title="Eichel-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Gras-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-gras"/></svg></span><span class="spk" title="Herz-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Schellen-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-schellen"/></svg></span></div>
+        </div>
+        <div class="trumpfreihe" role="img" aria-label="Farbwenz, Beispiel Eichel: 11 Trümpfe in der Reihenfolge Eichel-Unter, Gras-Unter, Herz-Unter, Schellen-Unter, Eichel-Ass, Eichel-Zehn, Eichel-König, Eichel-Ober, Eichel-Neun, Eichel-Acht, Eichel-Sieben">
+          <p><strong>Farbwenz, Beispiel Eichel</strong> <span>– 11 Trümpfe</span></p>
+          <div class="spk-reihe spk-mini"><span class="spk" title="Eichel-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Gras-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-gras"/></svg></span><span class="spk" title="Herz-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Schellen-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-schellen"/></svg></span><span class="spk" title="Eichel-Ass"><b>A</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Zehn"><b>10</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-König"><b>K</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Neun"><b>9</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Acht"><b>8</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Sieben"><b>7</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span></div>
+        </div>
+        <div class="trumpfreihe" role="img" aria-label="Farbgeier, Beispiel Eichel: 11 Trümpfe in der Reihenfolge Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, Eichel-Ass, Eichel-Zehn, Eichel-König, Eichel-Unter, Eichel-Neun, Eichel-Acht, Eichel-Sieben">
+          <p><strong>Farbgeier, Beispiel Eichel</strong> <span>– 11 Trümpfe</span></p>
+          <div class="spk-reihe spk-mini"><span class="spk" title="Eichel-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Gras-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-gras"/></svg></span><span class="spk" title="Herz-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-herz"/></svg></span><span class="spk" title="Schellen-Ober"><b>O</b><svg aria-hidden="true"><use href="#f-schellen"/></svg></span><span class="spk" title="Eichel-Ass"><b>A</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Zehn"><b>10</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-König"><b>K</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Unter"><b>U</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Neun"><b>9</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Acht"><b>8</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span><span class="spk" title="Eichel-Sieben"><b>7</b><svg aria-hidden="true"><use href="#f-eichel"/></svg></span></div>
+        </div>
+        <figcaption>Trümpfe von links nach rechts in absteigender Reihenfolge. Laufende werden immer von links gezählt. Beim Farbsolo ist statt Herz die gewählte Farbe Trumpf.</figcaption>
+      </figure>
 
       <h3>Laufende beim Wenz und Geier</h3>
       <p>
@@ -701,8 +868,9 @@
       </p>
       <ul>
         <li><strong>Tout:</strong> Der Alleinspieler kündigt an, alle Stiche zu machen. Das Spiel zählt doppelt, gewonnen wie verloren. Ob Schneider und Schwarz zusätzlich gezählt werden, handhaben die Runden unterschiedlich.</li>
-        <li><strong>Sie:</strong> Wer alle vier Ober und alle vier Unter hat, spielt „Sie“. Das Spiel wird meist vierfach gewertet. Beim Tarif 10/20/50 mit acht Laufenden: (50&nbsp;ct + 8 × 10&nbsp;ct) × 4 = <strong>5,20&nbsp;€ von jedem Gegenspieler</strong>.</li>
+        <li><strong>Sie:</strong> Wer alle vier Ober und alle vier Unter hat, spielt „Sie“. Das Spiel wird meist vierfach gewertet. Beim Tarif 10/20/50 mit acht Laufenden bekommt der Spieler <strong>5,20&nbsp;€ von jedem Gegenspieler</strong>:</li>
       </ul>
+        <div class="rechnung"><span class="op">(</span><span class="baustein">Solo<b>50 ct</b></span><span class="op">+</span><span class="baustein">8 Laufende<b>80 ct</b></span><span class="op">)</span><span class="op">×</span><span class="baustein mal">Sie<b>4</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>5,20 €</b></span></div>
 
       <h3>Das Schema auf einen Blick</h3>
       <div class="tabelle-rahmen">
@@ -727,44 +895,36 @@
 
       <div class="beispiel">
         <h3>Sauspiel gewonnen, Gegner Schneider, drei Laufende</h3>
-        <p>
-          20 ct Sauspiel + 10 ct Schneider + 3 × 10 ct Laufende = <strong>60 ct</strong>.
-          Beide Verlierer zahlen je 60 ct, beide Gewinner bekommen je 60 ct.
-        </p>
+        <div class="rechnung"><span class="baustein">Sauspiel<b>20 ct</b></span><span class="op">+</span><span class="baustein">Schneider<b>10 ct</b></span><span class="op">+</span><span class="baustein">3 Laufende<b>30 ct</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>60 ct</b></span></div>
+        <p>Beide Verlierer zahlen je 60 ct, beide Gewinner bekommen je 60 ct.</p>
       </div>
 
       <div class="beispiel">
         <h3>Solo verloren, mit Kontra</h3>
-        <p>
-          50 ct Solo, keine Laufenden, durch Kontra verdoppelt = 1 €.
-          Der Alleinspieler zahlt jedem der drei Gegner 1 €, zusammen <strong>3 €</strong>.
-        </p>
+        <div class="rechnung"><span class="baustein">Solo<b>50 ct</b></span><span class="op">×</span><span class="baustein mal">Kontra<b>2</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>1,00 €</b></span></div>
+        <p>Keine Laufenden. Der Alleinspieler zahlt jedem der drei Gegner 1 €, zusammen <strong>3 €</strong>.</p>
       </div>
 
       <div class="beispiel">
         <h3>Wenz gewonnen mit zwei Laufenden</h3>
-        <p>
-          50 ct Wenz + 2 × 10 ct Laufende = 70 ct.
-          Der Spieler bekommt von jedem Gegner 70 ct, zusammen <strong>2,10 €</strong>.
-        </p>
+        <div class="rechnung"><span class="baustein">Wenz<b>50 ct</b></span><span class="op">+</span><span class="baustein">2 Laufende<b>20 ct</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>70 ct</b></span></div>
+        <p>Der Spieler bekommt von jedem Gegner 70 ct, zusammen <strong>2,10 €</strong>.</p>
       </div>
 
       <div class="beispiel">
         <h3>Herz-Solo mit vier Ober, aufgestellt – Tarif 10/20</h3>
         <p>
           Der Spieler hat alle vier Ober, hat aufgestellt, und die Gegner machen
-          nur einen Stich mit 15 Augen. Von jedem Gegner bekommt er:
-          20 ct Solo + 10 ct Schneider + 4 × 10 ct Laufende = 70 ct, durch das
-          Aufstellen verdoppelt = <strong>1,40 € pro Person</strong>, zusammen 4,20 €.
+          nur einen Stich mit 15 Augen.
         </p>
+        <div class="rechnung"><span class="op">(</span><span class="baustein">Solo<b>20 ct</b></span><span class="op">+</span><span class="baustein">Schneider<b>10 ct</b></span><span class="op">+</span><span class="baustein">4 Laufende<b>40 ct</b></span><span class="op">)</span><span class="op">×</span><span class="baustein mal">Aufgestellt<b>2</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>1,40 €</b></span></div>
+        <p>Er bekommt <strong>1,40 € von jedem Gegner</strong>, zusammen 4,20 €.</p>
       </div>
 
       <div class="beispiel">
         <h3>Sauspiel mit Schneider, einmal gelegt</h3>
-        <p>
-          20 ct Sauspiel + 10 ct Schneider = 30 ct, durch das Legen verdoppelt
-          = <strong>60 ct</strong> pro Spieler.
-        </p>
+        <div class="rechnung"><span class="op">(</span><span class="baustein">Sauspiel<b>20 ct</b></span><span class="op">+</span><span class="baustein">Schneider<b>10 ct</b></span><span class="op">)</span><span class="op">×</span><span class="baustein mal">Gelegt<b>2</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>60 ct</b></span></div>
+        <p>Jeder Verlierer zahlt 60 ct, jeder Gewinner bekommt 60 ct.</p>
       </div>
     </section>
 
@@ -811,6 +971,16 @@
 
       <div class="variante">
         <h3>Ramsch bei gleicher Punktzahl</h3>
+      <figure class="grafik">
+        <div class="ablauf">
+          <div class="ablauf-box">1. Wer hat die meisten Augen?<span>verliert</span></div>
+          <div class="ablauf-pfeil">Gleichstand bei den Augen</div>
+          <div class="ablauf-box">2. Wer hat mehr Stiche?<span>verliert</span></div>
+          <div class="ablauf-pfeil">auch gleich viele Stiche</div>
+          <div class="ablauf-box">3. Wer hat mehr Trümpfe oder den höchsten Trumpf?<span>verliert</span></div>
+        </div>
+        <figcaption>Die verbreitetste Reihenfolge bei gleicher Punktzahl im Ramsch.</figcaption>
+      </figure>
         <ul>
           <li><strong>Nach Stichen:</strong> Haben zwei oder mehr gleich viele Augen, verliert, wer mehr Stiche hat. Das ist die verbreitetste Regel und steht so auch in der Schafkopfordnung des Bayerischen Schafkopf-Vereins.</li>
           <li><strong>Danach nach Trümpfen:</strong> Ist auch die Stichzahl gleich, verliert, wer mehr Trümpfe – oder den höchsten Trumpf – hat.</li>
@@ -868,9 +1038,10 @@
         <h3>Beispiel: Ramsch mit Jungfrau</h3>
         <p>
           Ramsch-Tarif 20 ct, Regel „alles doppelt“. Ein Spieler hat die meisten
-          Augen, ein anderer keinen Stich gemacht. Der Verlierer zahlt jedem der
-          drei Mitspieler 40 ct, zusammen <strong>1,20 €</strong>.
+          Augen, ein anderer keinen Stich gemacht.
         </p>
+        <div class="rechnung"><span class="baustein">Ramsch<b>20 ct</b></span><span class="op">×</span><span class="baustein mal">Jungfrau<b>2</b></span><span class="op">=</span><span class="baustein ergebnis">pro Spieler<b>40 ct</b></span></div>
+        <p>Der Verlierer zahlt jedem der drei Mitspieler 40 ct, zusammen <strong>1,20 €</strong>.</p>
       </div>
     </section>
 
@@ -888,6 +1059,29 @@
         <li><strong>Kontrolle:</strong> Die Summe aller Stände muss immer null ergeben – was einer gewinnt, verlieren die anderen.</li>
         <li>Spielart dazuschreiben (S, W, G, R …), damit sich Fehler später nachvollziehen lassen.</li>
       </ol>
+      <div class="liste-beispiel">
+        <figure class="grafik" style="margin:0">
+          <div class="papier tabelle-rahmen">
+            <table>
+              <thead><tr><th>Spiel</th><th class="zahl">Anna</th><th class="zahl">Ben</th><th class="zahl">Toni</th><th class="zahl">Vroni</th><th class="zahl">Summe</th></tr></thead>
+              <tbody>
+                <tr><td>Sauspiel</td><td class="zahl plus">+0,20</td><td class="zahl plus">+0,20</td><td class="zahl minus">−0,20</td><td class="zahl minus">−0,20</td><td class="zahl summe">0,00 ✓</td></tr>
+                <tr><td>Solo</td><td class="zahl minus">−0,30</td><td class="zahl minus">−0,30</td><td class="zahl plus">+1,30</td><td class="zahl minus">−0,70</td><td class="zahl summe">0,00 ✓</td></tr>
+                <tr><td>Ramsch</td><td class="zahl minus">−0,20</td><td class="zahl minus">−0,20</td><td class="zahl plus">+1,40</td><td class="zahl minus">−1,00</td><td class="zahl summe">0,00 ✓</td></tr>
+                <tr><td>Wenz</td><td class="zahl minus">−2,30</td><td class="zahl plus">+0,50</td><td class="zahl plus">+2,10</td><td class="zahl minus">−0,30</td><td class="zahl summe">0,00 ✓</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figcaption>Beispiel mit Tarif 10/20/50 in Euro: In jeder Zeile steht der neue Stand, nicht der Betrag des Spiels. Die Summe ist immer null.</figcaption>
+        </figure>
+        <figure class="grafik" style="margin:0">
+          <div class="phone">
+            <img src="/assets/screenshots/treffen.svg" width="390" height="844" loading="lazy" decoding="async"
+                 alt="Schafkopf Tracker: Punktestand eines Spielabends mit fünf Spielern und Verlaufsdiagramm">
+          </div>
+          <figcaption style="text-align:center">So führt Schafkopf Tracker die Liste automatisch.</figcaption>
+        </figure>
+      </div>
       <p>
         Genau das macht <a href="/">Schafkopf Tracker</a> automatisch: Ihr legt
         Tarif und Hausregeln für den Ramsch einmal pro Stammtisch fest, tragt
