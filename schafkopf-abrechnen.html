@@ -274,7 +274,7 @@
           "name": "Was ist ein üblicher Schafkopf-Tarif?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Bei zwei Zahlen gilt die erste für Sauspiel, Schneider, Schwarz und Laufende, die zweite für das Solo. Bei drei Zahlen gilt die erste für Schneider, Schwarz und Laufende, die zweite für das Sauspiel und die dritte für das Solo. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht."
+            "text": "Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Der Grundtarif ist der Preis für das Sauspiel, der Solotarif der für das Solo. Bei zwei Zahlen gilt der Grundtarif auch für Schneider, Schwarz und Laufende; bei drei Zahlen steht vorne ein eigener, kleinerer Zuschlag dafür. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht."
           }
         },
         {
@@ -381,8 +381,14 @@
         {
           "@type": "DefinedTerm",
           "name": "Grundtarif",
-          "description": "Die erste, kleinste Zahl des Tarifs. Sie gilt für Schneider, Schwarz und jeden Laufenden – und bei einem Tarif mit zwei Zahlen auch für das Sauspiel.",
+          "description": "Der Preis für ein Sauspiel. Bei einem Tarif mit zwei Zahlen wie 10/50 die erste Zahl, bei drei Zahlen wie 10/20/50 die mittlere.",
           "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-grundtarif"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Zuschlag",
+          "description": "Der Betrag für jeden Schneider, jedes Schwarz und jeden Laufenden. Bei zwei Zahlen so hoch wie der Grundtarif, bei drei Zahlen die erste Zahl.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-zuschlag"
         },
         {
           "@type": "DefinedTerm",
@@ -393,13 +399,13 @@
         {
           "@type": "DefinedTerm",
           "name": "Laufende",
-          "description": "Die höchsten Trümpfe in ununterbrochener Reihe in der Hand einer Partei. Jeder Laufende erhöht den Spielwert um einen Grundtarif.",
+          "description": "Die höchsten Trümpfe in ununterbrochener Reihe in der Hand einer Partei. Jeder Laufende erhöht den Spielwert um einen Zuschlag.",
           "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-laufende"
         },
         {
           "@type": "DefinedTerm",
           "name": "Schneider",
-          "description": "Eine Partei hat 30 Augen oder weniger. Der Spielwert steigt um einen Grundtarif.",
+          "description": "Eine Partei hat 30 Augen oder weniger. Der Spielwert steigt um einen Zuschlag.",
           "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-schneider"
         },
         {
@@ -411,7 +417,7 @@
         {
           "@type": "DefinedTerm",
           "name": "Schwarz",
-          "description": "Eine Partei macht keinen Stich. Der Spielwert steigt um einen weiteren Grundtarif.",
+          "description": "Eine Partei macht keinen Stich. Der Spielwert steigt um einen weiteren Zuschlag.",
           "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-schwarz"
         },
         {
@@ -595,35 +601,36 @@
     <section id="tarif">
       <h2>Schafkopf Tarif: was ein Spiel kostet</h2>
       <p class="kurz">
-        <strong>Kurz gesagt:</strong> Bei zwei Zahlen wie 10/50 gilt die erste
-        für Sauspiel, Schneider, Schwarz und Laufende, die zweite für das Solo.
-        Bei drei Zahlen wie 10/20/50 gilt die erste für Schneider, Schwarz und
-        Laufende, die zweite für das Sauspiel und die dritte für das Solo.
-        Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50 – einen einzigen
+        <strong>Kurz gesagt:</strong> Der Grundtarif ist der Preis für das
+        Sauspiel, der Solotarif der Preis für das Solo. Bei zwei Zahlen wie
+        10/50 gilt der Grundtarif auch für Schneider, Schwarz und Laufende.
+        Bei drei Zahlen wie 10/20/50 steht die erste Zahl für diese Zuschläge,
+        die zweite für den Grundtarif und die dritte für das Solo. Häufig
+        genannt werden 5/20, 10/20, 10/50 und 10/20/50 – einen einzigen
         Standard gibt es nicht.
       </p>
       <p>
-        Die erste, kleinste Zahl heißt <strong>Grundtarif</strong>. Sie wird für
-        jeden Schneider, jedes Schwarz und jeden Laufenden bezahlt. Die letzte
-        Zahl ist der <strong>Solotarif</strong>; er richtet sich weniger nach dem
-        Grundtarif als nach bequemen Münzbeträgen. Das Sauspiel kostet bei zwei
-        Zahlen den Grundtarif. Bei drei Zahlen bekommt es einen eigenen Betrag
-        dazwischen.
+        Der <strong>Grundtarif</strong> ist das, was ein Sauspiel kostet. Der
+        <strong>Solotarif</strong> gilt für Solo, Wenz und Geier; er richtet sich
+        weniger nach dem Grundtarif als nach bequemen Münzbeträgen. Dazu kommt
+        der <strong>Zuschlag</strong> für jeden Schneider, jedes Schwarz und jeden
+        Laufenden. Bei zwei Zahlen ist der Zuschlag so hoch wie der Grundtarif,
+        bei drei Zahlen ist er kleiner und steht vorne.
       </p>
       <div class="tabelle-rahmen">
         <table>
           <thead>
-            <tr><th>Tarif</th><th class="zahl">Zuschlag*</th><th class="zahl">Sauspiel</th><th class="zahl">Solo</th></tr>
+            <tr><th>Tarif</th><th class="zahl">Grundtarif</th><th class="zahl">Zuschlag*</th><th class="zahl">Solo</th></tr>
           </thead>
           <tbody>
             <tr><td>5/20</td><td class="zahl">5 ct</td><td class="zahl">5 ct</td><td class="zahl">20 ct</td></tr>
             <tr><td>10/20</td><td class="zahl">10 ct</td><td class="zahl">10 ct</td><td class="zahl">20 ct</td></tr>
             <tr><td>10/50</td><td class="zahl">10 ct</td><td class="zahl">10 ct</td><td class="zahl">50 ct</td></tr>
-            <tr><td>10/20/50</td><td class="zahl">10 ct</td><td class="zahl">20 ct</td><td class="zahl">50 ct</td></tr>
+            <tr><td>10/20/50</td><td class="zahl">20 ct</td><td class="zahl">10 ct</td><td class="zahl">50 ct</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="stand">* Zuschlag = Betrag je Schneider, Schwarz und Laufendem (Grundtarif).</p>
+      <p class="stand">Grundtarif = Preis des Sauspiels. * Zuschlag = Betrag je Schneider, Schwarz und Laufendem.</p>
       <p>
         Welcher Tarif der häufigste ist, lässt sich nicht eindeutig sagen:
         Für Freizeitrunden werden vor allem 5/20, 10/20 und 10/50 genannt,
@@ -656,9 +663,9 @@
           <figcaption><strong>Solo gewonnen</strong>Alle drei zahlen dem Alleinspieler</figcaption>
         </figure>
         <figure>
-          <svg viewBox="0 0 220 200" role="img" aria-label="Ramsch: Der Verlierer zahlt allen drei Mitspielern je 10 Cent.">
+          <svg viewBox="0 0 220 200" role="img" aria-label="Ramsch: Der Verlierer zahlt allen drei Mitspielern je 20 Cent.">
             <defs><marker id="pf-ramsch" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ceab33"/></marker></defs>
-            <g font-family="-apple-system, system-ui, sans-serif"><rect x="74" y="158" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="110" y="176.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Verlierer</text><rect x="74" y="14" width="72" height="28" rx="14" fill="#e6efe9"/><text x="110" y="32.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><rect x="140" y="86" width="72" height="28" rx="14" fill="#e6efe9"/><text x="176" y="104.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><rect x="8" y="86" width="72" height="28" rx="14" fill="#e6efe9"/><text x="44" y="104.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><line x1="110.0" y1="156.0" x2="110.0" y2="48.0" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="128.0" y="102.0" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">10 ct</text><line x1="123.4" y1="157.3" x2="159.9" y2="117.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="161.6" y="149.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">10 ct</text><line x1="96.6" y1="157.3" x2="60.1" y2="117.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="58.4" y="149.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">10 ct</text></g>
+            <g font-family="-apple-system, system-ui, sans-serif"><rect x="74" y="158" width="72" height="28" rx="14" fill="#f1e4e1"/><text x="110" y="176.5" font-size="12" font-weight="700" fill="#8e3a30" text-anchor="middle">Verlierer</text><rect x="74" y="14" width="72" height="28" rx="14" fill="#e6efe9"/><text x="110" y="32.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><rect x="140" y="86" width="72" height="28" rx="14" fill="#e6efe9"/><text x="176" y="104.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><rect x="8" y="86" width="72" height="28" rx="14" fill="#e6efe9"/><text x="44" y="104.5" font-size="12" font-weight="700" fill="#104f31" text-anchor="middle">Spieler</text><line x1="110.0" y1="156.0" x2="110.0" y2="48.0" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="128.0" y="102.0" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">20 ct</text><line x1="123.4" y1="157.3" x2="159.9" y2="117.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="161.6" y="149.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">20 ct</text><line x1="96.6" y1="157.3" x2="60.1" y2="117.6" stroke="#ceab33" stroke-width="3" marker-end="url(#pf-ramsch)"/><text x="58.4" y="149.5" font-size="12" font-weight="700" fill="#7a6418" text-anchor="middle">20 ct</text></g>
           </svg>
           <figcaption><strong>Ramsch</strong>Der Verlierer zahlt allen</figcaption>
         </figure>
@@ -729,8 +736,8 @@
         </table>
       </div>
       <p>
-        Bei anderen Tarifen rechnet ihr genauso: Spielwert = Sauspiel- oder
-        Solotarif + Grundtarif für Schneider, Schwarz und jeden Laufenden.
+        Bei anderen Tarifen rechnet ihr genauso: Spielwert = Grund- oder
+        Solotarif + Zuschlag für Schneider, Schwarz und jeden Laufenden.
         Kontra, Re, Legen und Bock verdoppeln den Betrag jeweils.
       </p>
     </section>
@@ -740,7 +747,7 @@
       <h2>Schneider und Schwarz</h2>
       <p class="kurz">
         <strong>Kurz gesagt:</strong> Schneider erhöht den Spielwert um einen
-        Grundtarif, Schwarz um einen weiteren – egal ob Spieler oder Gegner
+        Zuschlag, Schwarz um einen weiteren – egal ob Spieler oder Gegner
         gewonnen haben.
       </p>
       <p>
@@ -758,7 +765,7 @@
         <strong>Kurz gesagt:</strong> Laufende sind die höchsten Trümpfe in
         ununterbrochener Reihe in einer Partei. Sie zählen grundsätzlich ab
         drei, beim Wenz und Geier oft schon ab zwei. Jeder Laufende kostet
-        einen Grundtarif.
+        einen Zuschlag.
       </p>
 
       <h3>Laufende zählen – so geht’s</h3>
@@ -838,7 +845,7 @@
         Meist zählen Laufende für die Partei, die sie hat – egal ob Spieler
         oder Gegner. Fehlen der Spielerpartei die drei höchsten Trümpfe, spielt
         sie „ohne drei“, und das kostet genauso. Bei hohen Tarifen rechnen
-        manche Runden pro Laufendem nur einen halben Grundtarif.
+        manche Runden pro Laufendem nur einen halben Zuschlag.
       </p>
     </section>
 
@@ -882,21 +889,21 @@
         <table>
           <thead><tr><th>Spiel</th><th>So wird der Spielwert berechnet</th></tr></thead>
           <tbody>
-            <tr><td>Sauspiel</td><td>1 oder 2 × G, plus Schneider, Schwarz und jeder Laufende je 1 × G</td></tr>
+            <tr><td>Sauspiel</td><td>Grundtarif, plus Schneider, Schwarz und jeder Laufende je ein Zuschlag</td></tr>
             <tr><td>Hochzeit</td><td>wie ein Sauspiel, häufig × 2</td></tr>
-            <tr><td>Solo, Wenz, Geier</td><td>Solotarif (je nach Tarif 2-, 4- oder 5-facher Grundtarif), plus jeder Laufende je 1 × G; Schneider und Schwarz je 1 × G oder gar nicht</td></tr>
+            <tr><td>Solo, Wenz, Geier</td><td>Solotarif, plus jeder Laufende je ein Zuschlag; Schneider und Schwarz je ein Zuschlag oder gar nicht</td></tr>
             <tr><td>Tout</td><td>wie das Solo, × 2</td></tr>
             <tr><td>Sie</td><td>wie das Solo, meist × 4</td></tr>
           </tbody>
         </table>
       </div>
-      <p>G = Grundtarif. Dazu kommen jeweils Kontra, Re, Legen und Bock mit je × 2.</p>
+      <p>Dazu kommen jeweils Kontra, Re, Legen und Bock mit je × 2.</p>
     </section>
 
     <!-- ================================================================ -->
     <section id="beispiele">
       <h2>Rechenbeispiele zur Schafkopf-Abrechnung</h2>
-      <p>Wenn nicht anders angegeben, mit Tarif 10/20/50 (Grundtarif 10&nbsp;ct, Sauspiel 20&nbsp;ct, Solo 50&nbsp;ct), Laufende ab drei, beim Wenz ab zwei.</p>
+      <p>Wenn nicht anders angegeben, mit Tarif 10/20/50 (Zuschlag 10&nbsp;ct, Grundtarif 20&nbsp;ct, Solo 50&nbsp;ct), Laufende ab drei, beim Wenz ab zwei.</p>
 
       <div class="beispiel">
         <h3>Sauspiel gewonnen, Gegner Schneider, drei Laufende</h3>
@@ -997,7 +1004,7 @@
         <ul>
           <li><strong>Fester Betrag an jeden</strong> – am häufigsten: Der Verlierer zahlt allen Mitspielern den Grundtarif.</li>
           <li><strong>Zwei gegen zwei:</strong> Die beiden Spieler mit den meisten Augen zahlen an die beiden anderen.</li>
-          <li><strong>Eigener Ramsch-Tarif:</strong> Manche Runden machen einen eigenen Betrag aus, zum Beispiel den Sauspiel-Tarif.</li>
+          <li><strong>Eigener Ramsch-Tarif:</strong> Manche Runden machen für den Ramsch einen eigenen Betrag aus.</li>
           <li><strong>Mit Schneider und Schwarz:</strong> Einige rechnen auch im Ramsch Schneider- und Schwarz-Zuschläge ab.</li>
           <li><strong>Feste Punkte:</strong> Turniere und Punkterunden vergeben feste Punktwerte statt Geld, etwa Minuspunkte für den Verlierer.</li>
         </ul>
@@ -1110,17 +1117,19 @@
         <dt id="begriff-augen">Augen</dt>
         <dd>Die Punkte der Karten. Ass 11, Zehn 10, König 4, Ober 3, Unter 2; insgesamt 120 Augen im Spiel.</dd>
         <dt id="begriff-grundtarif">Grundtarif</dt>
-        <dd>Die erste, kleinste Zahl des Tarifs. Sie gilt für Schneider, Schwarz und jeden Laufenden – und bei einem Tarif mit zwei Zahlen auch für das Sauspiel.</dd>
+        <dd>Der Preis für ein Sauspiel. Bei einem Tarif mit zwei Zahlen wie 10/50 die erste Zahl, bei drei Zahlen wie 10/20/50 die mittlere.</dd>
+        <dt id="begriff-zuschlag">Zuschlag</dt>
+        <dd>Der Betrag für jeden Schneider, jedes Schwarz und jeden Laufenden. Bei zwei Zahlen so hoch wie der Grundtarif, bei drei Zahlen die erste Zahl.</dd>
         <dt id="begriff-solotarif">Solotarif</dt>
         <dd>Der Betrag für Solo, Wenz und Geier, den der Alleinspieler von jedem Gegner bekommt oder jedem zahlt.</dd>
         <dt id="begriff-laufende">Laufende</dt>
-        <dd>Die höchsten Trümpfe in ununterbrochener Reihe in der Hand einer Partei. Jeder Laufende erhöht den Spielwert um einen Grundtarif.</dd>
+        <dd>Die höchsten Trümpfe in ununterbrochener Reihe in der Hand einer Partei. Jeder Laufende erhöht den Spielwert um einen Zuschlag.</dd>
         <dt id="begriff-schneider">Schneider</dt>
-        <dd>Eine Partei hat 30 Augen oder weniger. Der Spielwert steigt um einen Grundtarif.</dd>
+        <dd>Eine Partei hat 30 Augen oder weniger. Der Spielwert steigt um einen Zuschlag.</dd>
         <dt id="begriff-schneiderfrei">Schneiderfrei</dt>
         <dd>Eine Partei hat genug Augen, um nicht Schneider zu sein – meist 31, für die Gegenspieler 30.</dd>
         <dt id="begriff-schwarz">Schwarz</dt>
-        <dd>Eine Partei macht keinen Stich. Der Spielwert steigt um einen weiteren Grundtarif.</dd>
+        <dd>Eine Partei macht keinen Stich. Der Spielwert steigt um einen weiteren Zuschlag.</dd>
         <dt id="begriff-kontra">Kontra</dt>
         <dd>Auch Stoß oder Spritze. Ein Gegenspieler verdoppelt den Spielwert.</dd>
         <dt id="begriff-re">Re</dt>
@@ -1160,7 +1169,7 @@
         </details>
         <details>
           <summary>Was ist ein üblicher Schafkopf-Tarif?</summary>
-          <p>Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Bei zwei Zahlen gilt die erste für Sauspiel, Schneider, Schwarz und Laufende, die zweite für das Solo. Bei drei Zahlen gilt die erste für Schneider, Schwarz und Laufende, die zweite für das Sauspiel und die dritte für das Solo. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht.</p>
+          <p>Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Der Grundtarif ist der Preis für das Sauspiel, der Solotarif der für das Solo. Bei zwei Zahlen gilt der Grundtarif auch für Schneider, Schwarz und Laufende; bei drei Zahlen steht vorne ein eigener, kleinerer Zuschlag dafür. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht.</p>
         </details>
         <details>
           <summary>Was kostet ein Sauspiel und was ein Solo?</summary>
