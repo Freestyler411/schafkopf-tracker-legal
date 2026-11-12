@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Schafkopf abrechnen: Punkte zählen, Tarife &amp; Ramsch | Schafkopf Tracker</title>
-  <meta name="description" content="So rechnet man Schafkopf ab: Augen zählen, übliche Tarife, Laufende, Schneider und Schwarz, Kontra und Legen, alle verbreiteten Ramsch-Varianten – mit Rechenbeispielen. Jeder Stammtisch spielt etwas anders.">
-  <meta name="author" content="Adrian Pomayr">
+  <title>Schafkopf Abrechnung: Tarif, Laufende &amp; Ramsch-Regeln | Schafkopf Tracker</title>
+  <meta name="description" content="Schafkopf abrechnen: Augen zählen, übliche Tarife mit Preistabelle, Laufende richtig zählen, Sie, Bock, Kontra und alle verbreiteten Ramsch-Regeln – mit Rechenbeispielen. Jeder Stammtisch spielt etwas anders.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#104f31">
   <link rel="canonical" href="https://schafkopf-tracker.de/schafkopf-abrechnen.html">
@@ -18,11 +17,12 @@
   <meta property="og:site_name" content="Schafkopf Tracker">
   <meta property="og:locale" content="de_DE">
   <meta property="og:url" content="https://schafkopf-tracker.de/schafkopf-abrechnen.html">
-  <meta property="og:title" content="Schafkopf abrechnen: Punkte zählen, Tarife & Ramsch">
-  <meta property="og:description" content="Augen zählen, übliche Tarife, Laufende, Schneider, Schwarz und alle verbreiteten Ramsch-Varianten – mit Rechenbeispielen.">
+  <meta property="og:title" content="Schafkopf Abrechnung: Tarif, Laufende & Ramsch-Regeln">
+  <meta property="og:description" content="Augen zählen, Tarife mit Preistabelle, Laufende, Sie, Bock und alle verbreiteten Ramsch-Regeln – mit Rechenbeispielen.">
   <meta property="og:image" content="https://schafkopf-tracker.de/assets/og/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="article:modified_time" content="2026-11-12">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="/assets/css/landing.css">
@@ -90,79 +90,317 @@
 
     .variante { margin-bottom: 1.2rem; }
     .variante h3 { margin-bottom: .4rem; }
+
+    .kurz {
+      font-size: 1.05rem;
+      background: var(--gruen-hell);
+      border-radius: var(--radius);
+      padding: .9rem 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    .kurz strong { color: var(--gruen-dunkel); }
+    .stand { font-size: .93rem; color: var(--text-leise); margin-top: -.6rem; }
+    .glossar dt { font-weight: 700; margin-top: .9rem; }
+    .glossar dd { margin: .15rem 0 0; color: var(--text-leise); }
+    .quellen li { font-size: .95rem; }
+    @media (max-width: 420px) { table { font-size: .9rem; } th, td { padding: .5rem .4rem; } }
+    .tabelle-titel { caption-side: top; text-align: left; font-weight: 700; padding: 0 0 .5rem; }
   </style>
 
+  <!-- FAQ und Glossar werden aus derselben Quelle erzeugt wie das sichtbare
+       Markup weiter unten – beim Ändern beide Stellen gleich halten. -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "@id": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#artikel",
-        "headline": "Schafkopf abrechnen: Punkte zählen, Tarife und Ramsch",
-        "description": "Augen zählen, übliche Tarife, Laufende, Schneider und Schwarz, Kontra und Legen sowie alle verbreiteten Ramsch-Varianten – mit Rechenbeispielen.",
-        "inLanguage": "de-DE",
-        "datePublished": "2026-11-12",
-        "dateModified": "2026-11-12",
-        "author": { "@type": "Person", "name": "Adrian Pomayr" },
-        "publisher": { "@type": "Organization", "name": "Schafkopf Tracker", "url": "https://schafkopf-tracker.de/" },
-        "mainEntityOfPage": "https://schafkopf-tracker.de/schafkopf-abrechnen.html",
-        "image": "https://schafkopf-tracker.de/assets/og/og-image.jpg"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#artikel",
+      "headline": "Schafkopf Abrechnung: Punkte zählen, Tarif, Laufende und Ramsch",
+      "description": "Wie man Schafkopf abrechnet: Augen zählen, übliche Tarife mit Preistabelle, Laufende zählen, Schneider und Schwarz, Kontra, Legen, Bock, Tout und Sie sowie alle verbreiteten Ramsch-Regeln – mit Rechenbeispielen.",
+      "inLanguage": "de-DE",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "Schafkopf Tracker",
+        "url": "https://schafkopf-tracker.de/"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Schafkopf Tracker", "item": "https://schafkopf-tracker.de/" },
-          { "@type": "ListItem", "position": 2, "name": "Schafkopf abrechnen", "item": "https://schafkopf-tracker.de/schafkopf-abrechnen.html" }
-        ]
+      "publisher": {
+        "@type": "Organization",
+        "name": "Schafkopf Tracker",
+        "url": "https://schafkopf-tracker.de/",
+        "logo": "https://schafkopf-tracker.de/logo.png"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Wie viele Augen braucht man beim Schafkopf zum Gewinnen?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Im Spiel sind 120 Augen. Die Spielerpartei gewinnt mit 61 Augen, den Gegenspielern reichen 60. Wer 30 Augen oder weniger hat, ist in der Regel Schneider; wer keinen Stich macht, ist Schwarz."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Was ist ein üblicher Schafkopf-Tarif?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Die erste Zahl ist der Grundtarif für Sauspiel, Schneider, Schwarz und Laufende, die letzte der Solotarif; eine mittlere Zahl ist ein eigener Sauspiel-Betrag. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Ab wie vielen Laufenden wird gezahlt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Grundsätzlich ab drei Laufenden. Beim Wenz und beim Geier zählen viele Runden schon ab zwei, weil es dort nur vier Trümpfe gibt. Bei Turnieren zählen meist höchstens die vier Ober, Privatrunden begrenzen häufig auf acht."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wer verliert beim Ramsch?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Meist verliert, wer die meisten Augen hat, und zahlt allen Mitspielern den Grundtarif oder einen eigens ausgemachten Ramsch-Tarif. Bei Augengleichstand verliert häufig, wer mehr Stiche hat. Manche Runden lassen die beiden mit den meisten Augen an die beiden anderen zahlen. Jungfrau, Durchmarsch und Schieben regelt jede Runde selbst."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie prüft man, ob die Punkteliste stimmt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Schafkopf ist ein Nullsummenspiel: Was einer gewinnt, verlieren die anderen. Die Summe aller Spielerstände muss nach jedem Spiel null ergeben. Ist sie es nicht, steckt irgendwo ein Fehler."
-            }
+      "mainEntityOfPage": "https://schafkopf-tracker.de/schafkopf-abrechnen.html",
+      "image": "https://schafkopf-tracker.de/assets/og/og-image.jpg",
+      "about": [
+        "Schafkopf",
+        "Schafkopf Abrechnung",
+        "Schafkopf Tarif",
+        "Laufende",
+        "Ramsch"
+      ],
+      "citation": [
+        "https://www.vol.at/2006/03/Schafkopf_Regeln.pdf",
+        "https://www.berchtesgadener-land.com/cdn/uploads/schafkopfregeln.pdf",
+        "https://de.wikipedia.org/wiki/Schafkopf",
+        "https://de.wikibooks.org/wiki/Kartenspiele:_Schafkopf",
+        "https://www.sauspiel.de/schafkopf-lernen/spielabrechnung",
+        "https://www.schafkopf-palast.de/schafkopf-glossar/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Schafkopf Tracker",
+          "item": "https://schafkopf-tracker.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Schafkopf Abrechnung",
+          "item": "https://schafkopf-tracker.de/schafkopf-abrechnen.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie viele Augen braucht man beim Schafkopf zum Gewinnen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Im Spiel sind 120 Augen. Die Spielerpartei gewinnt mit 61 Augen, den Gegenspielern reichen 60. Wer 30 Augen oder weniger hat, ist in der Regel Schneider; wer keinen Stich macht, ist Schwarz."
           }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "@type": "Question",
+          "name": "Wer gewinnt beim Schafkopf bei 60 zu 60?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei 60 zu 60 Augen verliert die Spielerpartei, denn sie braucht 61 Augen zum Sieg. Den Gegenspielern reichen 60."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist ein üblicher Schafkopf-Tarif?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Die erste Zahl ist der Grundtarif für Sauspiel, Schneider, Schwarz und Laufende, die letzte der Solotarif; eine mittlere Zahl ist ein eigener Sauspiel-Betrag. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet ein Sauspiel und was ein Solo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beim Tarif 10/20/50 kostet ein einfaches Sauspiel 20 Cent pro Spieler, ein Solo 50 Cent von jedem der drei Gegner. Für Schneider, Schwarz und jeden Laufenden kommen je 10 Cent dazu, Kontra und Legen verdoppeln den Betrag."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie zählt man beim Schafkopf Laufende?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Man zählt die höchsten Trümpfe in ununterbrochener Reihe ab dem Eichel-Ober: Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, dann die Unter in derselben Farbreihenfolge. Sobald ein Trumpf in der Reihe fehlt, ist Schluss. Hat eine Partei den Eichel-Ober nicht, zählt man für die andere Partei."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ab wie vielen Laufenden wird gezahlt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Grundsätzlich ab drei Laufenden. Beim Wenz und beim Geier zählen viele Runden schon ab zwei, weil es dort nur vier Trümpfe gibt. Bei Turnieren zählen meist höchstens die vier Ober, Privatrunden begrenzen häufig auf acht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie viele Laufende gibt es beim Farbwenz?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beim Farbwenz sind die vier Unter und die sieben Karten der Trumpffarbe Trumpf, also bis zu elf Laufende. Manche Runden zählen sie ab zwei wie beim Wenz, andere ab drei wie beim Solo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet ein Sie beim Schafkopf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Sie – alle vier Ober und alle vier Unter auf einer Hand – wird meist vierfach gewertet. Beim Tarif 10/20/50 und acht Laufenden sind das (50 + 80) × 4 = 5,20 Euro von jedem Gegenspieler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist Bock beim Schafkopf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bock- oder Bockrunden sind Spiele, in denen von vornherein der doppelte Tarif gilt – etwa nach dem Zusammenwerfen, nach einem verlorenen Solo, nach Kontra-Spielen oder nach Schwarz. Wann es Bock gibt, legt jede Runde selbst fest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wer verliert beim Ramsch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Meist verliert, wer die meisten Augen hat, und zahlt allen Mitspielern den Grundtarif oder einen eigens ausgemachten Ramsch-Tarif. Manche Runden lassen die beiden mit den meisten Augen an die beiden anderen zahlen. Jungfrau, Durchmarsch und Schieben regelt jede Runde selbst."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was gilt beim Ramsch bei gleicher Punktzahl?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Haben zwei oder mehr Spieler gleich viele Augen, verliert nach der verbreitetsten Regel, wer mehr Stiche gemacht hat. Ist auch die Stichzahl gleich, verliert, wer mehr Trümpfe oder den höchsten Trumpf hat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist ein Durchmarsch beim Ramsch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Durchmarsch gelingt, wenn ein Spieler alle Stiche macht – in manchen Runden reichen schon mehr als 90 Augen. Dann gewinnt er den Ramsch. Am häufigsten wird er wie ein schwarz gewonnenes Solo abgerechnet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist eine Jungfrau beim Ramsch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jungfrau ist, wer im Ramsch keinen Stich macht. Je nach Runde verdoppelt sich dann der ganze Ramsch, nur die Zahlung an die Jungfrau, oder es gilt der Solotarif. Eine klar vorherrschende Regel gibt es nicht."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie prüft man, ob die Punkteliste stimmt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Schafkopf ist ein Nullsummenspiel: Was einer gewinnt, verlieren die anderen. Die Summe aller Spielerstände muss nach jedem Spiel null ergeben. Ist sie es nicht, steckt irgendwo ein Fehler."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#glossar",
+      "name": "Glossar zur Schafkopf-Abrechnung",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "name": "Augen",
+          "description": "Die Punkte der Karten. Ass 11, Zehn 10, König 4, Ober 3, Unter 2; insgesamt 120 Augen im Spiel.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-augen"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Grundtarif",
+          "description": "Der kleinste vereinbarte Betrag. Er gilt für Sauspiel, Schneider, Schwarz und jeden Laufenden.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-grundtarif"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Solotarif",
+          "description": "Der Betrag für Solo, Wenz und Geier, den der Alleinspieler von jedem Gegner bekommt oder jedem zahlt.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-solotarif"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Laufende",
+          "description": "Die höchsten Trümpfe in ununterbrochener Reihe in der Hand einer Partei. Jeder Laufende erhöht den Spielwert um einen Grundtarif.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-laufende"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Schneider",
+          "description": "Eine Partei hat 30 Augen oder weniger. Der Spielwert steigt um einen Grundtarif.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-schneider"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Schneiderfrei",
+          "description": "Eine Partei hat genug Augen, um nicht Schneider zu sein – meist 31, für die Gegenspieler 30.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-schneiderfrei"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Schwarz",
+          "description": "Eine Partei macht keinen Stich. Der Spielwert steigt um einen weiteren Grundtarif.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-schwarz"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Kontra",
+          "description": "Auch Stoß oder Spritze. Ein Gegenspieler verdoppelt den Spielwert.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-kontra"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Re",
+          "description": "Auch Retour oder Gegenstoß. Die Spielerpartei antwortet auf Kontra und verdoppelt erneut.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-re"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Legen",
+          "description": "Auch Klopfen, Doppeln oder Aufstellen. Nach der ersten Kartenhälfte verdoppelt ein Spieler den Wert des Spiels.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-legen"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Bock",
+          "description": "Ein Spiel oder eine Runde mit doppeltem Tarif, etwa nach dem Zusammenwerfen.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-bock"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Stock",
+          "description": "Auch Pott oder Henn. Ein Einsatz, der nach dem Zusammenwerfen gesammelt und mit einem vereinbarten Spiel gewonnen wird.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-stock"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Tout",
+          "description": "Ein angesagtes Spiel, bei dem der Alleinspieler alle Stiche machen muss. Zählt doppelt.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-tout"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Sie",
+          "description": "Alle vier Ober und alle vier Unter auf einer Hand. Zählt meist vierfach.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-sie"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Ramsch",
+          "description": "Wird gespielt, wenn niemand ein Spiel ansagt. Jeder gegen jeden; wer die meisten Augen hat, verliert.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-ramsch"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Jungfrau",
+          "description": "Ein Spieler, der im Ramsch keinen Stich macht. Meist erhöht sich dadurch die Zahlung.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-jungfrau"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Durchmarsch",
+          "description": "Ein Spieler macht im Ramsch alle Stiche oder je nach Regel mehr als 90 Augen und gewinnt den Ramsch.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-durchmarsch"
+        },
+        {
+          "@type": "DefinedTerm",
+          "name": "Zusammenwerfen",
+          "description": "Niemand spielt, die Karten werden ohne Abrechnung neu gegeben.",
+          "url": "https://schafkopf-tracker.de/schafkopf-abrechnen.html#begriff-zusammenwerfen"
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 
@@ -180,11 +418,13 @@
 <header class="artikel-hero">
   <div class="wrap">
     <span class="eyebrow">Ratgeber</span>
-    <h1>Schafkopf abrechnen: Punkte zählen, Tarife &amp; Ramsch</h1>
+    <h1>Schafkopf Abrechnung: Punkte zählen, Tarif, Laufende &amp; Ramsch</h1>
     <p class="claim">
-      Wie viel ist ein Sauspiel wert, ab wann zählen Laufende, und wer zahlt beim
-      Ramsch? Hier stehen die verbreitetsten Varianten mit Rechenbeispielen.
+      Wie viel ist ein Sauspiel wert, wie zählt man Laufende, was kostet ein
+      Sie, und wer zahlt beim Ramsch? Hier stehen die verbreiteten Varianten
+      mit Preistabelle und Rechenbeispielen.
     </p>
+    <p class="stand">Zuletzt aktualisiert: <time datetime="2026-11-12">12. November 2026</time></p>
   </div>
 </header>
 
@@ -196,31 +436,37 @@
         <strong>Vorweg: Es gibt nicht <em>die</em> eine Abrechnung.</strong>
         Schafkopf wird von Region zu Region und von Stammtisch zu Stammtisch
         anders gespielt – bei Tarifen, Laufenden und vor allem beim Ramsch.
-        Diese Seite zeigt, was verbreitet ist, und sagt dazu, wo es
-        Unterschiede gibt. Was bei euch gilt, macht ihr vor dem ersten Spiel aus.
+        Diese Seite stellt die verbreiteten Spielweisen nebeneinander und
+        nennt die häufigste nur dort, wo sie sich belegen lässt. Was bei euch
+        gilt, macht ihr vor dem ersten Spiel aus.
       </p>
     </div>
 
     <nav class="inhalt" aria-label="Inhalt">
       <strong>Inhalt</strong>
       <ol>
-        <li><a href="#augen">Augen zählen: wer gewinnt?</a></li>
-        <li><a href="#tarife">Tarife: was ein Spiel kostet</a></li>
-        <li><a href="#zuschlaege">Laufende, Schneider und Schwarz</a></li>
-        <li><a href="#verdoppeln">Kontra, Legen, Bock, Tout und Sie</a></li>
+        <li><a href="#augen">Augen zählen: Kartenwerte und 61 Augen</a></li>
+        <li><a href="#tarif">Schafkopf Tarif</a></li>
+        <li><a href="#preistabelle">Preistabelle: was jedes Spiel kostet</a></li>
+        <li><a href="#schneider">Schneider und Schwarz</a></li>
+        <li><a href="#laufende">Laufende: Regeln und richtig zählen</a></li>
+        <li><a href="#verdoppeln">Kontra, Re, Legen und Bock</a></li>
+        <li><a href="#tout-sie">Tout und Sie: Tarif</a></li>
         <li><a href="#beispiele">Rechenbeispiele</a></li>
-        <li><a href="#ramsch">Ramsch: alle verbreiteten Varianten</a></li>
-        <li><a href="#punkteliste">Die Punkteliste führen</a></li>
+        <li><a href="#ramsch">Ramsch: Regeln, Wertung und Abrechnung</a></li>
+        <li><a href="#punkteliste">Punkteliste führen</a></li>
+        <li><a href="#glossar">Glossar</a></li>
         <li><a href="#fragen">Häufige Fragen</a></li>
+        <li><a href="#quellen">Quellen</a></li>
       </ol>
     </nav>
 
     <!-- ================================================================ -->
     <section id="augen">
-      <h2>Augen zählen: wer gewinnt?</h2>
-      <p>
-        Bevor es ums Geld geht, entscheiden die Augen – so heißen die Punkte
-        der Karten. Im ganzen Spiel sind 120 Augen.
+      <h2>Schafkopf Augen zählen: Kartenwerte und 61 Augen</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Im Spiel sind 120 Augen. Die
+        Spielerpartei gewinnt mit 61 Augen, bei 60 zu 60 verliert sie.
       </p>
       <div class="tabelle-rahmen">
         <table>
@@ -243,15 +489,18 @@
     </section>
 
     <!-- ================================================================ -->
-    <section id="tarife">
-      <h2>Tarife: was ein Spiel kostet</h2>
+    <section id="tarif">
+      <h2>Schafkopf Tarif: was ein Spiel kostet</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Ein Schafkopf-Tarif besteht aus einem
+        Grundtarif und einem Solotarif, etwa 10/50. Häufig genannt werden
+        5/20, 10/20, 10/50 und 10/20/50 – einen einzigen Standard gibt es nicht.
+      </p>
       <p>
-        Vor dem ersten Spiel macht die Runde den Tarif aus. Meist besteht er
-        aus einem <strong>Grundtarif</strong> und einem <strong>Solotarif</strong>.
-        Der Grundtarif ist die Basis für Sauspiel, Schneider, Schwarz und
-        Laufende. Der Solotarif richtet sich weniger nach dem Grundtarif als
-        nach bequemen Münzbeträgen. Geschrieben wird das als zwei Zahlen:
-        <strong>10/50</strong> heißt 10&nbsp;Cent Grundtarif, 50&nbsp;Cent Solo.
+        Der <strong>Grundtarif</strong> ist die Basis für Sauspiel, Schneider,
+        Schwarz und Laufende. Der <strong>Solotarif</strong> richtet sich
+        weniger nach dem Grundtarif als nach bequemen Münzbeträgen.
+        <strong>10/50</strong> heißt also 10&nbsp;Cent Grundtarif, 50&nbsp;Cent Solo.
       </p>
       <div class="tabelle-rahmen">
         <table>
@@ -270,13 +519,13 @@
         Welcher Tarif der häufigste ist, lässt sich nicht eindeutig sagen:
         Für Freizeitrunden werden vor allem 5/20, 10/20 und 10/50 genannt,
         viele Anleitungen bezeichnen 10/20/50 als den gängigsten. Nach oben
-        gibt es keine Grenze. Die dritte Zahl bei 10/20/50 ist ein eigener
+        gibt es keine Grenze. Die mittlere Zahl bei 10/20/50 ist ein eigener
         Sauspiel-Betrag zwischen Grund- und Solotarif.
       </p>
 
       <h3>Wenz, Geier, Bettel und Hochzeit</h3>
       <ul>
-        <li><strong>Wenz, Geier und Farbspiele</strong> kosten so viel wie ein Solo.</li>
+        <li><strong>Wenz, Geier, Farbwenz und Farbgeier</strong> kosten so viel wie ein Solo.</li>
         <li><strong>Bettel:</strong> am häufigsten der Solotarif; manche Runden machen einen eigenen Betrag aus, etwa zwischen Sauspiel und Solo.</li>
         <li><strong>Hochzeit:</strong> entweder wie ein Sauspiel oder – häufig – doppelt.</li>
       </ul>
@@ -290,61 +539,180 @@
     </section>
 
     <!-- ================================================================ -->
-    <section id="zuschlaege">
-      <h2>Laufende, Schneider und Schwarz</h2>
+    <section id="preistabelle">
+      <h2>Schafkopf Preistabelle: was jedes Spiel kostet</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Beim Tarif 10/20/50 kostet ein einfaches
+        Sauspiel 0,20&nbsp;€, ein Solo 0,50&nbsp;€. Jeder Laufende, Schneider
+        und Schwarz bringt je 0,10&nbsp;€ mehr.
+      </p>
+      <p>
+        Die Tabellen zeigen den Spielwert pro Spieler beim Tarif 10/20/50 mit
+        Laufenden ab drei, ohne Kontra oder Legen. Beim Sauspiel zahlt jeder
+        Verlierer diesen Betrag, beim Solo jeder der drei Gegenspieler. In der
+        Spalte „Schwarz“ ist der Schneider schon eingerechnet.
+      </p>
+      <div class="tabelle-rahmen">
+        <table>
+          <caption class="tabelle-titel">Sauspiel (Tarif 10/20/50)</caption>
+          <thead><tr><th>Laufende</th><th class="zahl">einfach</th><th class="zahl">Schneider</th><th class="zahl">Schwarz</th></tr></thead>
+          <tbody>
+            <tr><td>0–2</td><td class="zahl">0,20 €</td><td class="zahl">0,30 €</td><td class="zahl">0,40 €</td></tr>
+            <tr><td>3</td><td class="zahl">0,50 €</td><td class="zahl">0,60 €</td><td class="zahl">0,70 €</td></tr>
+            <tr><td>4</td><td class="zahl">0,60 €</td><td class="zahl">0,70 €</td><td class="zahl">0,80 €</td></tr>
+            <tr><td>5</td><td class="zahl">0,70 €</td><td class="zahl">0,80 €</td><td class="zahl">0,90 €</td></tr>
+            <tr><td>6</td><td class="zahl">0,80 €</td><td class="zahl">0,90 €</td><td class="zahl">1,00 €</td></tr>
+            <tr><td>7</td><td class="zahl">0,90 €</td><td class="zahl">1,00 €</td><td class="zahl">1,10 €</td></tr>
+            <tr><td>8</td><td class="zahl">1,00 €</td><td class="zahl">1,10 €</td><td class="zahl">1,20 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tabelle-rahmen">
+        <table>
+          <caption class="tabelle-titel">Solo (Tarif 10/20/50)</caption>
+          <thead><tr><th>Laufende</th><th class="zahl">einfach</th><th class="zahl">Schneider</th><th class="zahl">Schwarz</th></tr></thead>
+          <tbody>
+            <tr><td>0–2</td><td class="zahl">0,50 €</td><td class="zahl">0,60 €</td><td class="zahl">0,70 €</td></tr>
+            <tr><td>3</td><td class="zahl">0,80 €</td><td class="zahl">0,90 €</td><td class="zahl">1,00 €</td></tr>
+            <tr><td>4</td><td class="zahl">0,90 €</td><td class="zahl">1,00 €</td><td class="zahl">1,10 €</td></tr>
+            <tr><td>5</td><td class="zahl">1,00 €</td><td class="zahl">1,10 €</td><td class="zahl">1,20 €</td></tr>
+            <tr><td>6</td><td class="zahl">1,10 €</td><td class="zahl">1,20 €</td><td class="zahl">1,30 €</td></tr>
+            <tr><td>7</td><td class="zahl">1,20 €</td><td class="zahl">1,30 €</td><td class="zahl">1,40 €</td></tr>
+            <tr><td>8</td><td class="zahl">1,30 €</td><td class="zahl">1,40 €</td><td class="zahl">1,50 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tabelle-rahmen">
+        <table>
+          <caption class="tabelle-titel">Wenz und Geier, Laufende ab zwei (Tarif 10/20/50)</caption>
+          <thead><tr><th>Laufende</th><th class="zahl">einfach</th><th class="zahl">Schneider</th><th class="zahl">Schwarz</th></tr></thead>
+          <tbody>
+            <tr><td>0–1</td><td class="zahl">0,50 €</td><td class="zahl">0,60 €</td><td class="zahl">0,70 €</td></tr>
+            <tr><td>2</td><td class="zahl">0,70 €</td><td class="zahl">0,80 €</td><td class="zahl">0,90 €</td></tr>
+            <tr><td>3</td><td class="zahl">0,80 €</td><td class="zahl">0,90 €</td><td class="zahl">1,00 €</td></tr>
+            <tr><td>4</td><td class="zahl">0,90 €</td><td class="zahl">1,00 €</td><td class="zahl">1,10 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Bei anderen Tarifen rechnet ihr genauso: Spielwert = Sauspiel- oder
+        Solotarif + Grundtarif für Schneider, Schwarz und jeden Laufenden.
+        Kontra, Re, Legen und Bock verdoppeln den Betrag jeweils.
+      </p>
+    </section>
 
-      <h3>Schneider und Schwarz</h3>
-      <p>
-        Wird eine Partei Schneider, steigt der Wert des Spiels um einen
-        Grundtarif, bei Schwarz um einen weiteren. Dabei ist egal, ob die
-        Spieler- oder die Gegenpartei gewonnen hat. Schneider gilt als
-        Ehrensache und wird von selbst bezahlt, Schwarz muss der Gewinner
-        einfordern.
+    <!-- ================================================================ -->
+    <section id="schneider">
+      <h2>Schneider und Schwarz</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Schneider erhöht den Spielwert um einen
+        Grundtarif, Schwarz um einen weiteren – egal ob Spieler oder Gegner
+        gewonnen haben.
       </p>
       <p>
-        Bei Wenz und Farbsolo rechnen manche Runden Schneider und Schwarz nicht
-        ab – vor allem im langen Schafkopf. Im kurzen Schafkopf werden sie
-        grundsätzlich gezählt.
+        Schneider gilt als Ehrensache und wird von selbst bezahlt, Schwarz muss
+        der Gewinner einfordern. Bei Wenz und Farbsolo rechnen manche Runden
+        Schneider und Schwarz nicht ab – vor allem im langen Schafkopf. Im
+        kurzen Schafkopf werden sie grundsätzlich gezählt.
+      </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="laufende">
+      <h2>Schafkopf Laufende: Regeln und richtig zählen</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Laufende sind die höchsten Trümpfe in
+        ununterbrochener Reihe in einer Partei. Sie zählen grundsätzlich ab
+        drei, beim Wenz und Geier oft schon ab zwei. Jeder Laufende kostet
+        einen Grundtarif.
       </p>
 
-      <h3>Laufende</h3>
+      <h3>Laufende zählen – so geht’s</h3>
+      <ol>
+        <li>Beim Eichel-Ober anfangen: Wer ihn hat, dessen Partei hat die Laufenden – oder die andere Partei spielt „ohne“.</li>
+        <li>Der Reihe nach weiterzählen: Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, dann Eichel-Unter, Gras-Unter, Herz-Unter, Schellen-Unter, dann die Trumpffarbe vom Ass abwärts.</li>
+        <li>Beim ersten fehlenden Trumpf aufhören. Die Zahl bis dahin sind die Laufenden.</li>
+      </ol>
       <p>
-        Laufende (auch Bauern oder Herren genannt) sind die höchsten Trümpfe
-        in ununterbrochener Reihe in der Hand einer Partei – egal ob der
-        Spieler- oder der Gegenpartei. Jeder Laufende erhöht den Spielwert
-        um einen Grundtarif; bei hohen Tarifen rechnen manche nur einen halben.
+        <strong>Beispiel:</strong> Die Spielerpartei hat alle vier Ober, den
+        Eichel- und den Gras-Unter, aber nicht den Herz-Unter. Das sind
+        <strong>6 Laufende</strong>. Mit allen vier Ober und allen vier Unter
+        wären es <strong>8 Laufende</strong>.
       </p>
+
+      <h3>Ab wie vielen Laufenden wird gezahlt?</h3>
       <ul>
-        <li><strong>Ab wie vielen:</strong> grundsätzlich ab drei. Beim Wenz und beim Geier zählen viele Runden schon ab zwei, weil es dort nur vier Trümpfe gibt.</li>
-        <li><strong>Reihenfolge:</strong> Bei Sauspiel und Farbsolo erst die vier Ober, dann die vier Unter, dann die Trumpffarbe vom Ass abwärts – theoretisch also bis zu 14 Laufende. Beim Wenz sind es höchstens vier, nämlich die Unter.</li>
-        <li><strong>Bis wie viele:</strong> bei Turnieren meist höchstens vier, also nur die Ober. Privatrunden zählen mal nur die Ober, mal Ober und Unter, mal alle Trümpfe – häufig mit einer Obergrenze von acht.</li>
-        <li><strong>Mit oder ohne:</strong> Meist zählen Laufende für die Partei, die sie hat – egal ob Spieler oder Gegner. Fehlen der Spielerpartei die drei höchsten Trümpfe, spielt sie „ohne drei“, und das kostet genauso. Ob das bei euch gilt, ist Vereinbarung.</li>
-        <li><strong>Gar nicht:</strong> Auch das gibt es – manche Runden zahlen keine Laufenden.</li>
+        <li><strong>Sauspiel und Solo:</strong> grundsätzlich ab drei Laufenden.</li>
+        <li><strong>Wenz und Geier:</strong> viele Runden zahlen schon ab zwei, weil es dort nur vier Trümpfe gibt; andere bleiben bei drei.</li>
+        <li><strong>Gar nicht:</strong> Manche Runden zahlen überhaupt keine Laufenden.</li>
       </ul>
+
+      <h3>Wie viele Laufende zählen höchstens?</h3>
+      <ul>
+        <li><strong>Theoretisch:</strong> beim Sauspiel und Farbsolo bis zu 14 (vier Ober, vier Unter, sechs Karten der Trumpffarbe), beim Wenz und Geier vier.</li>
+        <li><strong>Turniere:</strong> meist höchstens vier, also nur die Ober.</li>
+        <li><strong>Privatrunden:</strong> mal nur die Ober, mal Ober und Unter, mal alle Trümpfe – häufig mit einer Obergrenze von acht.</li>
+      </ul>
+
+      <h3>Laufende beim Wenz und Geier</h3>
+      <p>
+        Beim Wenz sind nur die vier Unter Trumpf, beim Geier nur die vier Ober.
+        Laufende sind dort also höchstens vier, gezählt in der Farbreihenfolge
+        Eichel, Gras, Herz, Schellen.
+      </p>
+
+      <h3>Laufende beim Farbwenz und Farbgeier</h3>
+      <p>
+        Beim Farbwenz sind die vier Unter und die sieben Karten der
+        Trumpffarbe Trumpf (Ass, Zehn, König, Ober, Neun, Acht, Sieben), beim
+        Farbgeier die vier Ober und die Trumpffarbe ohne Ober. Damit sind bis
+        zu elf Laufende möglich. Manche Runden zählen sie ab zwei wie beim
+        Wenz, andere ab drei wie beim Solo – eine vorherrschende Regel gibt es
+        nicht.
+      </p>
+
+      <h3>Mit oder ohne</h3>
+      <p>
+        Meist zählen Laufende für die Partei, die sie hat – egal ob Spieler
+        oder Gegner. Fehlen der Spielerpartei die drei höchsten Trümpfe, spielt
+        sie „ohne drei“, und das kostet genauso. Bei hohen Tarifen rechnen
+        manche Runden pro Laufendem nur einen halben Grundtarif.
+      </p>
     </section>
 
     <!-- ================================================================ -->
     <section id="verdoppeln">
-      <h2>Kontra, Legen, Bock, Tout und Sie</h2>
-      <p>
-        Einige Situationen verdoppeln oder vervielfachen den Spielwert. Das gilt
-        immer für den ganzen Wert, also inklusive Schneider, Schwarz und
+      <h2>Kontra, Re, Legen und Bock</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Kontra, Re, Legen und Bock verdoppeln
+        jeweils den ganzen Spielwert – inklusive Schneider, Schwarz und
         Laufenden.
       </p>
       <ul>
         <li><strong>Kontra</strong> (auch Stoß oder Spritze): Ein Gegenspieler verdoppelt den Spielwert. Wann das erlaubt ist, unterscheidet sich: vor oder beim Ausspielen der ersten Karte, häufig auch „mit acht Karten“ – dann darf man warten, bis man in der ersten Runde selbst dran ist –, manchmal noch später.</li>
         <li><strong>Re</strong> (Retour, Gegenstoß): Die Spielerpartei antwortet auf Kontra und verdoppelt noch einmal.</li>
         <li><strong>Supra, Resupra und mehr:</strong> Manche Runden erlauben weitere Stufen im Wechsel – Supra, Resupra, teils auch Sub und Steinmetz. Jede Stufe verdoppelt erneut.</li>
-        <li><strong>Legen</strong> (auch doppeln, aufstellen, steigern, klopfen): Nach der ersten Hälfte der Karten – also nach vier, beim kurzen Blatt nach drei – darf jeder einmal den Wert verdoppeln, meist durch Herauslegen einer Münze. Manche Runden lassen nur den Ausspieler legen oder nur nacheinander.</li>
-        <li><strong>Bockrunden:</strong> Spiele, in denen von vornherein der doppelte Tarif gilt – etwa nach dem Zusammenwerfen, nach einem verlorenen Solo, nach Kontra-Spielen oder nach Schwarz.</li>
-        <li><strong>Tout:</strong> Der Alleinspieler kündigt an, alle Stiche zu machen. Das Spiel zählt doppelt, gewonnen wie verloren. Ob Schneider und Schwarz dabei zusätzlich gezählt werden, handhaben die Runden unterschiedlich.</li>
-        <li><strong>Sie:</strong> Wer alle vier Ober und alle vier Unter hat, spielt „Sie“ – das zählt vierfach.</li>
+        <li><strong>Legen</strong> (auch Klopfen, Doppeln, Aufstellen, Steigern): Nach der ersten Hälfte der Karten – also nach vier, beim kurzen Blatt nach drei – darf jeder einmal den Wert verdoppeln, meist durch Herauslegen einer Münze. Manche Runden lassen nur den Ausspieler legen oder nur nacheinander.</li>
+        <li><strong>Bock:</strong> Spiele oder ganze Runden, in denen von vornherein der doppelte Tarif gilt – etwa nach dem Zusammenwerfen, nach einem verlorenen Solo, nach Kontra-Spielen oder nach Schwarz.</li>
       </ul>
       <p>
-        Eine weitere Variante: Bei Kontra übernimmt die Gegenpartei das Spiel und
-        braucht dann selbst 61 Augen. Regelkonform ist das nicht, gespielt wird
-        es trotzdem öfter.
+        Eine weitere Variante: Bei Kontra übernimmt die Gegenpartei das Spiel
+        und braucht dann selbst 61 Augen. Regelkonform ist das nicht, gespielt
+        wird es trotzdem öfter.
       </p>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="tout-sie">
+      <h2>Tout und Sie: Tarif</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Ein Tout zählt doppelt, ein Sie meist
+        vierfach.
+      </p>
+      <ul>
+        <li><strong>Tout:</strong> Der Alleinspieler kündigt an, alle Stiche zu machen. Das Spiel zählt doppelt, gewonnen wie verloren. Ob Schneider und Schwarz zusätzlich gezählt werden, handhaben die Runden unterschiedlich.</li>
+        <li><strong>Sie:</strong> Wer alle vier Ober und alle vier Unter hat, spielt „Sie“. Das Spiel wird meist vierfach gewertet. Beim Tarif 10/20/50 mit acht Laufenden: (50&nbsp;ct + 8 × 10&nbsp;ct) × 4 = <strong>5,20&nbsp;€ von jedem Gegenspieler</strong>.</li>
+      </ul>
 
       <h3>Das Schema auf einen Blick</h3>
       <div class="tabelle-rahmen">
@@ -355,7 +723,7 @@
             <tr><td>Hochzeit</td><td>wie ein Sauspiel, häufig × 2</td></tr>
             <tr><td>Solo, Wenz, Geier</td><td>Solotarif (je nach Tarif 2-, 4- oder 5-facher Grundtarif), plus jeder Laufende je 1 × G; Schneider und Schwarz je 1 × G oder gar nicht</td></tr>
             <tr><td>Tout</td><td>wie das Solo, × 2</td></tr>
-            <tr><td>Sie</td><td>wie das Solo, × 4</td></tr>
+            <tr><td>Sie</td><td>wie das Solo, meist × 4</td></tr>
           </tbody>
         </table>
       </div>
@@ -364,7 +732,7 @@
 
     <!-- ================================================================ -->
     <section id="beispiele">
-      <h2>Rechenbeispiele</h2>
+      <h2>Rechenbeispiele zur Schafkopf-Abrechnung</h2>
       <p>Wenn nicht anders angegeben, mit Tarif 10/20/50 (Grundtarif 10&nbsp;ct, Sauspiel 20&nbsp;ct, Solo 50&nbsp;ct), Laufende ab drei, beim Wenz ab zwei.</p>
 
       <div class="beispiel">
@@ -412,34 +780,55 @@
 
     <!-- ================================================================ -->
     <section id="ramsch">
-      <h2>Ramsch: alle verbreiteten Varianten</h2>
+      <h2>Schafkopf Ramsch: Regeln, Wertung und Abrechnung</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Ramsch wird gespielt, wenn niemand ein
+        Spiel ansagt. Jeder spielt gegen jeden, Trumpf ist wie beim Sauspiel.
+        Wer die meisten Augen hat, verliert und zahlt meist allen anderen den
+        Grundtarif.
+      </p>
       <p>
         Der Ramsch gehört nicht zu den offiziellen Regeln – entsprechend
-        vielfältig wird er gespielt. Hier sind die Varianten, die man am
-        häufigsten antrifft. Die meisten Runden kombinieren mehrere davon.
+        vielfältig wird er gespielt. Hier sind die verbreiteten Varianten; die
+        meisten Runden kombinieren mehrere davon.
       </p>
 
       <div class="variante">
-        <h3>Was passiert, wenn keiner spielt?</h3>
+        <h3>Wann wird Ramsch gespielt?</h3>
         <ul>
-          <li><strong>Ramsch</strong> – die häufigste Lösung: Alle spielen gegeneinander, Trumpf wie beim Sauspiel. Ziel: möglichst wenige Augen.</li>
+          <li><strong>Ramsch</strong> – die häufigste Lösung, wenn alle „weiter“ sagen.</li>
           <li><strong>Zusammenwerfen:</strong> Die Karten werden neu gegeben, ohne Abrechnung.</li>
           <li><strong>Stock</strong> (auch Pott oder Henn): Beim Zusammenwerfen zahlt jeder einen Grundbetrag in den Stock. Wer ein vorher vereinbartes Spiel gewinnt, bekommt ihn; wer es verliert, muss den Stock verdoppeln.</li>
-          <li><strong>Bockrunde:</strong> Nach dem Zusammenwerfen zählen die nächsten Spiele doppelt.</li>
+          <li><strong>Bock:</strong> Nach dem Zusammenwerfen zählen die nächsten Spiele doppelt.</li>
         </ul>
       </div>
 
       <div class="variante">
-        <h3>Wer verliert?</h3>
+        <h3>Ramsch: Trumpf und Ziel</h3>
+        <p>
+          Trumpf sind wie beim Sauspiel die Ober, die Unter und Herz. Ziel ist,
+          möglichst wenige Augen zu bekommen.
+        </p>
+      </div>
+
+      <div class="variante">
+        <h3>Wer verliert beim Ramsch?</h3>
+        <p>
+          Wer am Ende die meisten Augen hat, verliert. Das ist praktisch
+          überall so.
+        </p>
+      </div>
+
+      <div class="variante">
+        <h3>Ramsch bei gleicher Punktzahl</h3>
         <ul>
-          <li><strong>Meiste Augen:</strong> Wer am Ende die meisten Augen hat, verliert. Das ist praktisch überall so.</li>
-          <li><strong>Gleichstand nach Stichen:</strong> Haben zwei oder mehr gleich viele Augen, verliert, wer mehr Stiche hat. Das ist die verbreitetste Regel und steht so auch in der Schafkopfordnung des Bayerischen Schafkopf-Vereins.</li>
+          <li><strong>Nach Stichen:</strong> Haben zwei oder mehr gleich viele Augen, verliert, wer mehr Stiche hat. Das ist die verbreitetste Regel und steht so auch in der Schafkopfordnung des Bayerischen Schafkopf-Vereins.</li>
           <li><strong>Danach nach Trümpfen:</strong> Ist auch die Stichzahl gleich, verliert, wer mehr Trümpfe – oder den höchsten Trumpf – hat.</li>
         </ul>
       </div>
 
       <div class="variante">
-        <h3>Was zahlt der Verlierer?</h3>
+        <h3>Ramsch Abrechnung und Wertung</h3>
         <ul>
           <li><strong>Fester Betrag an jeden</strong> – am häufigsten: Der Verlierer zahlt allen Mitspielern den Grundtarif.</li>
           <li><strong>Zwei gegen zwei:</strong> Die beiden Spieler mit den meisten Augen zahlen an die beiden anderen.</li>
@@ -466,11 +855,11 @@
       </div>
 
       <div class="variante">
-        <h3>Durchmarsch</h3>
+        <h3>Durchmarsch: alle Stiche oder über 90 Augen</h3>
         <p>Ein Spieler gewinnt den Ramsch, statt ihn zu verlieren. Was genau als Durchmarsch gilt, ist unterschiedlich:</p>
         <ul>
           <li><strong>Alle Stiche:</strong> Nur wer wirklich jeden Stich macht, hat einen Durchmarsch. So steht es in den meisten Regelwerken.</li>
-          <li><strong>Ab 91 Augen:</strong> Es reicht, wenn ein Spieler mehr als 90 Augen hat – verbreitet etwa bei Turnieren.</li>
+          <li><strong>Über 90 Augen:</strong> Es reicht, wenn ein Spieler mindestens 91 Augen hat – verbreitet etwa bei Turnieren.</li>
           <li><strong>Abrechnung wie Solo schwarz:</strong> Der Spieler bekommt von jedem, was ein schwarz gewonnenes Solo bringen würde. Das ist die häufigste Abrechnung und steht so in der Schafkopfordnung.</li>
           <li><strong>Abrechnung wie ein Ramsch:</strong> Der Spieler bekommt den Ramsch-Betrag von jedem, statt ihn zu zahlen.</li>
           <li><strong>Durchmarsch schlägt Jungfrau:</strong> Gelingt ein Durchmarsch, greift die Jungfrau-Regel meist nicht.</li>
@@ -478,7 +867,7 @@
       </div>
 
       <div class="variante">
-        <h3>Schieben und Verdoppeln</h3>
+        <h3>Schieberamsch und Legen</h3>
         <ul>
           <li><strong>Schieberamsch:</strong> Eine nur lokal verbreitete Sonderform mit eigenen Regeln, die sich von Ort zu Ort stark unterscheiden.</li>
           <li><strong>Legen gilt auch im Ramsch:</strong> Wurde vorher gelegt, zählt auch der Ramsch doppelt.</li>
@@ -497,8 +886,12 @@
 
     <!-- ================================================================ -->
     <section id="punkteliste">
-      <h2>Die Punkteliste führen</h2>
-      <p>Wer auf Papier mitschreibt, fährt mit einer einfachen Struktur am besten:</p>
+      <h2>Schafkopf Punkteliste führen</h2>
+      <p class="kurz">
+        <strong>Kurz gesagt:</strong> Eine Spalte pro Spieler, nach jedem Spiel
+        den neuen Stand eintragen – und die Summe aller Stände muss immer null
+        ergeben.
+      </p>
       <ol>
         <li>Eine Spalte pro Spieler, eine Zeile pro Spiel.</li>
         <li>Nach jedem Spiel den neuen Stand jedes Spielers eintragen, nicht nur den Betrag des Spiels.</li>
@@ -522,55 +915,123 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Häufige Fragen: Texte identisch mit FAQPage im JSON-LD oben halten -->
+    <section id="glossar">
+      <h2>Glossar: Begriffe der Schafkopf-Abrechnung</h2>
+      <dl class="glossar">
+        <dt id="begriff-augen">Augen</dt>
+        <dd>Die Punkte der Karten. Ass 11, Zehn 10, König 4, Ober 3, Unter 2; insgesamt 120 Augen im Spiel.</dd>
+        <dt id="begriff-grundtarif">Grundtarif</dt>
+        <dd>Der kleinste vereinbarte Betrag. Er gilt für Sauspiel, Schneider, Schwarz und jeden Laufenden.</dd>
+        <dt id="begriff-solotarif">Solotarif</dt>
+        <dd>Der Betrag für Solo, Wenz und Geier, den der Alleinspieler von jedem Gegner bekommt oder jedem zahlt.</dd>
+        <dt id="begriff-laufende">Laufende</dt>
+        <dd>Die höchsten Trümpfe in ununterbrochener Reihe in der Hand einer Partei. Jeder Laufende erhöht den Spielwert um einen Grundtarif.</dd>
+        <dt id="begriff-schneider">Schneider</dt>
+        <dd>Eine Partei hat 30 Augen oder weniger. Der Spielwert steigt um einen Grundtarif.</dd>
+        <dt id="begriff-schneiderfrei">Schneiderfrei</dt>
+        <dd>Eine Partei hat genug Augen, um nicht Schneider zu sein – meist 31, für die Gegenspieler 30.</dd>
+        <dt id="begriff-schwarz">Schwarz</dt>
+        <dd>Eine Partei macht keinen Stich. Der Spielwert steigt um einen weiteren Grundtarif.</dd>
+        <dt id="begriff-kontra">Kontra</dt>
+        <dd>Auch Stoß oder Spritze. Ein Gegenspieler verdoppelt den Spielwert.</dd>
+        <dt id="begriff-re">Re</dt>
+        <dd>Auch Retour oder Gegenstoß. Die Spielerpartei antwortet auf Kontra und verdoppelt erneut.</dd>
+        <dt id="begriff-legen">Legen</dt>
+        <dd>Auch Klopfen, Doppeln oder Aufstellen. Nach der ersten Kartenhälfte verdoppelt ein Spieler den Wert des Spiels.</dd>
+        <dt id="begriff-bock">Bock</dt>
+        <dd>Ein Spiel oder eine Runde mit doppeltem Tarif, etwa nach dem Zusammenwerfen.</dd>
+        <dt id="begriff-stock">Stock</dt>
+        <dd>Auch Pott oder Henn. Ein Einsatz, der nach dem Zusammenwerfen gesammelt und mit einem vereinbarten Spiel gewonnen wird.</dd>
+        <dt id="begriff-tout">Tout</dt>
+        <dd>Ein angesagtes Spiel, bei dem der Alleinspieler alle Stiche machen muss. Zählt doppelt.</dd>
+        <dt id="begriff-sie">Sie</dt>
+        <dd>Alle vier Ober und alle vier Unter auf einer Hand. Zählt meist vierfach.</dd>
+        <dt id="begriff-ramsch">Ramsch</dt>
+        <dd>Wird gespielt, wenn niemand ein Spiel ansagt. Jeder gegen jeden; wer die meisten Augen hat, verliert.</dd>
+        <dt id="begriff-jungfrau">Jungfrau</dt>
+        <dd>Ein Spieler, der im Ramsch keinen Stich macht. Meist erhöht sich dadurch die Zahlung.</dd>
+        <dt id="begriff-durchmarsch">Durchmarsch</dt>
+        <dd>Ein Spieler macht im Ramsch alle Stiche oder je nach Regel mehr als 90 Augen und gewinnt den Ramsch.</dd>
+        <dt id="begriff-zusammenwerfen">Zusammenwerfen</dt>
+        <dd>Niemand spielt, die Karten werden ohne Abrechnung neu gegeben.</dd>
+      </dl>
+    </section>
+
+    <!-- ================================================================ -->
     <section id="fragen">
-      <h2>Häufige Fragen</h2>
+      <h2>Häufige Fragen zur Schafkopf-Abrechnung</h2>
       <div class="faq">
         <details>
           <summary>Wie viele Augen braucht man beim Schafkopf zum Gewinnen?</summary>
-          <p>
-            Im Spiel sind 120 Augen. Die Spielerpartei gewinnt mit 61 Augen, den
-            Gegenspielern reichen 60. Wer 30 Augen oder weniger hat, ist in der
-            Regel Schneider; wer keinen Stich macht, ist Schwarz.
-          </p>
+          <p>Im Spiel sind 120 Augen. Die Spielerpartei gewinnt mit 61 Augen, den Gegenspielern reichen 60. Wer 30 Augen oder weniger hat, ist in der Regel Schneider; wer keinen Stich macht, ist Schwarz.</p>
+        </details>
+        <details>
+          <summary>Wer gewinnt beim Schafkopf bei 60 zu 60?</summary>
+          <p>Bei 60 zu 60 Augen verliert die Spielerpartei, denn sie braucht 61 Augen zum Sieg. Den Gegenspielern reichen 60.</p>
         </details>
         <details>
           <summary>Was ist ein üblicher Schafkopf-Tarif?</summary>
-          <p>
-            Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Die erste Zahl
-            ist der Grundtarif für Sauspiel, Schneider, Schwarz und Laufende, die
-            letzte der Solotarif; eine mittlere Zahl ist ein eigener Sauspiel-Betrag. Einen einzigen Standard gibt es nicht – verbindlich ist, was die
-            Runde vorher ausmacht.
-          </p>
+          <p>Häufig genannt werden 5/20, 10/20, 10/50 und 10/20/50. Die erste Zahl ist der Grundtarif für Sauspiel, Schneider, Schwarz und Laufende, die letzte der Solotarif; eine mittlere Zahl ist ein eigener Sauspiel-Betrag. Einen einzigen Standard gibt es nicht – verbindlich ist, was die Runde vorher ausmacht.</p>
+        </details>
+        <details>
+          <summary>Was kostet ein Sauspiel und was ein Solo?</summary>
+          <p>Beim Tarif 10/20/50 kostet ein einfaches Sauspiel 20 Cent pro Spieler, ein Solo 50 Cent von jedem der drei Gegner. Für Schneider, Schwarz und jeden Laufenden kommen je 10 Cent dazu, Kontra und Legen verdoppeln den Betrag.</p>
+        </details>
+        <details>
+          <summary>Wie zählt man beim Schafkopf Laufende?</summary>
+          <p>Man zählt die höchsten Trümpfe in ununterbrochener Reihe ab dem Eichel-Ober: Eichel-Ober, Gras-Ober, Herz-Ober, Schellen-Ober, dann die Unter in derselben Farbreihenfolge. Sobald ein Trumpf in der Reihe fehlt, ist Schluss. Hat eine Partei den Eichel-Ober nicht, zählt man für die andere Partei.</p>
         </details>
         <details>
           <summary>Ab wie vielen Laufenden wird gezahlt?</summary>
-          <p>
-            Grundsätzlich ab drei Laufenden. Beim Wenz und beim Geier zählen viele
-            Runden schon ab zwei, weil es dort nur vier Trümpfe gibt. Bei Turnieren
-            zählen meist höchstens die vier Ober, Privatrunden begrenzen häufig auf
-            acht.
-          </p>
+          <p>Grundsätzlich ab drei Laufenden. Beim Wenz und beim Geier zählen viele Runden schon ab zwei, weil es dort nur vier Trümpfe gibt. Bei Turnieren zählen meist höchstens die vier Ober, Privatrunden begrenzen häufig auf acht.</p>
+        </details>
+        <details>
+          <summary>Wie viele Laufende gibt es beim Farbwenz?</summary>
+          <p>Beim Farbwenz sind die vier Unter und die sieben Karten der Trumpffarbe Trumpf, also bis zu elf Laufende. Manche Runden zählen sie ab zwei wie beim Wenz, andere ab drei wie beim Solo.</p>
+        </details>
+        <details>
+          <summary>Was kostet ein Sie beim Schafkopf?</summary>
+          <p>Ein Sie – alle vier Ober und alle vier Unter auf einer Hand – wird meist vierfach gewertet. Beim Tarif 10/20/50 und acht Laufenden sind das (50 + 80) × 4 = 5,20 Euro von jedem Gegenspieler.</p>
+        </details>
+        <details>
+          <summary>Was ist Bock beim Schafkopf?</summary>
+          <p>Bock- oder Bockrunden sind Spiele, in denen von vornherein der doppelte Tarif gilt – etwa nach dem Zusammenwerfen, nach einem verlorenen Solo, nach Kontra-Spielen oder nach Schwarz. Wann es Bock gibt, legt jede Runde selbst fest.</p>
         </details>
         <details>
           <summary>Wer verliert beim Ramsch?</summary>
-          <p>
-            Meist verliert, wer die meisten Augen hat, und zahlt allen Mitspielern
-            den Grundtarif oder einen eigens ausgemachten Ramsch-Tarif. Bei
-            Augengleichstand verliert häufig, wer mehr Stiche hat. Manche Runden
-            lassen die beiden mit den meisten Augen an die beiden anderen zahlen.
-            Jungfrau, Durchmarsch und Schieben regelt jede Runde selbst.
-          </p>
+          <p>Meist verliert, wer die meisten Augen hat, und zahlt allen Mitspielern den Grundtarif oder einen eigens ausgemachten Ramsch-Tarif. Manche Runden lassen die beiden mit den meisten Augen an die beiden anderen zahlen. Jungfrau, Durchmarsch und Schieben regelt jede Runde selbst.</p>
+        </details>
+        <details>
+          <summary>Was gilt beim Ramsch bei gleicher Punktzahl?</summary>
+          <p>Haben zwei oder mehr Spieler gleich viele Augen, verliert nach der verbreitetsten Regel, wer mehr Stiche gemacht hat. Ist auch die Stichzahl gleich, verliert, wer mehr Trümpfe oder den höchsten Trumpf hat.</p>
+        </details>
+        <details>
+          <summary>Was ist ein Durchmarsch beim Ramsch?</summary>
+          <p>Ein Durchmarsch gelingt, wenn ein Spieler alle Stiche macht – in manchen Runden reichen schon mehr als 90 Augen. Dann gewinnt er den Ramsch. Am häufigsten wird er wie ein schwarz gewonnenes Solo abgerechnet.</p>
+        </details>
+        <details>
+          <summary>Was ist eine Jungfrau beim Ramsch?</summary>
+          <p>Jungfrau ist, wer im Ramsch keinen Stich macht. Je nach Runde verdoppelt sich dann der ganze Ramsch, nur die Zahlung an die Jungfrau, oder es gilt der Solotarif. Eine klar vorherrschende Regel gibt es nicht.</p>
         </details>
         <details>
           <summary>Wie prüft man, ob die Punkteliste stimmt?</summary>
-          <p>
-            Schafkopf ist ein Nullsummenspiel: Was einer gewinnt, verlieren die
-            anderen. Die Summe aller Spielerstände muss nach jedem Spiel null
-            ergeben. Ist sie es nicht, steckt irgendwo ein Fehler.
-          </p>
+          <p>Schafkopf ist ein Nullsummenspiel: Was einer gewinnt, verlieren die anderen. Die Summe aller Spielerstände muss nach jedem Spiel null ergeben. Ist sie es nicht, steckt irgendwo ein Fehler.</p>
         </details>
       </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <section id="quellen">
+      <h2>Quellen</h2>
+      <p>Diese Seite fasst die folgenden Regelwerke und Nachschlagewerke zusammen:</p>
+      <ul class="quellen">
+        <li><a href="https://www.vol.at/2006/03/Schafkopf_Regeln.pdf" rel="noopener">Offizielle Schafkopfordnung des Bayerischen Schafkopf-Vereins e.V. (PDF)</a></li>
+        <li><a href="https://www.berchtesgadener-land.com/cdn/uploads/schafkopfregeln.pdf" rel="noopener">Schafkopfregeln der Schafkopfschule e.V. (PDF)</a></li>
+        <li><a href="https://de.wikipedia.org/wiki/Schafkopf" rel="noopener">Wikipedia: Schafkopf</a></li>
+        <li><a href="https://de.wikibooks.org/wiki/Kartenspiele:_Schafkopf" rel="noopener">Wikibooks: Kartenspiele – Schafkopf</a></li>
+        <li><a href="https://www.sauspiel.de/schafkopf-lernen/spielabrechnung" rel="noopener">Sauspiel: Die Spielabrechnung beim Schafkopf</a></li>
+        <li><a href="https://www.schafkopf-palast.de/schafkopf-glossar/" rel="noopener">Schafkopf-Palast: Schafkopf-Glossar</a></li>
+      </ul>
     </section>
 
   </div>
