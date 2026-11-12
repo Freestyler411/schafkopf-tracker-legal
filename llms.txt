@@ -73,6 +73,9 @@ gibt es nicht.
 
 - [Startseite](https://schafkopf-tracker.de/): Funktionen, Statistiken, Preise
   und häufige Fragen
+- [Schafkopf abrechnen](https://schafkopf-tracker.de/schafkopf-abrechnen.html):
+  Augen zählen, übliche Tarife, Laufende, Schneider, Schwarz, Kontra, Klopfen
+  und alle verbreiteten Ramsch-Varianten mit Rechenbeispielen
 - [Support](https://schafkopf-tracker.de/support.html): Kontakt bei Fragen und
   Problemen
 - [Datenschutzerklärung](https://schafkopf-tracker.de/datenschutz.html)
