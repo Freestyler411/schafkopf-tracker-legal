@@ -192,12 +192,13 @@
     .papier td.minus { color: #a2453a; }
     .papier td.summe { color: var(--text-leise); }
     .app-block {
-      display: grid; gap: 1.5rem; align-items: center;
+      display: grid; gap: 1.5rem; align-items: start;
       background: var(--bg-sanft); border: 1px solid var(--linie); border-radius: var(--radius-gross);
       padding: 1.5rem; margin-top: 1.5rem;
     }
     .app-block > * { min-width: 0; }
     .app-block .phone { max-width: 200px; }
+    .app-block-logo { width: 64px; height: 64px; border-radius: 22%; background: #fff; box-shadow: var(--schatten-hoch); margin-bottom: 1.1rem; }
     .app-block p { margin-bottom: 1rem; }
     @media (min-width: 700px) {
       .app-block { grid-template-columns: 1fr 200px; padding: 2rem 2.5rem; }
@@ -1109,6 +1110,8 @@
       </figure>
       <div class="app-block">
         <div>
+          <img src="/logo.svg" width="64" height="64" class="app-block-logo" loading="lazy"
+               alt="App-Icon von Schafkopf Tracker: goldenes ST-Wappen mit gemusterter Kappe in dunklem Grün">
           <h3>Die Liste, die sich selbst rechnet</h3>
           <p>
             Genau das macht <a href="/">Schafkopf Tracker</a> automatisch: Ihr legt
