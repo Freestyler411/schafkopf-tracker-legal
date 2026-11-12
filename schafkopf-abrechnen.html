@@ -180,8 +180,7 @@
     .ablauf-pfeil::before { content: "↓"; position: absolute; left: .45rem; color: var(--gold); font-weight: 700; }
 
     /* Beispiel-Punkteliste */
-    .liste-beispiel { display: grid; gap: 1.5rem; align-items: start; }
-    .liste-beispiel > * { min-width: 0; }
+    .liste-beispiel { max-width: 34rem; }
     .papier {
       background: #fffdf6; border: 1px solid #eadfb8; border-radius: 12px; padding: .8rem;
     }
@@ -192,9 +191,16 @@
     .papier td.plus { color: var(--gruen); }
     .papier td.minus { color: #a2453a; }
     .papier td.summe { color: var(--text-leise); }
-    .liste-beispiel .phone { max-width: 210px; }
+    .app-block {
+      display: grid; gap: 1.5rem; align-items: center;
+      background: var(--bg-sanft); border: 1px solid var(--linie); border-radius: var(--radius-gross);
+      padding: 1.5rem; margin-top: 1.5rem;
+    }
+    .app-block > * { min-width: 0; }
+    .app-block .phone { max-width: 200px; }
+    .app-block p { margin-bottom: 1rem; }
     @media (min-width: 700px) {
-      .liste-beispiel { grid-template-columns: 1fr 210px; }
+      .app-block { grid-template-columns: 1fr 200px; padding: 2rem 2.5rem; }
     }
     @media (max-width: 420px) {
       .zahlwege { grid-template-columns: 1fr 1fr; }
@@ -1087,42 +1093,42 @@
         <li><strong>Kontrolle:</strong> Die Summe aller Stände muss immer null ergeben – was einer gewinnt, verlieren die anderen.</li>
         <li>Spielart dazuschreiben (S, W, G, R …), damit sich Fehler später nachvollziehen lassen.</li>
       </ol>
-      <div class="liste-beispiel">
-        <figure class="grafik" style="margin:0">
-          <div class="papier tabelle-rahmen">
-            <table>
-              <thead><tr><th>Spiel</th><th class="zahl">Anna</th><th class="zahl">Ben</th><th class="zahl">Toni</th><th class="zahl">Vroni</th><th class="zahl">Summe</th></tr></thead>
-              <tbody>
-                <tr><td>Sauspiel</td><td class="zahl plus">+0,20</td><td class="zahl plus">+0,20</td><td class="zahl minus">−0,20</td><td class="zahl minus">−0,20</td><td class="zahl summe">0,00 ✓</td></tr>
-                <tr><td>Solo</td><td class="zahl minus">−0,30</td><td class="zahl minus">−0,30</td><td class="zahl plus">+1,30</td><td class="zahl minus">−0,70</td><td class="zahl summe">0,00 ✓</td></tr>
-                <tr><td>Ramsch</td><td class="zahl minus">−0,20</td><td class="zahl minus">−0,20</td><td class="zahl plus">+1,40</td><td class="zahl minus">−1,00</td><td class="zahl summe">0,00 ✓</td></tr>
-                <tr><td>Wenz</td><td class="zahl minus">−2,30</td><td class="zahl plus">+0,50</td><td class="zahl plus">+2,10</td><td class="zahl minus">−0,30</td><td class="zahl summe">0,00 ✓</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <figcaption>Beispiel mit Tarif 10/20/50 in Euro: In jeder Zeile steht der neue Stand, nicht der Betrag des Spiels. Die Summe ist immer null.</figcaption>
-        </figure>
-        <figure class="grafik" style="margin:0">
-          <div class="phone">
-            <img src="/assets/screenshots/treffen.svg" width="390" height="844" loading="lazy" decoding="async"
-                 alt="Schafkopf Tracker: Punktestand eines Spielabends mit fünf Spielern und Verlaufsdiagramm">
-          </div>
-          <figcaption style="text-align:center">So führt Schafkopf Tracker die Liste automatisch.</figcaption>
-        </figure>
-      </div>
-      <p>
-        Genau das macht <a href="/">Schafkopf Tracker</a> automatisch: Ihr legt
-        Tarif und Hausregeln für den Ramsch einmal pro Stammtisch fest, tragt
-        nach jedem Spiel Spielart und Ergebnis ein, und die App rechnet ab – für
-        3 bis 8 Spieler, auf iPhone und Android, kostenlos.
-      </p>
-      <div class="btn-gruppe">
+      <figure class="grafik liste-beispiel">
+        <div class="papier tabelle-rahmen">
+          <table>
+            <thead><tr><th>Spiel</th><th class="zahl">Anna</th><th class="zahl">Ben</th><th class="zahl">Toni</th><th class="zahl">Vroni</th><th class="zahl">Summe</th></tr></thead>
+            <tbody>
+              <tr><td>Sauspiel</td><td class="zahl plus">+0,20</td><td class="zahl plus">+0,20</td><td class="zahl minus">−0,20</td><td class="zahl minus">−0,20</td><td class="zahl summe">0,00 ✓</td></tr>
+              <tr><td>Solo</td><td class="zahl minus">−0,30</td><td class="zahl minus">−0,30</td><td class="zahl plus">+1,30</td><td class="zahl minus">−0,70</td><td class="zahl summe">0,00 ✓</td></tr>
+              <tr><td>Ramsch</td><td class="zahl minus">−0,20</td><td class="zahl minus">−0,20</td><td class="zahl plus">+1,40</td><td class="zahl minus">−1,00</td><td class="zahl summe">0,00 ✓</td></tr>
+              <tr><td>Wenz</td><td class="zahl minus">−2,30</td><td class="zahl plus">+0,50</td><td class="zahl plus">+2,10</td><td class="zahl minus">−0,30</td><td class="zahl summe">0,00 ✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption>Beispiel mit Tarif 10/20/50 in Euro: In jeder Zeile steht der neue Stand, nicht der Betrag des Spiels. Die Summe ist immer null.</figcaption>
+      </figure>
+      <div class="app-block">
+        <div>
+          <h3>Die Liste, die sich selbst rechnet</h3>
+          <p>
+            Genau das macht <a href="/">Schafkopf Tracker</a> automatisch: Ihr legt
+            Tarif und Hausregeln für den Ramsch einmal pro Stammtisch fest, tragt
+            nach jedem Spiel Spielart und Ergebnis ein, und die App rechnet ab – für
+            3 bis 8 Spieler, auf iPhone und Android, kostenlos.
+          </p>
+          <div class="btn-gruppe">
         <a class="store-badge" href="https://apps.apple.com/us/app/schafkopf-tracker/id6790808695?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6790808695" data-cta="appstore">
           <img src="/assets/badges/app-store-schwarz.svg" width="180" height="60" alt="Schafkopf Tracker im App Store laden">
         </a>
         <a class="store-badge" href="https://play.google.com/store/apps/details?id=de.adrianpomayr.schafkopftracker" data-cta="googleplay">
           <img src="/assets/badges/google-play-de.svg" width="202" height="60" alt="Schafkopf Tracker bei Google Play herunterladen">
         </a>
+          </div>
+        </div>
+        <div class="phone">
+          <img src="/assets/screenshots/treffen.svg" width="390" height="844" loading="lazy" decoding="async"
+               alt="Schafkopf Tracker: Punktestand eines Spielabends mit fünf Spielern und Verlaufsdiagramm">
+        </div>
       </div>
     </section>
 
